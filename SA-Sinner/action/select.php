@@ -1,18 +1,30 @@
-<pre>
 <?php
+
 $conexao = mysqli_connect('localhost','root','root','database_sinner');
 
-// mysql_select_db($conexao);
+$pesquisa = $_POST['pesquisar'];
+$resultado = "SELECT * FROM tb_usuario WHERE nome LIKE '$pesquisa'";
+
+$acao = mysqli_query($conexao, $resultado;)
 
 
-$consulta = mysqli_query($conexao,"SELECT nome FROM tb_usuario WHERE id_usuario = 1");
+while ($rows = mysqli_fetch_array ($resultado)){
+echo"JESUS ama:" . $rows['nome']
 
-$flavio = $consulta;
+}
 
-print_r("$flavio");
 
-mysqli_close($conexao)
+
+
+
 
 
 ?>
-</pre>
+
+
+// mysql_select_db($conexao);
+// $consulta = mysqli_query($conexao,"SELECT nome FROM tb_usuario WHERE id_usuario = 1");
+// mysqli_close($conexao)
+
+
+
