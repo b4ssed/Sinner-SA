@@ -2,29 +2,19 @@
 
 $conexao = mysqli_connect('localhost','root','root','database_sinner');
 
-$pesquisa = $_POST['pesquisar'];
-$resultado = "SELECT * FROM tb_usuario WHERE nome LIKE '$pesquisa'";
+$pesquisa = $_POST['pesquisar']; //Pegando o POST da pag teste.php `-`
+$acao = mysqli_query($conexao, "SELECT * FROM usuario WHERE nome LIKE '%" . $pesquisa. "%'" ); //Pesquisando no banco `-`
 
-$acao = mysqli_query($conexao, $resultado;)
+$array = mysqli_fetch_all($acao, MYSQLI_ASSOC);//Criando um array `-`
 
-
-while ($rows = mysqli_fetch_array ($resultado)){
-echo"JESUS ama:" . $rows['nome']
-
+foreach($array as $key =>$value) { //pegando TODOS os resultados da pesquisa `-`
+ echo $value['nome'];
 }
 
-
-
-
-
-
+mysqli_close($conexao);
 
 ?>
 
-
-// mysql_select_db($conexao);
-// $consulta = mysqli_query($conexao,"SELECT nome FROM tb_usuario WHERE id_usuario = 1");
-// mysqli_close($conexao)
 
 
 
