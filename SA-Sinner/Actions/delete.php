@@ -1,16 +1,18 @@
 <?php
 
-    $id = $_GET["id"];
+$connect = mysqli_connect ('localhost','root','root','database_sinner');
+
+//$id = $_GET["id"];
     
-    include_once '../includes/connect.php';
+    //include_once '../includes/connect.php';
+    $id = 1;
+    $sql = mysqli_query($connect,"delete from usuario where id_usuario = ".$id);
       
-    $sql = "delete from tb_usuario where idusuario = ".$id;
-      
-    if(mysql_query($sql,$con)){
-        $msg = "Deletado com sucesso!";
-    }else{
-        $msg = "Erro ao deletar!";
-    }
-    mysql_close($con);    
+//     if(mysql_query($sql,$connect)){
+//         $msg = "Deletado com sucesso!";
+//    }else{
+//         $msg = "Erro ao deletar!";
+//     }
+    mysqli_close($connect);    
       
     ?>
