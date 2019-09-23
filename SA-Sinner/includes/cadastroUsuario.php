@@ -1,13 +1,19 @@
 <?php 
     session_start();
-    if (isset($_POST["usuario"])){
+    if (preg_match('/^[a-zA-Z0-9]+/', $username)){
         $nome = $_POST["usuario"];
+    }else{
+        header("Location: ../index.php?erro=200");
     }   
-    if (isset($_POST["email"])){
+    if (preg_match('/^[a-zA-Z0-9]+/', $username)){
         $email = $_POST["email"];
+    }else{
+        header("Location: ../index.php?erro=201");
     }
-    if (isset($_POST["senha"])){
+    if  (preg_match('/^[a-zA-Z0-9]+/', $username)){
         $senha = $_POST["senha"];
+    }else{
+        header("Location: ../index.php?erro=202");
     }
     
     insert($nome, $email, $senha);
