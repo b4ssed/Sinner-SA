@@ -1,10 +1,12 @@
 <!-- move_uploaded_file -->
 
 <html>
-<form action="actions/insert_CBanda.php" method="post" >
+<form action="actions/insert_CBanda.php" enctype="multipart/form-data"  method="post" >
  <H1>Cadastro de Banda</H1>
 <label >Nome da banda:</label>
-<input type="text" nome="NameBand" required >
+<input type="text" nome="max" required >
+<label>Imagem da banda</label>
+<input type="file" name="imgband" >
 <button type="submit">Enviar</button>
 </form>
 
