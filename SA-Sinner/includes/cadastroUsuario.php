@@ -1,29 +1,16 @@
 <?php 
-    session_start();
-    if (preg_match('/^[a-zA-Z0-9]+/', $username)){
-        $nome = $_POST["usuario"];
-    }else{
+    $nome = $_POST["usuario"];
+    $email = $_POST['email'];
+    $senha = $_POST["senha"];
+    if (!preg_match("/^([a-zA-Z0-9]+)$/", $nome)){
         header("Location: ../index.php?erro=200");
-    }   
-    if (preg_match('/^[a-zA-Z0-9]+/', $username)){
-        $email = $_POST["email"];
-    }else{
-        header("Location: ../index.php?erro=201");
-    }
-    if  (preg_match('/^[a-zA-Z0-9]+/', $username)){
-        $senha = $_POST["senha"];
-    }else{
-        header("Location: ../index.php?erro=202");
-    }
+    } 
     
-    insert($nome, $email, $senha);
-    
-
-    function cadastroUsuario($nome, $email, $senha){
+    session_start();
         $con = mysqli_connect("localhost", "root", "root", "database_sinner"); 
         $query = mysqli_query($con,"INSERT INTO usuario VALUES(DEFAULT, '$nome', '$email', '$senha', NULL, 1)");
-        mysqli_close($con); 
-    }
-      
-       
+        $query = mysqli_query($con, "SELECT * FROM usuario WHERE nome='$nome'");
+        $arrayUser = mysqli_fetch_all($query, MYSQLI_ASSOC);
+        $_SESSION["usuario"]  = $arrayUser;        
+        mysqli_close($con);      
 ?>
