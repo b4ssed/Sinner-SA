@@ -1,23 +1,23 @@
 
 <?php    
-  //  $nome = $_POST["max"];
+    $nome = $_POST['name'];
     $destino= '../css/images/image'; 
     $ext = strtolower(substr($_FILES['imgband']['name'],-4));
     if($ext=="jpeg"||$ext==".png"||$ext==".gif"||$ext=="jfif"||$ext==".img"||$ext==".jpg"){
-    $new_name = date("Y.m.d-H.i.s") . $ext;
-    $caminho="../css/iamges/image".$new_name;
+    $new_name = date("Y.m.d-H") . $ext;
+    $caminho="../css/images/image".$new_name;
     echo $caminho;
     move_uploaded_file($_FILES['imgband']['tmp_name'], $destino.$new_name);
-   // insert($nome);
+    insert($nome, $caminho );
     }else{
         
         echo "<script> alert('esse tipo de imagem n é suportada'); window.location.href = '../CBanda.php'; </script>" ;
     }
-    function insert($nome){
+    function insert($nome, $caminho ){
         $con = mysqli_connect("localhost", "root", "root", "database_sinner"); 
-        $query = mysqli_query($con,"INSERT INTO banda VALUES(DEFAULT, '$nome', NULL)");
+        $query = mysqli_query($con,"INSERT INTO banda VALUES(DEFAULT, '$nome', '$caminho')");
         mysqli_close($con);
-       header("location:../CBanda.php"); 
+        echo "<script> alert('banda cadastrada :)'); window.location.href = '../CBanda.php'; </script>" ;
 }  
-//header("location:../CBanda.php");  
+
 ?>
