@@ -3,7 +3,7 @@
     $email = $_POST['email'];
     $senha = $_POST["senha"];
     if (!preg_match("/^([a-zA-Z0-9]+)$/", $nome)){
-        header("Location: ../index.php?erro=200");
+        header("Location: ../paginas/cadastro.php?erro=200");
     } 
     
     session_start();

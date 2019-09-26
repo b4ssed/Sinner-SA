@@ -12,7 +12,7 @@
         }
         
     ?>
-        <form action="includes/cadastroUsuario.php" method="post">
+        <form action="../includes/cadastroUsuario.php" method="post">
             <div class="">
                 <label for="usuario">Usuário</label>
                 <input type="text" name="usuario" max="45" required>

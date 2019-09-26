@@ -36,7 +36,7 @@ a:focus {
 .navbar-btn {
     box-shadow: none;
     outline: none !important;
-    border: none;
+    border: 1px solid black;
 }
 
 .line {
@@ -62,7 +62,7 @@ a:focus {
     left: 0;
     height: 100vh;
     z-index: 999;
-    background: #7386D5;
+    background: rgb(53, 53, 56);
     color: #fff;
     transition: all 0.3s;
 }
@@ -73,12 +73,13 @@ a:focus {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
+    background: #252525;
 }
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
 }
 
 #sidebar ul p {
@@ -93,14 +94,14 @@ a:focus {
 }
 
 #sidebar ul li a:hover {
-    color: #7386D5;
+    color: rgb(0, 0, 0);
     background: #fff;
 }
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #6d7fcc;
+    background: rgb(53, 53, 56);
 }
 
 a[data-toggle="collapse"] {
@@ -118,7 +119,7 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #6d7fcc;
+    background: #252525;
 }
 
 ul.CTAs {
