@@ -14,6 +14,10 @@
             <?php include("template/navbar.php"); ?>
             <div id="content">
                 <?php include("includes/btnNavbar.php"); ?>               
+                <?php 
+                    session_start();
+                    print_r($_SESSION["usuario"]);
+                ?>
             </div>
         </div>
         <?php include("template/js.php"); ?>

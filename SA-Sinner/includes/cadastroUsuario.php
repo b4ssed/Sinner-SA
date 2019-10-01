@@ -17,21 +17,22 @@
 
     //Verificar Cadastro
     if (!preg_match("/^([a-zA-Z0-9]+)$/", $nome)){
+        mysqli_close($con);
         header("Location: ../pages/cadastro.php?erro=200");
     }else{
         if($dupEmail == $email){
+            mysqli_close($con);
             header("Location: ../pages/cadastro.php?erro=201");     
         }elseif($dupUser == $nome){
+            mysqli_close($con);
             header("Location: ../pages/cadastro.php?erro=202");
         }else{
             $query_insert = mysqli_query($con,"INSERT INTO usuario VALUES(DEFAULT, '$nome', '$email', '$senha', NULL, 1)");
-            if ($query_insert){
-                session_start();
-                $query_session = mysqli_query($con, "SELECT * FROM usuario WHERE nome='$nome'");
-                $sessionUser = mysqli_fetch_all($query_session, MYSQLI_ASSOC);
-                $_SESSION["usuario"]  = $sessionUser;        
+            if ($query_insert){        
                 mysqli_close($con);
+                header("Location: ../pages/login.php");       
             }else{
+                mysqli_close($con);
                 header("Location: ../pages/cadastro.php?erro=203");   
             }
         }
