@@ -8,6 +8,12 @@
             $erro = $_GET["erro"];
             if ($erro==200){
                 echo "<script>alert('Campo Usuário preenchido incorretamente')</script>";
+            }elseif ($erro==201){
+                echo "<script>alert('Este E-mail já está registrado')</script>";
+            }elseif ($erro==202){
+                echo "<script>alert('Este Usuário já existe')</script>";
+            }elseif ($erro==203){
+                echo "<script>alert('Não foi possível realizar o cadastro')</script>";
             }
         }
         
