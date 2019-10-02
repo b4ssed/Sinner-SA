@@ -1,6 +1,19 @@
 <html>
     <head>
-    
+        <?php include("../template/styles.php"); ?>
+        <style>
+            .containerCadastro{
+                width:400px;
+                padding: 15px;            
+                margin-top: 50px;
+                margin-left: 30%;
+                border-radius: 10px;
+                background: #fff;
+            }
+            .containerPrincipal{
+                background: #b2bec3;
+            }
+        </style>
     </head>
     <body>
     <?php
@@ -18,20 +31,32 @@
         }
         
     ?>
-        <form action="../includes/cadastroUsuario.php" method="post">
-            <div class="">
-                <label for="usuario">Usuário</label>
-                <input type="text" name="usuario" max="45" required>
+    <div class="wrapper">
+            <?php include("../template/navbar.php"); ?>
+            <div class="containerPrincipal" id="content">
+                <div class="containerCadastro">
+                    <center>
+                        <h3>Cadastre-se</h3>
+                    </center>
+                    <form action="../includes/cadastroUsuario.php" method="post">
+                        <div class="form-group">
+                            <label for="usuario">Usuário</label>
+                            <input type="text" class="form-control" name="usuario" max="45" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" class="form-control" name="email" max="50" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="senha">Senha</label>
+                            <input type="password" class="form-control" name="senha" max="8" required>
+                        </div>
+                        <button type="submit" class=" form-control btn btn-dark">Cadastrar</button>
+                    </form>
+                </div>
             </div>
-            <div class="">
-                <label for="email">E-mail</label>
-                <input type="email" name="email" max="50" required>
-            </div>
-            <div class="">
-                <label for="senha">Senha</label>
-                <input type="password" name="senha" max="8" required>
-            </div>
-            <button type="submit">Enviar</button>
-        </form>
+        </div>
+        <?php include("../template/js.php"); ?>
+        
     </body>
 </html>
