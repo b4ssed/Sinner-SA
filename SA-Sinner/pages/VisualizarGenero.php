@@ -4,16 +4,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Visualizar Gênero</title>
-        <?php include("../template/styles.php"); ?>   
+        <?php include("../template/styles.php"); ?>
+        <style>
+            .containerCadastro{
+            width:800px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #fff;
+            }
+            .containerPrincipal{
+            background: #b2bec3;
+            }
+
+        </style>   
     </head>
     <body>
     <?php
       session_start();
-      include("../../includes/navbar.php");
 
      ?>
-     <div class="container">
-       <div>
+     <div class="wrapper">
+     <?php include("../template/navbar.php"); ?>
+       <div id="content" class="containerPrincipal">
+        <div class="containerCadastro">
          <table class="table" style="background:#1e272e; color:white">
            <thead>
              <tr>
@@ -25,29 +38,29 @@
              $con = mysqli_connect("localhost", "root", "root", "database_sinner");
              $query_genero = mysqli_query($con, "SELECT * from genero");
              $arrayGenero = mysqli_fetch_all($query_genero, MYSQLI_ASSOC);
-              if (isset($arrayGenero) {
+             $array = $arrayGenero;
+              if (isset($array)) {
                 
-                foreach ($arrayGenero as $key => $value) {
+                foreach ($array as $key => $value) {
                   echo "<tr>";
                   echo "<td>".$value['descricao']."</td>";
-                  echo '<form class="" action="../../includes/excluirProduto.php? method="post">';
-                  echo '<td><button type="submit" class="btn btn-danger" name="excluirCarrinho" value='.$key.'>Excluir Item</td>';
+                
+                  echo '<form class="" action="../includes/excGenero.php? method="post">';
+                  echo '<td><button type="submit" class="btn btn-danger" name="excluirGenero" value='.$value["id_genero"].'>Excluir Item';
                   echo '</form>';
+                  echo '<a href="../pages/EditarGenero.php?id='.$value["id_genero"].'">	<button class="btn btn-dark">Editar</button></a></td>';
                   echo "</tr>";
                 }
               }
              ?>
            </tbody>
          </table>
-       </div>
-      <br>
-      <form class="" action="../../includes/limparCarrinho.php" method="post">
-        <a href="../home/index.php">
-          <button type="button" class="btn btn-outline-dark" name="voltarHome">Continuar Comprando</button>
-        </a>
-        <button type="submit" class="btn btn-outline-danger" name="limparCarrinho" value="limparCarrinho">Limpar Carrinho
-      </form>
+        </div>
+      </div>
+    <br>
+      
 
     </div>
+      <?php include("../template/js.php"); ?>
     </body>
 </html>

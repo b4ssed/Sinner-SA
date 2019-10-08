@@ -1,3 +1,13 @@
+<?php
+if (isset($_GET['id'])) {
+$id = $_GET['id'];
+
+$conexao = mysqli_connect('localhost','root','root','database_sinner');
+$query = mysqli_query($conexao, "SELECT * FROM genero WHERE id=$id_genero");
+$arrayorc = mysqli_fetch_all($query, MYSQLI_ASSOC);
+mysqli_close ($conexao);
+}
+ ?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -21,17 +31,33 @@
         </style>
     </head>
     <body>
-    
+        <?php
+                // if (isset($_GET['id'])) {
+                //     echo "<input type='hidden' name='id' value='".$id."'>";
+                // }
+        ?>
         <div class="wrapper">
             <?php include("../template/navbar.php"); ?>
             <div id="content" class="containerPrincipal">
             <div class="containerCadastro">        
-                <form action="../includes/AdcGenero.php" method="post">
+                <?php echo '<form action="../includes/EdtGenero.php" method="post">' ?>
                   <!-- area de campos do form -->
                   <hr />
+                  <?php
+                  if (isset($_GET['id'])) {
+                echo "<input type='hidden' name='id' value='".$id."'>";
+                    }
+                ?>
                     <div class="form-group">
                       <label for="descricao">Gênero</label>
-                      <input type="text" class="form-control" name="descricao" placeholder="Gênero">
+                      <?php
+                          if (isset($arrayorc[0]['descricao'])) {
+                            echo '<input id="descricao" name="descricao" type="text" value="'.$arrayorc[0]["descricao"].'" class="form-control" required>';
+                          }else {
+                            echo '<input id="descricao" name="descricao" type="text" placeholder="descricao" class="form-control" required>';
+                          }
+
+                           ?>
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                     <button type="reset" class="btn btn-default">Cancelar</button>

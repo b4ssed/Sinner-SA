@@ -28,10 +28,10 @@
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Páginas</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
                     <li>
-                        <a href="pages/CadastroGenero.php">Cadastro Genero</a>
+                        <a href="../pages/CadastroGenero.php">Cadastro Genero</a>
                     </li>
                     <li>
-                        <a href="#">Página 2</a>
+                        <a href="../pages/visualizargenero.php">Visualizar Genero</a>
                     </li>
                     <li>
                         <a href="#">Página 3</a>
