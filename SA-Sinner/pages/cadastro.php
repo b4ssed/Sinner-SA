@@ -1,19 +1,7 @@
 <html>
     <head>
         <?php include("../template/styles.php"); ?>
-        <style>
-            .containerCadastro{
-                width:400px;
-                padding: 15px;            
-                margin-top: 50px;
-                margin-left: 30%;
-                border-radius: 10px;
-                background: #fff;
-            }
-            .containerPrincipal{
-                background: #b2bec3;
-            }
-        </style>
+        <link rel="stylesheet" href="../css/styleCadastro.css">
     </head>
     <body>
     <?php
@@ -49,7 +37,7 @@
                         </div>
                         <div class="form-group">
                             <label for="senha">Senha</label>
-                            <input type="password" class="form-control" name="senha" max="8" required>
+                            <input type="password" class="form-control"  name="senha" max="8" required>
                         </div>
                         <button type="submit" class=" form-control btn btn-dark">Cadastrar</button>
                     </form>
