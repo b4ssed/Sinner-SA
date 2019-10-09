@@ -4,25 +4,11 @@
         <div class="sidebar-header">
             <h3>Sinner</h3>
         </div>
-
-        <ul class="list-unstyled components">
-            <p>Sub-Título</p>
+        <ul class="list-unstyled components">        
+            <a href="../../../Sinner-SA/SA-Sinner/pages/cadastro.php"><button class='btn btn-light'>Cadastre-se</button></a>
+            <a href="../../../Sinner-SA/SA-Sinner/pages/login.php"><button class='btn btn-light'>Log-in</button></a>
             <li class="">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                    <li>
-                        <a href="#">Home 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Home 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Home 3</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Sobre</a>
+                <a href="../../../Sinner-SA/SA-Sinner/index.php">Home</a>
             </li>
             <li>
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Páginas</a>
@@ -37,12 +23,6 @@
                         <a href="#">Página 3</a>
                     </li>
                 </ul>
-            </li>
-            <li>
-                <a href="#">Portfólio</a>
-            </li>
-            <li>
-                <a href="#">Contato</a>
             </li>
         </ul>
     </nav>

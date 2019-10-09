@@ -44,7 +44,6 @@
                 </div>
             </div>
         </div>
-        <?php include("../template/js.php"); ?>
-        
+        <?php include("../template/js.php"); ?>  
     </body>
 </html>
