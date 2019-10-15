@@ -6,17 +6,17 @@
             .containerLogin{
               height:185px;
               width:700px;
-              padding: 15px;            
+              padding: 15px;
               margin-top: 150px;
               margin-left: 20%;
               border-radius: 10px;
               background: #fff;
             }
-            .containerLogin input,button{              
+            .containerLogin input,button{
               margin-top: 15px;
               margin-left: 10px;
             }
-            .containerLogin a{              
+            .containerLogin a{
               margin-left: 10px;
               text-decoration: underline;
             }
@@ -46,50 +46,35 @@
               </center>
             </div>
           </div>
-          <form class="form-inline" action="../includes/validar_login.php" method="post">
+          <form class="form-inline" action="../actions/validarLogin.php" method="post">
             <div class="row">
-              <div class="col-sm">              
+              <div class="col-sm">
                 <div class="form-group">
                   <input type="text" class="form-control" required id="login" name="login" placeholder="Login">
                 </div>
               </div>
               <div class="col-sm">
                 <div class="form-group">
-                  <input type="password" class="form-control" required id="senha" name="senha" placeholder="Senha"> 
+                  <input type="password" class="form-control" required id="senha" name="senha" placeholder="Senha">
                 </div>
-              </div>  
+              </div>
               <div class="col-sm">
                 <button type="submit" class="btn btn-dark" >Entrar</button>
-              </div>                             
+              </div>
             </div>
             <div class="row">
               <div class="col">
                 <a href="cadastro.php"><small class="form-text text-muted">Cadastre-se</small></a>
-              </div>                           
-              <div class="col">
-                <a href="#"><small class="form-text text-muted">Esqueci minha senha</small></a>                
               </div>
-              
+              <div class="col">
+                <a href="#"><small class="form-text text-muted">Esqueci minha senha</small></a>
+              </div>
+
             </div>
-          </form>          
+          </form>
         </div>
       </div>
     </div>
-    <?php include("../template/js.php"); ?>        
+    <?php include("../template/js.php"); ?>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
