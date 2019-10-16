@@ -1,4 +1,6 @@
 <?php
+ini_set("upload_max_filesize", "200M");
+
 $pesquisa = $_POST['pesquisar']; //Pegando o POST da pag teste.php `-`
 select($pesquisa);
 function select($pesquisa){

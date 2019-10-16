@@ -1,31 +1,22 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-<style>
- 
-</style>
   <title>Cadastro musica</title>
 </head>
 <body>
-<!-- <?php // Tratativa de erro #100
-if(isset($_GET["erro"])){
-  $erro = $_GET["erro"];
-  if($erro==100){
-    echo"<script>alert('Usuário não cadastrado')</script>";
-  }
-}
-?> -->
-<form action="../includes/cadastrarMusica.php" method="post">
+
+<form action="../includes/cadastrarMusica.php" enctype="multipart/form-data" method="post">
   <div>
-	  <input type="text" required id="nmusica" name="nmusica" placeholder="Nome da Música">
+	  <input type="text" name="name" placeholder="Nome da Música" required>
   </div>
   
   <div>
-  	<input type="float"  required id="duracao" name="duracao" placeholder="Duração"> 
+  	<input type="float" name="duracao" placeholder="Duração" required> 
   </div>
 
   <div>
-  	<input type="file" id="music" name="music" placeholder=".mp4"> 
+  	<input type="file" name="music"> 
   </div>
     <div>
         <label>Genero</label>
@@ -70,7 +61,7 @@ if(isset($_GET["erro"])){
     </select>
   </div>
   
-  <button type="submit">Cadastrar</button>
+  <button name="enviar" type="submit">Cadastrar</button>
 </form>
 
 </body>
