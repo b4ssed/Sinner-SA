@@ -1,6 +1,6 @@
 <?php
-    $id = $_POST['id'];     
-    $desc = $_POST["descricao"];
+    $id = $_POST['id'];
+    $desc = $_POST['descricao'];
         //verifica caratere especial
         if(preg_match("/^([a-zA-Z0-9]+)$/", $desc)){
             $con = mysqli_connect("localhost", "root", "root", "database_sinner");
@@ -8,5 +8,5 @@
             mysqli_close($con);
             header("Location: ../pages/VisualizarGenero.php");
         }
-        
+
 ?>
