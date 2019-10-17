@@ -1,7 +1,7 @@
 <html>
     <head>
-        <?php include("../template/styles.php"); ?>
-        <link rel="stylesheet" href="../css/styleCadastro.css">
+        <?php include("../../template/styles.php"); ?>
+        <link rel="stylesheet" href="../../css/styleCadastro.css">
     </head>
     <body>
     <?php
@@ -17,16 +17,16 @@
                 echo "<script>alert('Não foi possível realizar o cadastro')</script>";
             }
         }
-        
+
     ?>
     <div class="wrapper">
-            <?php include("../template/navbar.php"); ?>
+            <?php include("../../template/navbar.php"); ?>
             <div class="containerPrincipal" id="content">
                 <div class="containerCadastro">
                     <center>
                         <h3>Cadastre-se</h3>
                     </center>
-                    <form action="../includes/cadastroUsuario.php" method="post">
+                    <form action="../../includes/cadastroUsuario.php" method="post">
                         <div class="form-group">
                             <label for="usuario">Usuário</label>
                             <input type="text" class="form-control" name="usuario" max="45" required>
@@ -44,6 +44,6 @@
                 </div>
             </div>
         </div>
-        <?php include("../template/js.php"); ?>  
+        <?php include ("../../template/js.php"); ?>
     </body>
 </html>

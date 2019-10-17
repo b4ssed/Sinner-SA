@@ -2,7 +2,7 @@
 <html>
     <head>
         <?php include("../../template/styles.php"); ?>
-        <link rel="stylesheet" href="../css/styleCadastro.css">
+        <link rel="stylesheet" href="../../css/styleCadastro.css">
     </head>
     <body>
         <div class="wrapper">
