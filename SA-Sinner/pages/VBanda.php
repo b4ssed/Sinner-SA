@@ -24,14 +24,14 @@ foreach ($dados as $key => $value) {
     <img src='".$value['img']."' style='height: 350px;width: 313;'>
     <div class='card-body' >
     <h4>".$value['id_banda']."</h4>
-    <h3>".$value['descricao']."</h3>
-    <a href='../includes/ExcluirBanda.php?idb='$key''><button>Excluir</button></a>
+    <h3>".$value['descricao']."</h3>";
+    echo '<a href="../includes/ExcluirBanda.php?idb='.($value['id_banda']).'"><button>Excluir</button></a>';
      
-    </div>
+   echo" </div>
     </div>";
 }
 ?>
 </div>
 
-<input type='button' value='excluir' href=>
+
 </html>

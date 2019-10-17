@@ -4,7 +4,7 @@
     $destino= '../css/images/image'; 
     $ext = strtolower(substr($_FILES['imgband']['name'],-4));
     if($ext=="jpeg"||$ext==".png"||$ext==".gif"||$ext=="jfif"||$ext==".img"||$ext==".jpg"){
-    $new_name = $_FILES['imgband']['name'] . $ext;
+    $new_name = $_FILES['imgband']['name'] ;
     $caminho="../css/images/image".$new_name;
     echo $caminho;
     move_uploaded_file($_FILES['imgband']['tmp_name'], $destino.$new_name);
