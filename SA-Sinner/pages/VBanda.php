@@ -26,7 +26,7 @@ foreach ($dados as $key => $value) {
     <h4>".$value['id_banda']."</h4>
     <h3>".$value['descricao']."</h3>";
     echo '<a href="../includes/ExcluirBanda.php?idb='.($value['id_banda']).'"><button>Excluir</button></a>';
-     
+    echo '<a href="../includes/AlterarBanda.php?idb='.($value['id_banda']).'"><button>Atualizar</button></a>';  
    echo" </div>
     </div>";
 }
