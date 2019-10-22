@@ -8,13 +8,22 @@ $con = mysqli_connect("localhost", "root", "root", "database_sinner");
 $id= $_GET['idb'];
 $query = mysqli_query($con, "SELECT * FROM banda where id_banda = $id");
 $dados = mysqli_fetch_all($query, MYSQLI_ASSOC);
-$query = mysqli_query($con, "DELETE  FROM banda where id_banda = $id ");
-print_r($dados);
+
 $ext = ($dados[0]['img']);
-unlink($ext);
+echo("
+<form action='../includes/AlterarBanda.php?idb=$id' enctype='multipart/form-data'  method='post' >
+<div class='card-deck'>
+<div class='card' style='width: 18rem;'>
+<img src='".$ext."' style='height: 350px;width: 313;'>
+<div class='card-body' >
+<label >Nome da banda:</label>
+<input type='text' name='name'value=".$dados[0]['descricao']." required >
+<label>Imagem da banda</label>
+<input type='file' name='imgband' >
+<button type='submit'>Enviar</button>
+</form>");
 
 
-echo "<script> alert('banda EXCLUIDA :)'); window.location.href = '../pages/VBanda.php'; </script>" ;
 ?>
 </div>
 
