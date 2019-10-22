@@ -23,18 +23,18 @@ $arr = mysqli_fetch_all($busca, MYSQLI_ASSOC);
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr> 
                 <?php 
                 foreach($arr as $chave => $valor){
                     echo "<tr>";
                     echo "<td>".$valor['id_musica']."</td>";
                     echo "<td>".$valor['dsmusica']."</td>";
                     echo "<td>".$valor['duracao']."</td>";
+                    echo "<td>".$valor['album_id_album']."</td>";
+                    echo "<td>".$valor['genero_id_genero']."</td>";
                     echo "<td>";
-                    echo "<td>";
-                    echo "<td>";
-					echo '<a href="?pagina=editar&usuarioID='.$valor['id_musica'].'"><button class="btn btn-primary">Editar</button></a>';
-                    echo '<a href="excluir.php?id='.$valor["id_musica"].'"><button class="btn btn-primary">Excluir</button></a>';
+					echo '<a href="../includes/excluir_musica.php?id='.$valor['id_musica'].'"><button>Excluir</button></a>';
+                    // echo '<a href="excluir.php?id='.$valor["id_musica"].'"><button class="btn btn-primary">Excluir</button></a>';
                     echo "</td>";
                 }
                
