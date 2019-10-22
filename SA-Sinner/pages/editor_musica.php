@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<form action="../includes/cadastrarMusica.php" enctype="multipart/form-data" method="post">
+<form action="../includes/editar_musica.php" enctype="multipart/form-data" method="post">
   <div>
 	  <input type="text" name="name" placeholder="Nome da Música" required>
   </div>
@@ -61,7 +61,7 @@
     </select>
   </div>
   
-  <button name="enviar" type="submit">Cadastrar</button>
+  <button name="enviar" type="submit">Alterar</button>
 </form>
 
 </body>
