@@ -12,6 +12,7 @@
         <div class="wrapper">
             <?php include("../../template/navbar.php"); ?>
             <div id="content">
+              <?php include("../../includes/btnNavbar.php"); ?>
                 <br>
                 <div class="row">
                   <div class="col-sm-6">

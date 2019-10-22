@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Visualizar Gênero</title>
-        <?php include("../template/styles.php"); ?>
+        <?php include("../../template/styles.php"); ?>
         <style>
             .containerCadastro{
             width:800px;
@@ -16,15 +16,14 @@
             background: #b2bec3;
             }
 
-        </style>   
+        </style>
     </head>
     <body>
     <?php
       session_start();
-
      ?>
      <div class="wrapper">
-     <?php include("../template/navbar.php"); ?>
+     <?php include("../../template/navbar.php"); ?>
        <div id="content" class="containerPrincipal">
         <div class="containerCadastro">
          <table class="table" style="background:#1e272e; color:white">
@@ -40,11 +39,10 @@
              $arrayGenero = mysqli_fetch_all($query_genero, MYSQLI_ASSOC);
              $array = $arrayGenero;
               if (isset($array)) {
-                
                 foreach ($array as $key => $value) {
                   echo "<tr>";
                   echo "<td>".$value['descricao']."</td>";
-                
+
                   echo '<form class="" action="../includes/excGenero.php? method="post">';
                   echo '<td><button type="submit" class="btn btn-danger" name="excluirGenero" value='.$value["id_genero"].'>Excluir Item';
                   echo '</form>';
@@ -58,9 +56,9 @@
         </div>
       </div>
     <br>
-      
+
 
     </div>
-      <?php include("../template/js.php"); ?>
+      <?php include("../../template/js.php"); ?>
     </body>
 </html>

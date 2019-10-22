@@ -41,7 +41,7 @@
           <div class="col">
             <center>
               <small class="form-text text-muted">Ainda não possui cadastro?</small>
-              <a href="#" class="btn btn-light">Cadastre-se</a>
+              <a href="pages/cadastros/cadastroUsuario.php" class="btn btn-dark">Cadastre-se</a>
             </center>
           </div>
         </div>
