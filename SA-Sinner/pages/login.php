@@ -4,24 +4,27 @@
     <?php include("../template/styles.php"); ?>
     <style>
             .containerLogin{
-              height:185px;
-              width:700px;
-              padding: 15px;
-              margin-top: 150px;
-              margin-left: 20%;
+              width: 50%;
+              height: 38%;
               border-radius: 10px;
               background: #fff;
             }
-            .containerLogin input,button{
-              margin-top: 15px;
-              margin-left: 10px;
+            body{
+              background: grey;
             }
             .containerLogin a{
-              margin-left: 10px;
               text-decoration: underline;
             }
+            .containerLogin input{
+              width: 50%;
+            }
             .containerPrincipal{
-              background: #b2bec3;
+              width: 100vw;
+              height: 100vh;
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
             }
         </style>
   </head>
@@ -34,10 +37,8 @@
       }
     }
     ?>
-    <div class="wrapper">
-      <?php include("../template/navbar.php"); ?>
-      <div class="containerPrincipal" id="content">
-        <div class="container containerLogin">
+      <div class="containerPrincipal">
+        <div class="containerLogin">
           <div class="row">
             <div class="col">
               <center>
@@ -46,35 +47,38 @@
               </center>
             </div>
           </div>
-          <form class="form-inline" action="../actions/validarLogin.php" method="post">
+          <form class action="../actions/validarLogin.php" method="post">
             <div class="row">
               <div class="col-sm">
                 <div class="form-group">
-                  <input type="text" class="form-control" required id="login" name="login" placeholder="Login">
+                  <center>
+                    <input type="text" class="form-control" required id="login" name="login" placeholder="Login">
+                  </center>
                 </div>
               </div>
+            </div>
+            <div class="row">
               <div class="col-sm">
                 <div class="form-group">
-                  <input type="password" class="form-control" required id="senha" name="senha" placeholder="Senha">
+                  <center>
+                    <input type="password" class="form-control" required id="senha" name="senha" placeholder="Senha">
+                  </center>
                 </div>
               </div>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <a href="cadastros/cadastroUsuario.php"><small class="form-text text-muted">Cadastre-se</small></a>
+              </div>
+              <div class="col-sm">
+                <a href="#"><small class="form-text text-muted">Esqueci minha senha</small></a>
+              </div>
+            </div>
               <div class="col-sm">
                 <button type="submit" class="btn btn-dark" >Entrar</button>
               </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <a href="cadastro.php"><small class="form-text text-muted">Cadastre-se</small></a>
-              </div>
-              <div class="col">
-                <a href="#"><small class="form-text text-muted">Esqueci minha senha</small></a>
-              </div>
-
-            </div>
           </form>
         </div>
       </div>
-    </div>
-    <?php include("../template/js.php"); ?>
   </body>
 </html>
