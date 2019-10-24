@@ -13,11 +13,11 @@
     $con = mysqli_connect("localhost", "root", "root", "database_sinner"); 
         $query = mysqli_query($con,"INSERT INTO noticia VALUES(DEFAULT, '$nome', '$conteudo','$caminho',$GENERO)");
         mysqli_close($con);
-        echo "<script> alert('banda cadastrada :)'); window.location.href = '../pages/CBanda.php'; </script>" ;
+        echo "<script> alert('banda cadastrada :)'); window.location.href = '../pages/VNoticia.php'; </script>" ;
 
     }else{
         
-        echo "<script> alert('esse tipo de imagem não é suportada'); window.location.href = '../pages/CBanda.php'; </script>" ;
+        echo "<script> alert('esse tipo de imagem não é suportada'); window.location.href = '../pages/VNoticia.php'; </script>" ;
     }
   
 
