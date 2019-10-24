@@ -1,12 +1,12 @@
 
 <?php    
     $nome = $_POST['name'];
-    $destino= '../css/images/image'; 
+    $destino= '../css/imagesbanda/image'; 
     $data=date('s'). $_FILES['imgband']['name'];
     $ext = strtolower(substr($_FILES['imgband']['name'],-4));
     if($ext=="jpeg"||$ext==".png"||$ext==".gif"||$ext=="jfif"||$ext==".img"||$ext==".jpg"){
     $new_name =$data ;
-    $caminho="../css/images/image".$new_name;
+    $caminho="../css/imagesbanda/image".$new_name;
     echo $caminho;
     move_uploaded_file($_FILES['imgband']['tmp_name'], $destino.$new_name);
     insert($nome, $caminho );
