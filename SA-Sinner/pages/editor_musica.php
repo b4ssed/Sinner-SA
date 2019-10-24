@@ -5,7 +5,12 @@
   <title>Editar musica</title>
 </head>
 <body>
-
+<?php
+    if (isset($_GET["id_musica"])){
+        $id_musica = $_GET["id_musica"];    
+    }
+    
+?>
 <form action="../includes/editar_musica.php" enctype="multipart/form-data" method="post">
   <div>
 	  <input type="text" name="name" placeholder="Nome da Música" required>
@@ -13,6 +18,11 @@
   
   <div>
   	<input type="float" name="duracao" placeholder="Duração" required> 
+    <?php
+        if (isset($_GET["id_musica"])){
+            echo '<input type="hidden" value="'.$id_musica.'">';            
+        }
+    ?>
   </div>
 
   <div>

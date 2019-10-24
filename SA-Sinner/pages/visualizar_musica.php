@@ -33,9 +33,9 @@ $arr = mysqli_fetch_all($busca, MYSQLI_ASSOC);
                     echo "<td>".$valor['album_id_album']."</td>";
                     echo "<td>".$valor['genero_id_genero']."</td>";
                     echo "<td>";
-                    echo '<a href="excluir.php?id='.$valor["id_musica"].'"><button class="btn btn-primary">Excluir</button></a>';
+                    echo '<a href="../includes/excluir_musica.php?id_musica='.$valor["id_musica"].'"><button class="btn btn-primary">Excluir</button></a>';
                     echo "<td>";
-                    echo '<a href="../includes/editar_musica.php?id='.$valor['id_musica'].'"><button>Editar</button></a>';
+                    echo '<a href="../pages/editor_musica.php?id_musica='.$valor['id_musica'].'"><button>Editar</button></a>';
                     echo "</td>";
                 }
                
