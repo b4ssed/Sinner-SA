@@ -26,7 +26,7 @@
             <?php include("../template/navbar.php"); ?>
             <div id="content" class="containerPrincipal">
             <div class="containerCadastro">        
-                <form action="../includes/AdcAlbum.php" method="post">
+                <form action="../includes/AdcAlbum.php" enctype="multipart/form-data" method="post">
                   <!-- area de campos do form -->
                   <hr />
                   <H1>Cadastro de Album</H1>
@@ -38,7 +38,10 @@
                       <label for="descricao">Descrição</label>
                       <input type="text" class="form-control" name="descricao" placeholder="Descrição">
                     </div>  
-                    <!-- input imagem -->
+                    <div class="form-group">
+                    <label>Imagem da banda</label>
+                    <input type="file" name="imgband" >
+                    </div> 
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                     <button type="reset" class="btn btn-default">Cancelar</button>

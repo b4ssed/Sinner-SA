@@ -15,6 +15,9 @@
             .containerPrincipal{
             background: #b2bec3;
             }
+            img {
+            width:100px;
+            }
 
         </style>   
     </head>
@@ -43,8 +46,9 @@
                 
                 foreach ($array as $key => $value) {
                   echo "<tr>";
+                  echo "<td><img src=".$value['img']."></td>";
                   echo "<td>".$value['descricao']."</td>";
-                
+                  echo "<td>".$value['duracao']."</td>";
                   echo '<form class="" action="../includes/excAlbum.php? method="post">';
                   echo '<td><button type="submit" class="btn btn-danger" name="excluirAlbum" value='.$value["id_album"].'>Excluir Item';
                   echo '</form>';
