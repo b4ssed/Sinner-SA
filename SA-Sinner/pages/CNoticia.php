@@ -11,7 +11,7 @@
 <label>Genero:</label>
         <select name="genero" id='genero'>
              <?php
-                $con = mysqli_connect("localhost", "root", "root", "database_sinner");
+                $con = mysqli_connect("localhost", "root", "", "database_sinner");
 
                 $query_genero = mysqli_query($con,"SELECT * FROM genero");
                 $arrayGenero = mysqli_fetch_all($query_genero);

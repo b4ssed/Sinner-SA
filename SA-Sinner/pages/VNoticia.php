@@ -4,28 +4,32 @@
 </head>
 <?php
  
-$con = mysqli_connect("localhost", "root", " ", "database_sinner"); 
+$con = mysqli_connect("localhost", "root", "", "database_sinner"); 
 
-$query = mysqli_query($con, "SELECT * FROM noticia");
+$query = mysqli_query($con,"SELECT * FROM noticia");
 $dados = mysqli_fetch_all($query, MYSQLI_ASSOC);
-//var_dump($dados);
+$query2 = mysqli_query($con,"SELECT * FROM genero");
+$dados2 = mysqli_fetch_all($query2, MYSQLI_ASSOC);
+
 //echo"<img src='";
-//printf ($dados[0]);
+
 //echo"'>"; 
 
 //conectado no band
 $a=0;
 echo "<div class='card-deck'>"; 
 foreach ($dados as $key => $value) {
-    echo "<div class='card' style='width: 18rem;'>
+    
+    echo "<a href='noticia.php?id=".($value['id_noticia'])."'> <div class='card' style='width: 18rem;'>
     <img src='".$value['img']."' style='height: 350px;width: 313;'>
     <div class='card-body' >
-    <h4>".$value['id_banda']."</h4>
-    <h3>".$value['descricao']."</h3>";
-    echo '<a href="../includes/ExcluirBanda.php?idb='.($value['id_banda']).'"><button>Excluir</button></a>';
-    echo '<a href="../pages/AlterarBanda.php?idb='.($value['id_banda']).'"><button>Atualizar</button></a>';  
+    <h4>".$value['descricao']."</h4>
+    <h3>".$dados[$value['genero_id_genero']]['descricao']."</h3>";
+    echo '<a href="../includes/ExcluirBanda.php?idb='.($value['id_noticia']).'"><button>Excluir</button></a>';
+    echo '<a href="../pages/AlterarBanda.php?idb='.($value['id_noticia']).'"><button>Atualizar</button></a>';  
    echo" </div>
-    </div>";
+    </div>
+    </a>";
 }
 ?>
 </div>
