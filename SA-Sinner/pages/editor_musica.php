@@ -6,23 +6,16 @@
 </head>
 <body>
 <?php
-    if (isset($_GET["id_musica"])){
-        $id_musica = $_GET["id_musica"];    
-    }
-    
+  $id_musica = $_GET["id_musica"];   
+   echo '<form action="../includes/editar_musica.php?id='.$id_musica.'" enctype="multipart/form-data" method="post">'
 ?>
-<form action="../includes/editar_musica.php" enctype="multipart/form-data" method="post">
+
   <div>
 	  <input type="text" name="name" placeholder="Nome da Música" required>
   </div>
   
   <div>
   	<input type="float" name="duracao" placeholder="Duração" required> 
-    <?php
-        if (isset($_GET["id_musica"])){
-            echo '<input type="hidden" value="'.$id_musica.'">';            
-        }
-    ?>
   </div>
 
   <div>
@@ -32,7 +25,7 @@
         <label>Genero</label>
         <select name="genero">
             <?php
-                $con = mysqli_connect("localhost", "root", "root", "database_sinner");
+                $con = mysqli_connect("localhost", "root", "", "database_sinner");
 
                 //Selecionar Genero
                 $query_genero = mysqli_query($con,"SELECT * FROM genero");
@@ -52,7 +45,7 @@
     <label>Album</label>
     <select name="album">
     <?php
-        $con = mysqli_connect("localhost", "root", "root", "database_sinner");
+        $con = mysqli_connect("localhost", "root", "", "database_sinner");
 
         //Selecionar Album
         $query_album = mysqli_query($con,"SELECT * FROM album");

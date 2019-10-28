@@ -1,7 +1,7 @@
 <?php
       if (isset($_GET["id_musica"])) {
         //Cria a conexão com o banco de dados
-        $connect = mysqli_connect("localhost","root","root","database_sinner");
+        $connect = mysqli_connect("localhost","root","","database_sinner");
         //Variavel que recebem o id do orçamento a ser excluído
         $idm = $_GET["id_musica"];
         //Exclui o registro do banco de dados

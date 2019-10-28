@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-$con = mysqli_connect("localhost", "root", "root", "database_sinner"); 
+$con = mysqli_connect("localhost", "root", "", "database_sinner"); 
 $busca = mysqli_query($con,"SELECT * FROM musica");
 $arr = mysqli_fetch_all($busca, MYSQLI_ASSOC);
 

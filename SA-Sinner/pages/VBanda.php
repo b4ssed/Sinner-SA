@@ -1,7 +1,7 @@
 <html>
 
 <?php
-$con = mysqli_connect("localhost", "root", "root", "database_sinner"); 
+$con = mysqli_connect("localhost", "root", "", "database_sinner"); 
 
 $query = mysqli_query($con, "SELECT * FROM banda");
 $dados = mysqli_fetch_all($query, MYSQLI_ASSOC);

@@ -13,7 +13,7 @@
     // echo $caminho;
     // print_r($_FILES['music']);
         move_uploaded_file($_FILES['music']['tmp_name'], $caminho);
-        $con = mysqli_connect("localhost", "root", "root", "database_sinner"); 
+        $con = mysqli_connect("localhost", "root", "", "database_sinner"); 
         $query_insert = mysqli_query($con,"INSERT INTO musica VALUES(DEFAULT, '$nmusica', '$duracao', '$caminho', $album, $genero)");
         mysqli_close($con);
         echo "<script> alert('Musica cadastrada com sucesso !'); window.location.href ='../pages/cadastroMusica.php'; </script>" ;
