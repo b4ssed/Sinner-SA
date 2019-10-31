@@ -5,7 +5,7 @@
             $con = mysqli_connect("localhost", "root", "root", "database_sinner");
             $query = mysqli_query($con,"INSERT INTO genero VALUES(DEFAULT, '$desc')");
             mysqli_close($con);
-            header("Location: ../pages/VisualizarGenero.php");
+            header("Location: ../../pages/VisualizarGenero.php");
         }
 
 ?>

@@ -4,8 +4,8 @@
     $senha = $_POST["senha"];
 
 
-    $con = mysqli_connect("localhost", "root", "", "database_sinner"); 
-    
+    $con = mysqli_connect("localhost", "root", "", "database_sinner");
+
 
     //Selecionar Email Duplicado
     $query_email = mysqli_query($con,"SELECT email FROM usuario WHERE email = '$email'");

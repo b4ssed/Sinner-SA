@@ -16,7 +16,7 @@ if (isset($_SESSION['usuario'])) {
   }
 }else{
   // Usuário não logado! Redireciona para a página de login
-  header("Location:../../../../Sinner-SA/SA-Sinner/index.php")
+  header("Location:../../../../Sinner-SA/SA-Sinner/index.php");
 }
 
 
