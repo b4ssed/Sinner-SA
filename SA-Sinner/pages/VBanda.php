@@ -3,8 +3,8 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <?php
- 
-$con = mysqli_connect("localhost", "root", "root", "database_sinner"); 
+
+$con = mysqli_connect("localhost", "root", "", "database_sinner"); 
 
 $query = mysqli_query($con, "SELECT * FROM banda");
 $dados = mysqli_fetch_all($query, MYSQLI_ASSOC);
@@ -24,14 +24,14 @@ foreach ($dados as $key => $value) {
     <img src='".$value['img']."' style='height: 350px;width: 313;'>
     <div class='card-body' >
     <h4>".$value['id_banda']."</h4>
-    <h3>".$value['descricao']."</h3>
-    <a href='../includes/ExcluirBanda.php?idb='$key''><button>Excluir</button></a>
-     
-    </div>
+    <h3>".$value['descricao']."</h3>";
+    echo '<a href="../includes/ExcluirBanda.php?idb='.($value['id_banda']).'"><button>Excluir</button></a>';
+    echo '<a href="../pages/AlterarBanda.php?idb='.($value['id_banda']).'"><button>Atualizar</button></a>';  
+   echo" </div>
     </div>";
 }
 ?>
 </div>
 
-<input type='button' value='excluir' href=>
+
 </html>
