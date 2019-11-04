@@ -13,7 +13,7 @@
         echo "<script> alert('esse tipo de imagem n é suportada'); window.location.href = '../pages/CBanda.php'; </script>" ;
     }
     function insert($nome, $caminho ){
-        $con = mysqli_connect("localhost", "root", "root", "database_sinner"); 
+        $con = mysqli_connect("localhost", "root", "", "database_sinner"); 
         $query = mysqli_query($con,"INSERT INTO banda VALUES(DEFAULT, '$nome', '$caminho')");
         mysqli_close($con);
         echo "<script> alert('banda cadastrada :)'); window.location.href = '../pages/CBanda.php'; </script>" ;

@@ -17,7 +17,7 @@
                     
                     echo "<script> alert('esse tipo de imagem n é suportada'); window.location.href = '../pages/CBanda.php'; </script>" ;
                 }
-            $con = mysqli_connect("localhost", "root", "root", "database_sinner");
+            $con = mysqli_connect("localhost", "root", "", "database_sinner");
             $query = mysqli_query($con,"INSERT INTO album VALUES(DEFAULT, '$duracao', '$descricao', '$caminho', 1)");
             mysqli_close($con);
             header("Location: ../pages/VisualizarAlbum.php");

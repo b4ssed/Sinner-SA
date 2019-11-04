@@ -38,7 +38,7 @@
            </thead>
            <tbody>
              <?php
-             $con = mysqli_connect("localhost", "root", "root", "database_sinner");
+             $con = mysqli_connect("localhost", "root", "", "database_sinner");
              $query_album = mysqli_query($con, "SELECT * from album");
              $arrayAlbum = mysqli_fetch_all($query_album, MYSQLI_ASSOC);
              $array = $arrayAlbum;

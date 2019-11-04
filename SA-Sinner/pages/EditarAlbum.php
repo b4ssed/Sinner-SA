@@ -2,7 +2,7 @@
 if (isset($_GET['id'])) {
   $id = $_GET['id'];
 
-  $conexao = mysqli_connect('localhost','root','root','database_sinner');
+  $conexao = mysqli_connect('localhost','root','','database_sinner');
   $query = mysqli_query($conexao, "SELECT * FROM album WHERE id=$id");
   $arrayorc = mysqli_fetch_all($query, MYSQLI_ASSOC);
   mysqli_close ($conexao);
