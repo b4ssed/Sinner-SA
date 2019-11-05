@@ -38,14 +38,13 @@
                 echo "<script>alert('Não foi possível realizar o cadastro')</script>";
             }
         }
-
     ?>
     <div class="container">
             <div class="mx-auto" >
                   <center>
                       <h3>Cadastre-se</h3>
                   </center>
-                  <form action="../../includes/cadastroUsuario.php" method="post">
+                  <form action="../../includes/cadatros/cadastrarUsuario.php" method="post">
                       <div class="form-group">
                           <label for="usuario">Usuário</label>
                           <input type="text" class="form-control" name="usuario" max="45" required>

@@ -26,7 +26,7 @@
             <?php include("../../template/navbar.php"); ?>
             <div id="content" class="containerPrincipal">
             <div class="containerCadastro">
-                <form action="../../includes/AdcGenero.php" method="post">
+                <form action="../../includes/cadastros/cadastrarGenero.php" method="post">
                   <!-- area de campos do form -->
                   <hr />
                     <div class="form-group">

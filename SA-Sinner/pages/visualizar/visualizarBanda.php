@@ -6,7 +6,7 @@
     <title></title>
   </head>
   <body>
-    <div class="">
+    <div class="">      
       <?php
 
         $con = mysqli_connect("localhost", "root", "", "database_sinner");
@@ -30,8 +30,8 @@
             <div class='card-body' >
             <h4>".$value['id_banda']."</h4>
             <h3>".$value['descricao']."</h3>";
-            echo '<a href="../includes/ExcluirBanda.php?idb='.($value['id_banda']).'"><button>Excluir</button></a>';
-            echo '<a href="../pages/AlterarBanda.php?idb='.($value['id_banda']).'"><button>Atualizar</button></a>';
+            echo '<a href="../../includes/ExcluirBanda.php?idb='.($value['id_banda']).'"><button>Excluir</button></a>';
+            echo '<a href="../../pages/AlterarBanda.php?idb='.($value['id_banda']).'"><button>Atualizar</button></a>';
            echo" </div>
             </div>";
         }

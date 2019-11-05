@@ -20,22 +20,22 @@
     //Verificar Cadastro
     if (!preg_match("/^([a-zA-Z0-9]+)$/", $nome)){
         mysqli_close($con);
-        header("Location: ../pages/cadastros/cadastroUsuario.php?erro=200");
+        header("Location: ../../pages/cadastros/cadastroUsuario.php?erro=200");
     }else{
         if($dupEmail == $email){
             mysqli_close($con);
-            header("Location: ../pages/cadastros/cadastroUsuario.php?erro=201");
+            header("Location: ../../pages/cadastros/cadastroUsuario.php?erro=201");
         }elseif($dupUser == $nome){
             mysqli_close($con);
-            header("Location: ../pages/cadastros/cadastroUsuario.php?erro=202");
+            header("Location: ../../pages/cadastros/cadastroUsuario.php?erro=202");
         }else{
             $query_insert = mysqli_query($con,"INSERT INTO usuario VALUES(DEFAULT, '$nome', '$email', '$senha', NULL, 1)");
             if ($query_insert){
                 mysqli_close($con);
-                header("Location: ../pages/login.php");
+                header("Location: ../../pages/login.php");
             }else{
                 mysqli_close($con);
-                header("Location: ../pages/cadastros/cadastroUsuario.php?erro=203");
+                header("Location: ../../pages/cadastros/cadastroUsuario.php?erro=203");
             }
         }
     }

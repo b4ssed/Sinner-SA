@@ -7,7 +7,7 @@
   <body>
     <?php
       $id_musica = $_GET["id_musica"];
-       echo '<form action="../../includes/editar_musica.php?id='.$id_musica.'" enctype="multipart/form-data" method="post">'
+       echo '<form action="../../includes/editar/editarMusica.php?id='.$id_musica.'" enctype="multipart/form-data" method="post">'
     ?>
 
       <div>

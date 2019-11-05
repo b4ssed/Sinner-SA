@@ -16,7 +16,7 @@
 
       $ext = ($dados[0]['img']);
       echo("
-      <form action='../../includes/AlterarBanda.php?idb=$id' enctype='multipart/form-data'  method='post' >
+      <form action='../../includes/editar/editarBanda.php?idb=$id' enctype='multipart/form-data'  method='post' >
       <div class='card-deck'>
       <div class='card' style='width: 18rem;'>
       <img src='".$ext."' style='height: 350px;width: 313;'>

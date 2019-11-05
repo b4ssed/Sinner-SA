@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-$con = mysqli_connect("localhost", "root", "", "database_sinner"); 
+$con = mysqli_connect("localhost", "root", "", "database_sinner");
 $busca = mysqli_query($con,"SELECT * FROM musica");
 $arr = mysqli_fetch_all($busca, MYSQLI_ASSOC);
 
@@ -19,12 +19,12 @@ $arr = mysqli_fetch_all($busca, MYSQLI_ASSOC);
                     <th>Genero</th>
                     <th>Album</th>
                     <th>Ações</th>
-             
+
                 </tr>
             </thead>
             <tbody>
-                <tr> 
-                <?php 
+                <tr>
+                <?php
                 foreach($arr as $chave => $valor){
                     echo "<tr>";
                     echo "<td>".$valor['id_musica']."</td>";
@@ -38,12 +38,12 @@ $arr = mysqli_fetch_all($busca, MYSQLI_ASSOC);
                     echo '<a href="../pages/editor_musica.php?id_musica='.$valor['id_musica'].'"><button>Editar</button></a>';
                     echo "</td>";
                 }
-               
 
-                mysqli_close($con);
-                   ?> 	
+
+                    mysqli_close($con);
+                   ?>
                 </tr>
-             
+
             </tbody>
         </table>
 
