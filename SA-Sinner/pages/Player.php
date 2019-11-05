@@ -11,7 +11,7 @@
 
 
     </style>
-    <script>src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
    <style>
     .Fks{
       width: 100%;
@@ -36,12 +36,18 @@
   <li><a href="../css/music/3.mp3">Musica3</a></li>
 
   <script>
-    inicio();
+
+    $(document).ready(function(){
+      inicio();
+
+    });
+
+    
     function inicio(){
       var corrente = 0;
       var audio = $("#audio");
       var playlist = $("#playlist");
-      var tracks; = playlist.find("li a");
+      var tracks = playlist.find("li a");
       var len = tracks.length -1;
       audio[0].play();
       playlist.find("a").click(function(e){
