@@ -1,6 +1,7 @@
 <?php
     $descricao = $_POST["descricao"];
     $duracao = $_POST["duracao"];
+    $banda = $_POST["banda"];
     $destino= '../css/images/image'; 
     $ext = strtolower(substr($_FILES['imgband']['name'],-4));
         //verifica caratere especial
@@ -18,7 +19,7 @@
                     echo "<script> alert('esse tipo de imagem n é suportada'); window.location.href = '../pages/CBanda.php'; </script>" ;
                 }
             $con = mysqli_connect("localhost", "root", "", "database_sinner");
-            $query = mysqli_query($con,"INSERT INTO album VALUES(DEFAULT, '$duracao', '$descricao', '$caminho', 1)");
+            $query = mysqli_query($con,"INSERT INTO album VALUES(DEFAULT, '$duracao', '$descricao', '$caminho', '$banda')");
             mysqli_close($con);
             header("Location: ../pages/VisualizarAlbum.php");
        // }

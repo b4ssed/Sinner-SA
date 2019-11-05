@@ -3,7 +3,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Cadastro Gênero</title>
+        <title>Cadastro Album</title>
         <?php include("../template/styles.php"); ?>
         <style>
             .containerCadastro{
@@ -37,15 +37,34 @@
                     <div class="form-group">
                       <label for="descricao">Descrição</label>
                       <input type="text" class="form-control" name="descricao" placeholder="Descrição">
-                    </div>  
+                    </div>
+                    <div class="form-group">
+                        <select name="banda">
+                            <?php
+                                $con = mysqli_connect("localhost", "root", "", "database_sinner");
+
+                                //Selecionar Genero
+                                $query_banda = mysqli_query($con,"SELECT * FROM banda");
+                                $arrayBanda = mysqli_fetch_all($query_banda);
+                                $banda = $arrayBanda;
+                                            
+                                //Printar Select Genero
+                                foreach($banda as $key => $value){                
+                                    echo '<option value="'.$value[0].'">'.$value[1].'</option>';        
+                                }
+                                
+                                mysqli_close($con)
+                            ?>
+                    </div>
                     <div class="form-group">
                     <label>Imagem da banda</label>
                     <input type="file" name="imgband" >
                     </div> 
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
-                    <button type="reset" class="btn btn-default">Cancelar</button>
+                    
                 </form>
+                <button class="btn btn-default" type='button' onclick="window.location.href='visualizarAlbum.php'">Cancelar</button>
             </div>
         </div>
         <?php include("../template/js.php"); ?>

@@ -65,13 +65,34 @@ if (isset($_GET['id'])) {
                             echo '<input id="duracao" name="duracao" type="text" placeholder="duracao" class="form-control" required>';
                           }
                            ?>
+                            <label for="descricao">Banda</label>
+                            <br>
+                        <select name="banda">
+                            <?php
+                                $con = mysqli_connect("localhost", "root", "", "database_sinner");
+
+                                //Selecionar Genero
+                                $query_banda = mysqli_query($con,"SELECT * FROM banda");
+                                $arrayBanda = mysqli_fetch_all($query_banda);
+                                $banda = $arrayBanda;
+                                            
+                                //Printar Select Genero
+                                foreach($banda as $key => $value){                
+                                    echo '<option value="'.$value[0].'">'.$value[1].'</option>';       
+                                }
+                                
+                                mysqli_close($con)
+                            ?>
+                    </div>
                       <div class="form-group">
                     <label>Imagem da banda</label>
                     <input type="file" name="imgband" >
                     </div> 
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
-                    <button type="reset" class="btn btn-default">Cancelar</button>
+                    <a href="VisualizarAlbum.php">
+                    <button class="btn btn-default" type='button' onclick="window.location.href='visualizarAlbum.php'">Cancelar</button>
+                    </a>
                 </form>
             </div>
         </div>
