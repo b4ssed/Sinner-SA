@@ -25,14 +25,5 @@
 
       echo "<script> alert('esse tipo de imagem n é suportada'); window.location.href = '../../pages/cadastros/cadastroBanda.php'; </script>" ;
     }
-
-
-
-
-
-
-
-  header("Location: ../pages/VBanda.php");
-
-
+  header("Location: ../../pages/visualizar/visualizarBanda.php");
 ?>

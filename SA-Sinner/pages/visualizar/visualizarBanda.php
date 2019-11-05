@@ -6,7 +6,7 @@
     <title></title>
   </head>
   <body>
-    <div class="">      
+    <div class="">
       <?php
 
         $con = mysqli_connect("localhost", "root", "", "database_sinner");
@@ -24,16 +24,16 @@
         //conectado no band
         $a=0;
         echo "<div class='card-deck'>";
+        echo "<div class='card' style='width: 18rem;'>";
         foreach ($dados as $key => $value) {
-            echo "<div class='card' style='width: 18rem;'>
-            <img src='".$value['img']."' style='height: 350px;width: 313;'>
-            <div class='card-body' >
-            <h4>".$value['id_banda']."</h4>
-            <h3>".$value['descricao']."</h3>";
-            echo '<a href="../../includes/ExcluirBanda.php?idb='.($value['id_banda']).'"><button>Excluir</button></a>';
-            echo '<a href="../../pages/AlterarBanda.php?idb='.($value['id_banda']).'"><button>Atualizar</button></a>';
-           echo" </div>
-            </div>";
+          echo "<img src='".$value['img']."' style='height: 350px;width: 313;'>";
+          echo "<div class='card-body'>";
+          echo "<h4>".$value['id_banda']."</h4>";
+          echo "<h3>".$value['descricao']."</h3>";
+          echo '<a href="../../includes/excluir/excluirBanda.php?idb='.($value['id_banda']).'"><button>Excluir</button></a>';
+          echo '<a href="../../pages/editar/editarBanda.php?idb='.($value['id_banda']).'"><button>Atualizar</button></a>';
+          echo "</div>";
+          echo "</div>";
         }
       ?>
     </div>

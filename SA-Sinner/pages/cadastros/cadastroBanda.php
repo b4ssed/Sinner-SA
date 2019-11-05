@@ -9,7 +9,7 @@
             <?php include("../../template/navbar.php"); ?>
             <div class="containerPrincipal" id ='content'>
                 <div class="containerCadastro">
-                    <form action="includes/insert_CBanda.php" enctype="multipart/form-data"  method="post" >
+                    <form action="../../includes/cadastros/cadastroBanda.php" enctype="multipart/form-data"  method="post" >
                         <center>
                             <H1>Cadastro de Banda</H1>
                         </center>

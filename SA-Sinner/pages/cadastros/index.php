@@ -20,10 +20,7 @@
                       <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs">
                           <li class="nav-item">
-                            <a class="nav-link active" href="#">Cadastro</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link active" href="#">Visualizar</a>
+                            <a class="nav-link active" href="cadastroUsuario.php">Cadastro</a>
                           </li>
                         </ul>
                       </div>
@@ -41,7 +38,7 @@
                             <a class="nav-link active" href="cadastroBanda.php">Cadastro</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link active" href="#">Visualizar</a>
+                            <a class="nav-link active" href="../visualizar/visualizarBanda.php">Visualizar</a>
                           </li>
                         </ul>
                       </div>

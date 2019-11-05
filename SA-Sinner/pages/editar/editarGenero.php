@@ -14,7 +14,7 @@ if (isset($_GET['id'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Cadastro Gênero</title>
-        <?php include("../template/styles.php"); ?>
+        <?php include("../../template/styles.php"); ?>
         <style>
             .containerCadastro{
             width:400px;
@@ -35,7 +35,7 @@ if (isset($_GET['id'])) {
             <?php include("../../template/navbar.php"); ?>
             <div id="content" class="containerPrincipal">
             <div class="containerCadastro">
-                <form action="../../includes/EdtGenero.php" method="post">
+                <form action="../../includes/editar/editarGenero.php" method="post">
                   <!-- area de campos do form -->
                   <hr />
                   <?php

@@ -25,7 +25,7 @@
                 </ul>
             </li>
             <li class="">
-                <a href="../../../Sinner-SA/SA-Sinner/pages/cadastros/index.php">Cadastros</a>
+                <a href="../../../../Sinner-SA/SA-Sinner/pages/cadastros/index.php">Cadastros</a>
             </li>
         </ul>
     </nav>

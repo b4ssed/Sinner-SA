@@ -28,7 +28,7 @@ echo ($id_musica);
       $query = mysqli_query($con, "UPDATE musica SET dsmusica='$nmusica', duracao=$duracao, musica='$caminho', genero_id_genero=$genero, album_id_album=$album WHERE id_musica = '$id_musica'") or DIE(mysqli_error($con));
       mysqli_close($con);
       echo "<script> alert('Musica Atualizada com sucesso !'); window.location.href ='../../pages/cadastros/cadastroMusica.php'; </script>" ;
-      header("Location:../pages/visualizar_musica.php");
+      header("Location:../../pages/visualizar/visualizarMusica.php");
   }else{
 
       echo "<script> alert('Erro ao atualizar a musica '); window.location.href ='../../pages/cadastros/cadastroMusica.php'; </script>" ;
