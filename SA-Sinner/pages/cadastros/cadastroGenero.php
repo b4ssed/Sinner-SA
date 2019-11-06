@@ -33,8 +33,12 @@
                       <label for="descricao">Gênero</label>
                       <input type="text" class="form-control" name="descricao" placeholder="Gênero">
                     </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                    <button type="reset" class="btn btn-default">Cancelar</button>
+                    <div>
+                        <button type="submit" class="form-control btn btn-dark">Enviar</button>
+                    </div>
+                    <div>
+                        <button type="reset" class="form-control btn btn-dark">Cancelar</button>
+                    </div>
                 </form>
             </div>
         </div>
