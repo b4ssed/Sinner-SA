@@ -56,7 +56,7 @@
                       <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs">
                           <li class="nav-item">
-                            <a class="nav-link active" href="#">Cadastro</a>
+                            <a class="nav-link active" href="">Cadastro</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link active" href="#">Visualizar</a>

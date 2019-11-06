@@ -14,7 +14,7 @@ if (isset($_GET['id'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Cadastro Album</title>
-        <?php include("../template/styles.php"); ?>
+        <?php include("../../template/styles.php"); ?>
         <style>
             .containerCadastro{
             width:450px;
@@ -32,13 +32,13 @@ if (isset($_GET['id'])) {
     </head>
     <body>
         <?php
-            
+
         ?>
         <div class="wrapper">
-            <?php include("../template/navbar.php"); ?>
+            <?php include("../../template/navbar.php"); ?>
             <div id="content" class="containerPrincipal">
             <div class="containerCadastro">
-                <form action="../includes/EdtAlbum.php" enctype="multipart/form-data" method="post">
+                <form action="../../includes/editar/editarAlbum.php" enctype="multipart/form-data" method="post">
                   <!-- area de campos do form -->
                   <hr />
                   <?php
@@ -75,27 +75,27 @@ if (isset($_GET['id'])) {
                                 $query_banda = mysqli_query($con,"SELECT * FROM banda");
                                 $arrayBanda = mysqli_fetch_all($query_banda);
                                 $banda = $arrayBanda;
-                                            
+
                                 //Printar Select Genero
-                                foreach($banda as $key => $value){                
-                                    echo '<option value="'.$value[0].'">'.$value[1].'</option>';       
+                                foreach($banda as $key => $value){
+                                    echo '<option value="'.$value[0].'">'.$value[1].'</option>';
                                 }
-                                
+
                                 mysqli_close($con)
                             ?>
                     </div>
                       <div class="form-group">
                     <label>Imagem da banda</label>
                     <input type="file" name="imgband" >
-                    </div> 
+                    </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                     <a href="VisualizarAlbum.php">
-                    <button class="btn btn-default" type='button' onclick="window.location.href='visualizarAlbum.php'">Cancelar</button>
+                    <button class="btn btn-default" type='button' onclick="window.location.href='../visualizar/visualizarAlbum.php'">Cancelar</button>
                     </a>
                 </form>
             </div>
         </div>
-        <?php include("../template/js.php"); ?>
+        <?php include("../../template/js.php"); ?>
     </body>
 </html>
