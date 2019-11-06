@@ -6,21 +6,35 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <title></title>
-        <?php include("template/styles.php"); ?>
-         
+        <?php
+          session_start();
+          if (isset($_SESSION['usuario'])) {
+            include("template/styles.php");
+          }
+        ?>
+
     </head>
     <body>
         <div class="wrapper">
-            <?php include("template/navbar.php"); ?>
+            <?php
+              if (isset($_SESSION['usuario'])) {
+                include("template/navbar.php");
+              }
+            ?>
             <div id="content">
-                <?php include("includes/btnNavbar.php"); ?>               
-                <?php 
-                    session_start();
-                    print_r($_SESSION["usuario"]);
+                <?php
+                  if (isset($_SESSION['usuario'])) {
+                    include("includes/btnNavbar.php");
+                  }else{
+                    include 'pages/newUser.php';
+                  }
                 ?>
             </div>
         </div>
-        <?php include("template/js.php"); ?>
+        <?php
+          if (isset($_SESSION['usuario'])) {
+            include("template/js.php");
+          }
+        ?>
     </body>
 </html>
-
