@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `database_sinner`.`usuario` (
   `img` VARCHAR(100) NULL,
   `tipo_usuario_id_tipo_usuario` INT NOT NULL,
   PRIMARY KEY (`id_usuario`),
-  INDEX `fk_tb_usuario_tb_tipo_usuario_idx` (`tipo_usuario_id_tipo_usuario` ASC) VISIBLE,
+  INDEX `fk_tb_usuario_tb_tipo_usuario_idx` (`tipo_usuario_id_tipo_usuario` ASC) ,
   CONSTRAINT `fk_tb_usuario_tb_tipo_usuario`
     FOREIGN KEY (`tipo_usuario_id_tipo_usuario`)
     REFERENCES `database_sinner`.`tipo_usuario` (`id_tipo_usuario`)
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `database_sinner`.`banda` (
   `img` VARCHAR(100) NULL,
   `genero_id_genero` INT NOT NULL,
   PRIMARY KEY (`id_banda`),
-  INDEX `fk_banda_genero1_idx` (`genero_id_genero` ASC) VISIBLE,
+  INDEX `fk_banda_genero1_idx` (`genero_id_genero` ASC) ,
   CONSTRAINT `fk_banda_genero1`
     FOREIGN KEY (`genero_id_genero`)
     REFERENCES `database_sinner`.`genero` (`id_genero`)
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `database_sinner`.`album` (
   `img` VARCHAR(100) NULL,
   `banda_id_banda` INT NOT NULL,
   PRIMARY KEY (`id_album`),
-  INDEX `fk_tb_album_tb_banda1_idx` (`banda_id_banda` ASC) VISIBLE,
+  INDEX `fk_tb_album_tb_banda1_idx` (`banda_id_banda` ASC) ,
   CONSTRAINT `fk_tb_album_tb_banda1`
     FOREIGN KEY (`banda_id_banda`)
     REFERENCES `database_sinner`.`banda` (`id_banda`)
@@ -104,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `database_sinner`.`musica` (
   `musica` VARCHAR(100) NOT NULL,
   `album_id_album` INT NOT NULL,
   PRIMARY KEY (`id_musica`),
-  INDEX `fk_tb_musica_tb_album1_idx` (`album_id_album` ASC) VISIBLE,
+  INDEX `fk_tb_musica_tb_album1_idx` (`album_id_album` ASC) ,
   CONSTRAINT `fk_tb_musica_tb_album1`
     FOREIGN KEY (`album_id_album`)
     REFERENCES `database_sinner`.`album` (`id_album`)
@@ -123,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `database_sinner`.`noticia` (
   `img` VARCHAR(100) NULL,
   `genero_id_genero` INT NOT NULL,
   PRIMARY KEY (`id_noticia`),
-  INDEX `fk_tb_noticia_tb_genero1_idx` (`genero_id_genero` ASC) VISIBLE,
+  INDEX `fk_tb_noticia_tb_genero1_idx` (`genero_id_genero` ASC) ,
   CONSTRAINT `fk_tb_noticia_tb_genero1`
     FOREIGN KEY (`genero_id_genero`)
     REFERENCES `database_sinner`.`genero` (`id_genero`)
@@ -139,8 +139,8 @@ CREATE TABLE IF NOT EXISTS `database_sinner`.`usuario_genero` (
   `id_usuario_genero` INT NOT NULL AUTO_INCREMENT,
   `usuario_id_usuario` INT NOT NULL,
   `genero_id_genero` INT NOT NULL,
-  INDEX `fk_usuario_has_genero_genero1_idx` (`genero_id_genero` ASC) VISIBLE,
-  INDEX `fk_usuario_has_genero_usuario1_idx` (`usuario_id_usuario` ASC) VISIBLE,
+  INDEX `fk_usuario_has_genero_genero1_idx` (`genero_id_genero` ASC) ,
+  INDEX `fk_usuario_has_genero_usuario1_idx` (`usuario_id_usuario` ASC) ,
   PRIMARY KEY (`id_usuario_genero`),
   CONSTRAINT `fk_usuario_has_genero_usuario1`
     FOREIGN KEY (`usuario_id_usuario`)
