@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Tiny, opensource, Bootstrap WYSIWYG rich text editor from MindMup</title>
+    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="opensource rich wysiwyg text editor jquery bootstrap execCommand html5" />
     <meta name="description" content="This tiny jQuery Bootstrap WYSIWYG plugin turns any DIV into a HTML5 rich text editor" />
@@ -17,6 +17,27 @@
     <script src="external/google-code-prettify/prettify.js"></script>
 		<link href="index.css" rel="stylesheet">
     <script src="bootstrap-wysiwyg.js"></script>
+    <script>
+    
+      $(document).ready(function() {
+      var conteudo_div = $('#editor').html();
+       
+       function salvar() {
+        <?php
+           $variavelphp='<script>document.write(conteudo_div)</script>';
+
+            $con = mysqli_connect("localhost", "root", "", "database_sinner");
+            $query = mysqli_query($con,"INSERT INTO noticia VALUES(DEFAULT, 'sasdfkgfdg','$variavelphp,'sdfsdf','DFGD')");
+            mysqli_close($con);
+        
+        ?>
+       }
+      
+    });
+   
+    
+    
+    </script>
   </head>
   <body>
 
@@ -137,7 +158,7 @@
   });
 </script>
 
-
+<input type="button" onclick=salvar()  value="salvar">
 
 
 
