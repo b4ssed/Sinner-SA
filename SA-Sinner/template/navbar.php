@@ -11,21 +11,45 @@
                 <a href="../../../../Sinner-SA/SA-Sinner/index.php">Home</a>
             </li>
             <li>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Páginas</a>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Cadastrar</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
                     <li>
-                        <a href="../pages/CadastroGenero.php">Cadastro Genero</a>
+                        <a href="../../../../Sinner-SA/SA-Sinner/pages/visualizar/visualizarGenero.php">Visualizar Genero</a>
                     </li>
                     <li>
-                        <a href="../pages/visualizargenero.php">Visualizar Genero</a>
+                        <a href="../../../../Sinner-SA/SA-Sinner/pages/visualizar/visualizarAlbum.php">Visualizar Album</a>
                     </li>
                     <li>
-                        <a href="#">Página 3</a>
+                        <a href="../../../../Sinner-SA/SA-Sinner/pages/visualizar/visualizarBanda.php">Visualizar Banda</a>
+                    </li>
+                    <li>
+                        <a href="../../../../Sinner-SA/SA-Sinner/pages/visualizar/visualizarMusica.php">Visualizar Musica</a>
                     </li>
                 </ul>
             </li>
+
             <li class="">
                 <a href="../../../../Sinner-SA/SA-Sinner/pages/cadastros/index.php">Cadastros</a>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Editar</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="../../../../Sinner-SA/SA-Sinner/pages/editar/editarGenero.php">Visualizar Genero</a>
+                    </li>
+                    <li>
+                        <a href="../../../../Sinner-SA/SA-Sinner/pages/editar/editarAlbum.php">Visualizar Album</a>
+                    </li>
+                    <li>
+                        <a href="../../../../Sinner-SA/SA-Sinner/pages/editar/editarBanda.php">Visualizar Banda</a>
+                    </li>
+                    <li>
+                        <a href="../../../../Sinner-SA/SA-Sinner/pages/editar/editarMusica.php">Visualizar Musica</a>
+                    </li>
+                    <li>
+                        <a href="../../../../Sinner-SA/SA-Sinner/pages/editar/editarMusica.php">Visualizar Usuário</a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </nav>

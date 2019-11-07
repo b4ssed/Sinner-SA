@@ -1,7 +1,7 @@
 <?php
 if (isset($_GET['id'])) {
   $id = $_GET['id'];
-
+  echo $id;
   $conexao = mysqli_connect('localhost','root','','database_sinner');
   $query = mysqli_query($conexao, "SELECT * FROM album WHERE id=$id");
   $arrayorc = mysqli_fetch_all($query, MYSQLI_ASSOC);
@@ -15,28 +15,15 @@ if (isset($_GET['id'])) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Cadastro Album</title>
         <?php include("../../template/styles.php"); ?>
-        <style>
-            .containerCadastro{
-            width:450px;
-            padding: 15px;
-            margin-top: 50px;
-            margin-left: 30%;
-            border-radius: 10px;
-            background: #fff;
-            }
-            .containerPrincipal{
-            background: #b2bec3;
-            }
-
-        </style>
     </head>
     <body>
         <?php
 
         ?>
         <div class="wrapper">
-            <?php include("../../template/navbar.php"); ?>
-            <div id="content" class="containerPrincipal">
+            <?php include("../../includes/btnNavbar.php"); ?>
+            <!-- / -->
+            <div id="content" class="container">
             <div class="containerCadastro">
                 <form action="../../includes/editar/editarAlbum.php" enctype="multipart/form-data" method="post">
                   <!-- area de campos do form -->

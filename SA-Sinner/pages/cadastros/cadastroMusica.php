@@ -9,7 +9,7 @@
   <body>
     <div class="wrapper">
       <?php include("../../template/navbar.php"); ?>
-    <div id="content" class="containerPrincipal">
+    <div id="content" class="container">
     <div class="containerCadastro">
       <form action="../../includes/cadastros/cadastrarMusica.php" enctype="multipart/form-data" method="post">
      <!-- area de campos do form -->
@@ -69,7 +69,12 @@
       ?>
       </select>
       </div>
-      <button name="enviar" type="submit" class="form-control btn btn-dark">Cadastrar</button>
+      <div class="form-group">
+          <button type="submit" class="form-control btn btn-dark">Enviar</button>
+        </div>
+         <div>
+          <button class="form-control btn btn-dark" type='button' onclick="window.location.href='index.php'">Cancelar</button>
+        </div>
     </form>
   </body>
 </html>
