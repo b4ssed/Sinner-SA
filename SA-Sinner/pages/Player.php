@@ -23,6 +23,14 @@
 <body>
 
 
+<?php
+	$con = mysqli_connect("localhost","root","","database_sinner");
+	$query = mysqli_query($con, "SELECT * FROM musica");
+	$arr = mysqli_fetch_all($query, MYSQLI_ASSOC);
+
+  
+?>
+
 <div class="Fks">
   <audio id="audio" preload="auto" tadindex="0" controls="">
     <source src="">
@@ -31,9 +39,16 @@
 
 
 <ul id="playlist"> 
-  <li><a href="../css/music/1.mp3">Musica1</a></li>
+ <!-- <li><a href="../css/music/1.mp3">Musica1</a></li>
   <li><a href="../css/music/2.mp3">Musica2</a></li>
   <li><a href="../css/music/3.mp3">Musica3</a></li>
+-->
+
+<?php
+    foreach ($arr as $key => $value) {
+      echo "<li><a href='".$value["musica"]."'>".$value["dsmusica"]."</a></li>";
+    }
+ ?>
 
   <script>
 
