@@ -51,7 +51,7 @@ ENGINE = InnoDB;
 -- Table `database_sinner`.`genero`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `database_sinner`.`genero` (
-  `id_genero` INT NOT NULL,
+  `id_genero` INT NOT NULL AUTO_INCREMENT,
   `descricao` VARCHAR(25) NOT NULL,
   PRIMARY KEY (`id_genero`))
 ENGINE = InnoDB;
@@ -98,7 +98,7 @@ ENGINE = InnoDB;
 -- Table `database_sinner`.`musica`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `database_sinner`.`musica` (
-  `id_musica` INT NOT NULL,
+  `id_musica` INT NOT NULL AUTO_INCREMENT,
   `descricao` VARCHAR(30) NOT NULL,
   `duracao` CHAR(8) NOT NULL,
   `musica` VARCHAR(100) NOT NULL,
@@ -117,7 +117,7 @@ ENGINE = InnoDB;
 -- Table `database_sinner`.`noticia`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `database_sinner`.`noticia` (
-  `id_noticia` INT NOT NULL,
+  `id_noticia` INT NOT NULL AUTO_INCREMENT,
   `descricao` VARCHAR(50) NOT NULL,
   `conteudo` MEDIUMTEXT NOT NULL,
   `img` VARCHAR(100) NULL,
