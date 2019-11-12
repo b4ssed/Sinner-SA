@@ -14,33 +14,44 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 		<script src="external/jquery.hotkeys.js"></script>
     <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-    <script src="external/google-code-prettify/prettify.js"></script>
+   
 		<link href="index.css" rel="stylesheet">
     <script src="bootstrap-wysiwyg.js"></script>
-    <script>
     
-      $(document).ready(function() {
-      var conteudo_div = $('#editor').html();
-       
-       function salvar() {
-        <?php
-           $variavelphp='<script>document.write(conteudo_div)</script>';
-
-            $con = mysqli_connect("localhost", "root", "", "database_sinner");
-            $query = mysqli_query($con,"INSERT INTO noticia VALUES(DEFAULT, 'sasdfkgfdg','$variavelphp,'sdfsdf','DFGD')");
-            mysqli_close($con);
-        
-        ?>
-       }
-      
-    });
    
+
+
     
-    
-    </script>
+
+
   </head>
   <body>
+  <script>
+    
+    $(document).ready(function() {
+    var conteudo_div = $('#editor').html();
+     
+    $('#buttonteste').click(function(){
+  
+  alert("asa");
+  <?php
+  echo"alert(conteudo_div)";
+  $variavelphp = 'aa';
+  
+  $con = mysqli_connect("localhost", "root", "", "database_sinner");
+  $query = mysqli_query($con,"INSERT INTO noticia VALUES(DEFAULT, 'testee','$variavelphp','teste',1)");
+  mysqli_close($con);
+            
+?>
 
+
+}); 
+    
+        }); 
+        
+      
+ </script>
+   
 <div class="container">
   <div class="hero-unit">
   <div class="pull-right">
@@ -157,9 +168,9 @@
     window.prettyPrint && prettyPrint();
   });
 </script>
+<a href="aa.php?text:<script>document.write(conteudo_div);</script>">
+<button id="buttontestea" >enviar</button>
+</a>
 
-<input type="button" onclick=salvar()  value="salvar">
-
-
-
+</body>
 </html>
