@@ -13,7 +13,7 @@ if (isset($_GET['id'])) {
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Cadastro Gênero</title>
+        <title>Editar Gênero</title>
         <?php include("../../template/styles.php"); ?>
         <style>
             .containerCadastro{
@@ -44,7 +44,7 @@ if (isset($_GET['id'])) {
                   }
                   ?>
                     <div class="form-group">
-                      <label for="descricao">Gênero</label>
+                      <H2>Gênero</H2>
                       <?php
                           if (isset($arrayorc[0]['descricao'])) {
                             echo '<input id="descricao" name="descricao" type="text" value="'.$arrayorc[0]["descricao"].'" class="form-control" required>';
@@ -54,8 +54,12 @@ if (isset($_GET['id'])) {
 
                            ?>
                     </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                    <button type="reset" class="btn btn-default">Cancelar</button>
+                    <div class="form-group">
+                        <button type="submit" class="form-control btn btn-dark">Enviar</button>
+                    </div>
+                    <div>
+                        <button class="form-control btn btn-dark" type='button' onclick="window.location.href='index.php'">Cancelar</button>
+                    </div>
                 </form>
             </div>
         </div>

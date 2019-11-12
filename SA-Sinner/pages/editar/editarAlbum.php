@@ -1,9 +1,8 @@
 <?php
 if (isset($_GET['id'])) {
   $id = $_GET['id'];
-  echo $id;
   $conexao = mysqli_connect('localhost','root','','database_sinner');
-  $query = mysqli_query($conexao, "SELECT * FROM album WHERE id=$id");
+  $query = mysqli_query($conexao, "SELECT * FROM album WHERE id_album=$id");
   $arrayorc = mysqli_fetch_all($query, MYSQLI_ASSOC);
   mysqli_close ($conexao);
 }
