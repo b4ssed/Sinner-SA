@@ -8,7 +8,7 @@
     <meta name="description" content="This tiny jQuery Bootstrap WYSIWYG plugin turns any DIV into a HTML5 rich text editor" />
     
     
-    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
 		<link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
@@ -32,17 +32,24 @@
     var conteudo_div = $('#editor').html();
      
     $('#buttonteste').click(function(){
-  
-  alert("asa");
-  <?php
-  echo"alert(conteudo_div)";
-  $variavelphp = 'aa';
-  
-  $con = mysqli_connect("localhost", "root", "", "database_sinner");
-  $query = mysqli_query($con,"INSERT INTO noticia VALUES(DEFAULT, 'testee','$variavelphp','teste',1)");
-  mysqli_close($con);
-            
-?>
+      var conteudo_div = $('#editor').html();
+        $.ajax({
+          url: "http://localhost/Sinner-SA/SA-Sinner/testebanco/aa.php",
+          type: "POST",
+          data: "conteudo="+conteudo_div,
+          dataType: "html"
+
+      }).done(function(resposta) {
+          console.log(resposta);
+
+      }).fail(function(jqXHR, textStatus ) {
+          console.log("Request failed: " + textStatus);
+
+      }).always(function() {
+          console.log("completou");
+      });
+        
+       
 
 
 }); 
@@ -62,6 +69,14 @@
 	<hr/>
 	
 	<div id="alerts"></div>
+
+
+
+
+
+
+
+
     <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
       <div class="btn-group">
         <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font"><i class="icon-font"></i><b class="caret"></b></a>
@@ -168,9 +183,9 @@
     window.prettyPrint && prettyPrint();
   });
 </script>
-<a href="aa.php?text:<script>document.write(conteudo_div);</script>">
-<button id="buttontestea" >enviar</button>
-</a>
+
+<button id="buttonteste" data-target="#submitt" >enviar</button>
+
 
 </body>
 </html>

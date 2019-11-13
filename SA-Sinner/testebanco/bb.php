@@ -2,7 +2,6 @@
     $nome = $_POST['TNoticia'];
     $conteudo = $_POST['CNoticia'];
     $GENERO=$_POST['genero'];
-   
 
 
     $destino= '../css/imagesnoticia/image'; 
@@ -15,7 +14,7 @@
     $con = mysqli_connect("localhost", "root", "", "database_sinner"); 
         $query = mysqli_query($con,"INSERT INTO noticia VALUES(DEFAULT, '$nome', '00','$caminho',$GENERO)");
         mysqli_close($con);
-        echo "<script> alert('digite a noticia :)'); window.location.href = '../../../testebanco/testen.php'; </script>" ;
+        echo "<script> alert('digite a noticia :)'); window.location.href = 'vnoticia.php'; </script>" ;
 
     }else{
         
