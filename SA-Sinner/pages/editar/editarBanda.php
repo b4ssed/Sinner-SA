@@ -14,7 +14,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <link rel="stylesheet" href="../../css/styleCadastro.css">
-            <title>Cadastro Album</title>
+            <title>Editar Banda</title>
             <?php include("../../template/styles.php"); ?>
         </head>
         <body>
@@ -47,8 +47,13 @@
                           <input type="file" name="imgband" >
                         </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                        <button class="btn btn-default" type='button' onclick="window.location.href='../visualizar/visualizarBanda.php'">Cancelar</button>
+                        <div class="">
+                          <button type="submit"class="form-control btn btn-dark">Enviar</button>
+                        </div>
+                        <div class="">
+                          <button class="form-control btn btn-dark" type='button' onclick="window.location.href='../visualizar/visualizarBanda.php'">Cancelar</button>
+                        </div>
+
                     </form>
                 </div>
             </div>

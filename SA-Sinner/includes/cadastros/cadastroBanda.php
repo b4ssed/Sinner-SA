@@ -18,6 +18,6 @@
         $query = mysqli_query($con,"INSERT INTO banda VALUES(DEFAULT, '$nome', '$caminho', '$genero')");
         mysqli_close($con);
         echo "<script> alert('banda cadastrada :)'); window.location.href = '../../pages/cadastros/cadastroBanda.php'; </script>" ;
-
+        header("Location: ../../pages/visualizar/visualizarBanda.php");
 
 ?>
