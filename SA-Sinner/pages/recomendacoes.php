@@ -6,6 +6,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title></title>
     <style media="screen">
+    label{
+      margin-left: 5px;
+    }
     .container{
       width: 100vw;
       height: 100vh;
@@ -21,56 +24,57 @@
     }
     </style>
     <!-- //https://getbootstrap.com.br/docs/4.1/components/list-group/ -->
-    <!-- <?php
+    <?php
       $con = mysqli_connect("localhost", "root", "", "database_sinner");
       $query_genero = mysqli_query($con,"SELECT COUNT(id_genero) AS result FROM genero;");
       $array_num = mysqli_fetch_assoc($query_genero);
       $arraynum = json_encode($array_num);
 
-      print_r($arraynum);
-      echo "<script>";
-      echo "$(document).ready(function(){";
-      echo "$('input[type='checkbox']').click(function(){";
-      echo 'if($(this).prop("checked") == true){';
-      echo '$("#1").addClass("active");';
-      echo '}';
-      echo 'else if($(this).prop("checked") == false){';
-      echo '$("#1").removeClass("active");';
-      echo '}';
-      echo '});';
-      echo '});';
-      echo '</script>';
-    ?> -->
+    ?>
     <script>
       $(document).ready(function(){
         $('input[type="checkbox"]').click(function(){
             if($(this).prop("checked") == true){
-                $("#1").addClass("active");
+              $("#a").addClass("active");
+              $("#btnSubmit").removeClass("disabled");
             }
             else if($(this).prop("checked") == false){
-                $("#1").removeClass("active");
+                $("#a").removeClass("active");
+                $("#btnSubmit").addClass("disabled");
             }
         });
+        // $("#checkboxActive").checked(function(){
+        //
+        // });
       });
+
+
+
     </script>
   </head>
   <body>
     <div class="container">
       <div class="mx-auto">
-        <div class="list-group" id="list-tab" role="tablist">1
-        <?php
-          $con = mysqli_connect("localhost", "root", "", "database_sinner");
-          $query_genero = mysqli_query($con,"SELECT * FROM genero");
-          $array_g = mysqli_fetch_all($query_genero, MYSQLI_ASSOC);
-          $arrayGenero = $array_g;
-          foreach ($arrayGenero as $key => $value) {
-            echo '<a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#lista-home" role="tab" aria-controls="home">Home</a>';
-            echo '<a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Perfil</a>';
-            echo '<a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#lista-mensagens" role="tab" aria-controls="messages">Mensagens</a>';
-            echo '<a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#lista-configuracoes" role="tab" aria-controls="settings">Configurações</a>';
-          }
-        ?>
-        </div>
+        <form class="" action="../includes/cadastros/cadastroRecomendacoes.php" method="post">
+          <div class="list-group" id="list-tab" role="tablist">
+            <ul class="list-group">
+              <li class="list-group-item"><center>Selecione um genero</center></li>
+            <?php
+              $con = mysqli_connect("localhost", "root", "", "database_sinner");
+              $query_genero = mysqli_query($con,"SELECT * FROM genero");
+              $array_g = mysqli_fetch_all($query_genero, MYSQLI_ASSOC);
+              $arrayGenero = $array_g;
+              foreach ($arrayGenero as $key => $value) {
+
+                echo '<li class="list-group-item" id="">';
+                echo '<input type="checkbox" name="'.$value['id_genero'].'" value="'.$value["descricao"].'">'.$value["descricao"].'</label>';
+                echo '</li>';
+              }
+            ?>
+            </ul>
+          </div>
+          <li class="list-group-item"><center><button type="submit" class="btn btn-dark disabled" id="btnSubmit">Enviar</button></center></li>
+        </form>
       </div>
     </div>
     <?php include("../template/js.php"); ?>
