@@ -5,19 +5,22 @@
     <style>
       ul{list-style: none;padding: 0px}
       a{text-decoration: none;color: #444;font-family: arial}
-      li:hover{background: #eee;border-bottom: solid 1px #f60;}
+      li:hover{background: #eee;border-bottom: solid 1px #692273;}
       li{width: 20%; padding: 5px; border-bottom: solid 1px #ccc;}
-      .active a{color:#f60; padding-left: 1px; font-style: italic;}
+      .active a{color:#692273; padding-left: 1px; font-style: italic;}
 
 
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
    <style>
-    .Fks{
+    footer{
       width: 100%;
-      height: 20%;
-      background: WhiteSmoke   ;
+      background: WhiteSmoke;
+      bottom = 0;
+      left = 0;
+      position = fixed;
     }
+
     </style> 
 </head>
 <body>
@@ -30,20 +33,9 @@
 
   
 ?>
-
-<div class="Fks">
-  <audio id="audio" preload="auto" tadindex="0" controls="">
-    <source src="">
-  </audio>
-</div>
-
+<!-- Lista de musica -->
 
 <ul id="playlist"> 
- <!-- <li><a href="../css/music/1.mp3">Musica1</a></li>
-  <li><a href="../css/music/2.mp3">Musica2</a></li>
-  <li><a href="../css/music/3.mp3">Musica3</a></li>
--->
-
 <?php
     foreach ($arr as $key => $value) {
       echo "<li><a href='".$value["musica"]."'>".$value["dsmusica"]."</a></li>";
@@ -95,6 +87,17 @@
   </script>
 
 </ul>
+
+<!-- Player-->
+
+<footer>
+  <div class="Fks">
+    <audio id="audio" preload="auto" tadindex="0" controls="">
+      <source src="">
+    </audio>
+  </div>
+</footer>
+
 
 
 

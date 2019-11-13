@@ -31,7 +31,7 @@
                                
                 //Printar Select Genero
                 foreach($generos as $key => $value){                
-                    echo '<option value="'.$value[0]["id_genero"].'">'.$value[1]["descricao"].'</option>';       
+                    echo '<option value="'.$value[0].'">'.$value[1].'</option>';       
                 }
                 
                 mysqli_close($con)
@@ -52,7 +52,7 @@
         
         //Printar Select Album
         foreach($albuns as $key => $value){                
-            echo '<option value="'.$value[0]["id_album"].'">'.$value[2]["descricao"].'</option>';       
+            echo '<option value="'.$value[0].'">'.$value[2].'</option>';       
         }
 
         mysqli_close($con)
