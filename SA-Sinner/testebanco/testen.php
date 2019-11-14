@@ -36,7 +36,7 @@
         $.ajax({
           url: "http://localhost/Sinner-SA/SA-Sinner/testebanco/aa.php",
           type: "POST",
-          data: "conteudo="+conteudo_div,
+          data: "conteudo="+conteudo_div+"&id="+<?= $_GET['idb']?>,
           dataType: "html"
 
       }).done(function(resposta) {
