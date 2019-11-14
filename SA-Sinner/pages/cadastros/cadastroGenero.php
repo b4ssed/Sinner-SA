@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Cadastro Gênero</title>
-        <?php include("../template/styles.php"); ?>
+        <?php include("../../template/styles.php"); ?>
         <style>
             .containerCadastro{
             width:400px;
@@ -21,23 +21,27 @@
         </style>
     </head>
     <body>
-    
+
         <div class="wrapper">
-            <?php include("../template/navbar.php"); ?>
+            <?php include("../../template/navbar.php"); ?>
             <div id="content" class="containerPrincipal">
-            <div class="containerCadastro">        
-                <form action="../includes/AdcGenero.php" method="post">
+            <div class="containerCadastro">
+                <form action="../../includes/cadastros/cadastrarGenero.php" method="post">
                   <!-- area de campos do form -->
                   <hr />
                     <div class="form-group">
                       <label for="descricao">Gênero</label>
                       <input type="text" class="form-control" name="descricao" placeholder="Gênero">
                     </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                    <button type="reset" class="btn btn-default">Cancelar</button>
+                    <div>
+                        <button type="submit" class="form-control btn btn-dark">Enviar</button>
+                    </div>
+                    <div>
+                        <button type="reset" class="form-control btn btn-dark">Cancelar</button>
+                    </div>
                 </form>
             </div>
         </div>
-        <?php include("../template/js.php"); ?>
+        <?php include("../../template/js.php"); ?>
     </body>
 </html>

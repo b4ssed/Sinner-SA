@@ -4,7 +4,7 @@ session_start();
 $login = isset($_POST["login"]) ? $_POST["login"] : "";
 $senha = isset($_POST["senha"]) ? $_POST["senha"] : "";
 
-$conexao = mysqli_connect('localhost','root','root','database_sinner');
+$conexao = mysqli_connect('localhost','root','','database_sinner');
 $acao = mysqli_query($conexao, "SELECT * FROM usuario WHERE nome = '$login' AND senha = '$senha' " ); //Pesquisando no banco `-`
 
 
