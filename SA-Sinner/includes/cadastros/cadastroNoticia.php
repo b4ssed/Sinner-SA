@@ -14,7 +14,7 @@
     $con = mysqli_connect("localhost", "root", "", "database_sinner"); 
         $query = mysqli_query($con,"INSERT INTO noticia VALUES(DEFAULT, '$nome', '00','$caminho',$GENERO)");
         mysqli_close($con);
-        echo "<script> alert('digite a noticia :)'); window.location.href = 'vnoticia.php'; </script>" ;
+        echo "<script> alert('digite a noticia :)'); window.location.href = '../../pages/visualizar/visualizarNoticia.php'; </script>" ;
 
     }else{
         

@@ -1,5 +1,5 @@
 <html>
-<form action="bb.php?aa='1'" enctype="multipart/form-data"  method="post" >
+<form action="../../includes/cadastros/cadastroNoticia.php?aa='1'" enctype="multipart/form-data"  method="post" >
  <H1>Cadastro de Notícia</H1>
 <label >Titulo da Notícia:</label>
 <input type="text" name="TNoticia" required >
