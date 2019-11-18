@@ -34,7 +34,7 @@
     $('#buttonteste').click(function(){
       var conteudo_div = $('#editor').html();
         $.ajax({
-          url: "http://localhost/Sinner-SA/SA-Sinner/testebanco/aa.php",
+          url: "http://localhost/Sinner-SA/SA-Sinner/includes/editar/editarNoticia.php",
           type: "POST",
           data: "conteudo="+conteudo_div+"&id="+<?= $_GET['idb']?>,
           dataType: "html"

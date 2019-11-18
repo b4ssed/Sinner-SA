@@ -30,7 +30,7 @@ foreach ($dados as $key => $value) {
     
     <h3>".$value['descricao']."</h3>";
     echo '<a href="../includes/ExcluirBanda.php?idb='.($value['id_noticia']).'"><button>Excluir</button></a>';
-    echo '<a href="testen.php?idb='.($value['id_noticia']).'"><button>adicionar noticia</button></a>';  
+    echo '<a href="../editar/noticias/editarnoticia.php?idb='.($value['id_noticia']).'"><button>adicionar noticia</button></a>';  
    echo" </div>
     </div>
     </a>";
