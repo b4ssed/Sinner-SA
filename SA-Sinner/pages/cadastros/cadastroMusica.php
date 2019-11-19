@@ -9,7 +9,7 @@
   <body>
     <div class="wrapper">
       <?php include("../../template/navbar.php"); ?>
-    <div id="content" class="containerPrincipal">
+    <div id="content" class="container">
     <div class="containerCadastro">
       <form action="../../includes/cadastros/cadastrarMusica.php" enctype="multipart/form-data" method="post">
      <!-- area de campos do form -->
@@ -29,26 +29,6 @@
       <input type="file" name="music" class="form-control">
     </div>
     <div>
-      <label>Gênero</label>
-        <select name="genero">
-            <?php
-                $con = mysqli_connect("localhost", "root", "", "database_sinner");
-
-                //Selecionar Genero
-                $query_genero = mysqli_query($con,"SELECT * FROM genero");
-                $arrayGenero = mysqli_fetch_all($query_genero);
-                $generos = $arrayGenero;
-
-                //Printar Select Genero
-                foreach($generos as $key => $value){
-                    echo '<option value="'.$value[0]["id_genero"].'">'.$value[1]["descricao"].'</option>';
-                }
-
-                mysqli_close($con)
-            ?>
-        </select>
-    </div>
-    <div>
       <label>Álbum</label>
       <select name="album">
       <?php
@@ -62,14 +42,19 @@
 
           //Printar Select Album
           foreach($albuns as $key => $value){
-              echo '<option value="'.$value[0]["id_album"].'">'.$value[2]["descricao"].'</option>';
+              echo '<option value="'.$value[0].'">'.$value[2].'</option>';
           }
 
           mysqli_close($con)
       ?>
       </select>
       </div>
-      <button name="enviar" type="submit" class="form-control btn btn-dark">Cadastrar</button>
+      <div class="form-group">
+          <button type="submit" class="form-control btn btn-dark">Enviar</button>
+        </div>
+         <div>
+          <button class="form-control btn btn-dark" type='button' onclick="window.location.href='index.php'">Cancelar</button>
+        </div>
     </form>
   </body>
 </html>

@@ -1,41 +1,65 @@
-<!DOCTYPE html>
-<?php
-$con = mysqli_connect("localhost", "root", "", "database_sinner");
-$busca = mysqli_query($con,"SELECT * FROM musica");
-$arr = mysqli_fetch_all($busca, MYSQLI_ASSOC);
-
-?>
 <html>
-<head>
-    <title>Visualizar Musicas</title>
-</head>
-<body>
-<table class="table">
-            <thead>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Visualizar Gênero</title>
+        <?php include("../../template/styles.php"); ?>
+        <style>
+            .containerCadastro{
+            width:800px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #fff;
+            }
+            .containerPrincipal{
+            background: #b2bec3;
+            }
+
+        </style>
+    </head>
+    <body>
+    <?php
+      session_start();
+     ?>
+     <div class="wrapper">
+     <?php include("../../template/navbar.php"); ?>
+       <div id="content" class="containerPrincipal">
+        <div class="containerCadastro">
+         <table class="table" style="background:#1e272e; color:white">
+           <thead>
+             <tr>
+               <th scope="col">Música</th>
+             </tr>
+           </thead>
             <tr class="">
-                    <th>#</th>
                     <th>Nome</th>
                     <th>Duração</th>
-                    <th>Genero</th>
                     <th>Album</th>
-                    <th>Ações</th>
-
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                 <?php
+
+                $con = mysqli_connect("localhost", "root", "", "database_sinner");
+                $busca = mysqli_query($con,"SELECT * FROM musica");
+
+
+                $arr = mysqli_fetch_all($busca, MYSQLI_ASSOC);
                 foreach($arr as $chave => $valor){
+                    $busca2 = mysqli_query($con,"SELECT descricao FROM album WHERE id_album=$valor[album_id_album]");
+                    $array = mysqli_fetch_all($busca2, MYSQLI_ASSOC);
+
+
                     echo "<tr>";
-                    echo "<td>".$valor['id_musica']."</td>";
-                    echo "<td>".$valor['dsmusica']."</td>";
+                    echo "<td>".$valor['descricao']."</td>";
                     echo "<td>".$valor['duracao']."</td>";
-                    echo "<td>".$valor['album_id_album']."</td>";
-                    echo "<td>".$valor['genero_id_genero']."</td>";
+                    echo "<td>".$array[0]["descricao"]."</td>";
                     echo "<td>";
-                    echo '<a href="../../includes/excluir/excluirMusica.php?id_musica='.$valor["id_musica"].'"><button class="btn btn-primary">Excluir</button></a>';
-                    echo "<td>";
-                    echo '<a href="../../pages/editar/editarMusica.php?id_musica='.$valor['id_musica'].'"><button>Editar</button></a>';
+                    echo '<a href="../../includes/excluir/excluirMusica.php?id_musica='.$valor["id_musica"].'"><button class="btn btn-danger"">Excluir</button></a>';
+                    echo '<a href="../../pages/editar/editarMusica.php?id_musica='.$valor['id_musica'].'"><button class="btn btn-dark">Editar</button></a>';
                     echo "</td>";
                 }
 
@@ -46,6 +70,6 @@ $arr = mysqli_fetch_all($busca, MYSQLI_ASSOC);
 
             </tbody>
         </table>
-
+        <?php include("../../template/js.php"); ?>
 </body>
 </html>

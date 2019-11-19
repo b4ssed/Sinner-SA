@@ -7,7 +7,7 @@
     <body>
         <div class="wrapper">
             <?php include("../../template/navbar.php"); ?>
-            <div class="containerPrincipal" id ='content'>
+            <div class="container" id ='content'>
                 <div class="containerCadastro">
                     <form action="../../includes/cadastros/cadastroBanda.php" enctype="multipart/form-data"  method="post" >
                     <center>        
@@ -17,15 +17,36 @@
                             <label for="name">Nome da banda</label>
                             <input type="text" class="form-control" name="name" required >
                         </div>
-                        
                         <div class="form-group">
-                            <label for="imgband">Imagem da banda</label>
-                            <center>
-                            <input type="file"  name="imgband" >
-                            </center>
+                            <label for="name">Gênero</label>
+                            <select name="genero">
+                                <?php
+                                    $con = mysqli_connect("localhost", "root", "", "database_sinner");
+
+                                    //Selecionar Genero
+                                    $query_genero = mysqli_query($con,"SELECT * FROM genero");
+                                    $arrayGenero = mysqli_fetch_all($query_genero);
+                                    $genero = $arrayGenero;
+
+                                    //Printar Select Genero
+                                    foreach($genero as $key => $value){
+                                        echo '<option value="'.$value[0].'">'.$value[1].'</option>';
+                                    }
+
+                                    mysqli_close($con)
+                                ?>
+                            </select>
                         </div>
-                        
-                        <button type="submit" class="btn btn-dark form-control">Enviar</button>
+                        <div class="form-group">
+                            <label for="imgband">Imagem da banda:</label>
+                            <input type="file"  name="imgband" >
+                        </div>
+                        <div class="form-group">
+                        <button type="submit" class="form-control btn btn-dark">Enviar</button>
+                    </div>
+                    <div>
+                        <button class="form-control btn btn-dark" type='button' onclick="window.location.href='index.php'">Cancelar</button>
+                    </div>
                     </form>
                 </div>
             </div>
