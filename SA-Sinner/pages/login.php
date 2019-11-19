@@ -47,7 +47,14 @@
               </center>
             </div>
           </div>
-          <form class action="../actions/validarLogin.php" method="post">
+          <?php
+            if (isset($_GET['newUser'])) {
+              echo '<form action="../actions/validarLogin.php?newUser=1" method="post">';
+            }else {
+              echo '<form action="../actions/validarLogin.php" method="post">';
+            }
+          ?>
+          <form action="../actions/validarLogin.php" method="post">
             <div class="row">
               <div class="col-sm">
                 <div class="form-group">
