@@ -46,7 +46,7 @@
                   echo '<form class="" action="../../includes/excluir/excluirGenero.php? method="post">';
                   echo '<td><button type="submit" class="btn btn-danger" name="excluirGenero" value='.$value["id_genero"].'>Excluir Item';
                   echo '</form>';
-                  echo '<a href="../../pages/editar/rditarGenero.php?id='.$value["id_genero"].'">	<button class="btn btn-dark">Editar</button></a></td>';
+                  echo '<a href="../../pages/editar/editarGenero.php?id='.$value["id_genero"].'">	<button class="btn btn-dark">Editar</button></a></td>';
                   echo "</tr>";
                 }
               }
@@ -59,6 +59,6 @@
 
 
     </div>
-      <?php include("../../template/js.php"); ?>
+      <?php include("../template/js.php"); ?>
     </body>
-</html>
+ </html>
