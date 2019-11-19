@@ -1,18 +1,24 @@
 <html>
-<form action="../../includes/cadastros/cadastroNoticia.php?aa='1'" enctype="multipart/form-data"  method="post" >
- <H1>Cadastro de Notícia</H1>
-<label >Titulo da Notícia:</label>
-<input type="text" name="TNoticia" required >
-    <?php include("../../template/styles.php"); ?>
-    <link rel="stylesheet" href="../../css/styleCadastro.css">
+
+    <head>
+        <?php include("../../template/styles.php"); ?>
+        <link rel="stylesheet" href="../../css/styleCadastro.css">
+    </head>
+   
     <div class="wrapper">
-    <?php include("../../template/navbar.php"); ?>
-    <div id="content" class="container">
-    <div class="containerCadastro">
-    <hr />
+        <?php include("../../template/navbar.php"); ?>
+            <div id="content" class="container">
+                <div class="containerCadastro">
+                    <hr/>
+    <form action="../../includes/cadastros/cadastroNoticia.php" enctype="multipart/form-data"  method="post" >
                   <center>
                   <H2>Cadastro de Noticia</H2>
                   </center>
+                  <div>
+                  <label>Titulo da notícia:</label>
+                  <input type="text" id="TNoticia" required pattern={*,3} class="form-control" name="TNoticia" placeholde="Lançamento de novo album" >
+                  </div>
+                  <br>
                   <div class="form-group">
                     <label>Genero:</label>
                 <select name="genero" id='genero'>
@@ -35,7 +41,7 @@
     <label>Imagem da Noticia.</label>
     <input type="file" name="imgband" >
     </div>
-    <button  id='submitt' type="submit" class="form-control btn btn-dark"> noticia</button>
+    <button  id='submitt' type="submit" class="form-control btn btn-dark">enviar</button>
 </form>
 </div>
 </div>
