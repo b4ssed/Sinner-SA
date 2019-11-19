@@ -1,7 +1,7 @@
 <?php
  $con = mysqli_connect("localhost", "root", "", "database_sinner");
- $id=$_GET['idb'];
- $name=$_POST['name'];
+ $id= $_POST['id'];
+ $name=$_POST['descricao'];
 
  echo $name;
 
