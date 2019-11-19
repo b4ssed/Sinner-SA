@@ -56,10 +56,10 @@
                       <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs">
                           <li class="nav-item">
-                            <a class="nav-link active" href="">Cadastro</a>
+                            <a class="nav-link active" href="cadastroAlbum.php">Cadastro</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link active" href="#">Visualizar</a>
+                            <a class="nav-link active" href="../visualizar/visualizarAlbum.php">Visualizar</a>
                           </li>
                         </ul>
                       </div>
@@ -74,10 +74,10 @@
                       <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs">
                           <li class="nav-item">
-                            <a class="nav-link active" href="#">Cadastro</a>
+                            <a class="nav-link active" href="cadastroGenero.php">Cadastro</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link active" href="#">Visualizar</a>
+                            <a class="nav-link active" href="../visualizar/visualizarGenero.php">Visualizar</a>
                           </li>
                         </ul>
                       </div>
@@ -95,10 +95,10 @@
                       <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs">
                           <li class="nav-item">
-                            <a class="nav-link active" href="#">Cadastro</a>
+                            <a class="nav-link active" href="cadastroMusica.php">Cadastro</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link active" href="#">Visualizar</a>
+                            <a class="nav-link active" href="../visualizar/visualizarMusica.php">Visualizar</a>
                           </li>
                         </ul>
                       </div>
@@ -113,10 +113,10 @@
                       <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs">
                           <li class="nav-item">
-                            <a class="nav-link active" href="#">Cadastro</a>
+                            <a class="nav-link active" href="cadastroNoticia.php">Cadastro</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link active" href="#">Visualizar</a>
+                            <a class="nav-link active" href="../visualizar/visualizarNoticia.php">Visualizar</a>
                           </li>
                         </ul>
                       </div>

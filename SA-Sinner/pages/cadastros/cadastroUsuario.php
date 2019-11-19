@@ -2,29 +2,9 @@
     <head>
         <?php include("../../template/styles.php"); ?>
         <link rel="stylesheet" href="../../css/styleCadastro.css">
-        <style media="screen">
-        .container{
-          width: 100vw;
-          height: 100vh;
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-        }
-        .mx-auto{
-          background: white;
-          width: 30%;
-          border-radius: 5px;
-        }
-        .form-group{
-          margin: 5px;
-        }
-        body{
-          background: grey;
-        }
-        </style>
     </head>
     <body>
+    <?php include("../../template/navbar.php"); ?>
     <?php
         if (isset($_GET["erro"])){
             $erro = $_GET["erro"];
@@ -39,8 +19,8 @@
             }
         }
     ?>
-    <div class="container">
-            <div class="mx-auto" >
+    <div id="content" class="container">
+            <div class="containerCadastro">
                   <center>
                       <h3>Cadastre-se</h3>
                   </center>

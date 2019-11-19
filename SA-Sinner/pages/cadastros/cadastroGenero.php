@@ -5,36 +5,28 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Cadastro Gênero</title>
         <?php include("../../template/styles.php"); ?>
-        <style>
-            .containerCadastro{
-            width:400px;
-            padding: 15px;
-            margin-top: 50px;
-            margin-left: 30%;
-            border-radius: 10px;
-            background: #fff;
-            }
-            .containerPrincipal{
-            background: #b2bec3;
-            }
-
-        </style>
+        <link rel="stylesheet" href="../../css/styleCadastro.css"> 
     </head>
     <body>
 
         <div class="wrapper">
             <?php include("../../template/navbar.php"); ?>
-            <div id="content" class="containerPrincipal">
+            <div id="content" class="container">
             <div class="containerCadastro">
                 <form action="../../includes/cadastros/cadastrarGenero.php" method="post">
                   <!-- area de campos do form -->
                   <hr />
                     <div class="form-group">
-                      <label for="descricao">Gênero</label>
-                      <input type="text" class="form-control" name="descricao" placeholder="Gênero">
+                        <h2>Cadastro Gênero</h2>
+                      <input type="text" class="form-control" name="descricao" placeholder="Pagodinho">
                     </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                    <button type="reset" class="btn btn-default">Cancelar</button>
+                    <div class="form-group">
+                        <button type="submit" class="form-control btn btn-dark">Enviar</button>
+                    </div>
+                    <div>
+                        <button class="form-control btn btn-dark" type='button' onclick="window.location.href='index.php'">Cancelar</button>
+                    </div>
+                    </div>
                 </form>
             </div>
         </div>
