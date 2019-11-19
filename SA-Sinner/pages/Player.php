@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
     <title>Player</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,URL"></script>
+    <script src="https://unpkg.com/plyr@3"></script>
+    <link rel="stylesheet" href="https://unpkg.com/plyr@3/dist/plyr.css"/>
+    
     <style>
       ul{list-style: none;padding: 0px}
       a{text-decoration: none;color: #444;font-family: arial}
@@ -11,15 +16,16 @@
 
 
     </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-   <style>
-    footer{
-      width: 100%;
-      background: WhiteSmoke;
-      bottom = 0;
-      left = 0;
-      position = fixed;
-    }
+    <style>
+      .Fks{
+        width: 100%;
+        background: black;
+        bottom = 0;
+        left = 0;
+        position = fixed;
+      }
+
+
 
     </style> 
 </head>
@@ -46,6 +52,11 @@
 
     $(document).ready(function(){
       inicio();
+
+      const player = new Plyr('audio', {});
+
+      // Expose player so it can be used from the console
+      window.player = player;
 
     });
 
@@ -91,10 +102,17 @@
 <!-- Player-->
 
 <footer>
-  <div class="Fks">
-    <audio id="audio" preload="auto" tadindex="0" controls="">
+  <div >
+  <img  src="http://www.pngmart.com/files/3/Play-Button-PNG-Transparent-Image.png" style="width:200px"/>
+    <!--audio class="Fks" id="audio" preload="auto" tadindex="0" controls  >
       <source src="">
-    </audio>
+    </audio-->
+
+	<audio  id="audio" crossorigin playsinline>
+		<source src="">
+	</audio>
+
+    
   </div>
 </footer>
 
