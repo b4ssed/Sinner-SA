@@ -10,6 +10,7 @@
     $caminho="../../css/images/image".$new_name;
     echo $caminho;
     move_uploaded_file($_FILES['imgband']['tmp_name'], $destino.$new_name);
+    insert($nome, $caminho);
     }else{
 
         echo "<script> alert('esse tipo de imagem não é suportada'); window.location.href = '../../pages/cadastros/cadastroBanda.php'; </script>" ;
