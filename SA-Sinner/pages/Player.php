@@ -44,7 +44,7 @@
 <ul id="playlist"> 
 <?php
     foreach ($arr as $key => $value) {
-      echo "<li><a href='".$value["musica"]."'>".$value["dsmusica"]."</a></li>";
+      echo "<li><a href='".$value["musica"]."'>".$value["descricao"]."</a></li>";
     }
  ?>
 
@@ -103,7 +103,6 @@
 
 <footer>
   <div >
-  <img  src="http://www.pngmart.com/files/3/Play-Button-PNG-Transparent-Image.png" style="width:200px"/>
     <!--audio class="Fks" id="audio" preload="auto" tadindex="0" controls  >
       <source src="">
     </audio-->
