@@ -22,17 +22,17 @@
         mysqli_close($con);
         header("Location: ../../pages/cadastros/cadastroUsuario.php?erro=200");
     }else{
-        if($dupEmail == $email){
-            mysqli_close($con);
-            header("Location: ../../pages/cadastros/cadastroUsuario.php?erro=201");
-        }elseif($dupUser == $nome){
+        if($dupUser == $nome){
             mysqli_close($con);
             header("Location: ../../pages/cadastros/cadastroUsuario.php?erro=202");
+        }elseif($dupEmail == $email){
+            mysqli_close($con);
+            header("Location: ../../pages/cadastros/cadastroUsuario.php?erro=201");
         }else{
             $query_insert = mysqli_query($con,"INSERT INTO usuario VALUES(DEFAULT, '$nome', '$email', '$senha', NULL, 1)");
             if ($query_insert){
                 mysqli_close($con);
-                header("Location: ../../pages/login.php");
+                header("Location: ../../pages/login.php?newUser=1");
             }else{
                 mysqli_close($con);
                 header("Location: ../../pages/cadastros/cadastroUsuario.php?erro=203");

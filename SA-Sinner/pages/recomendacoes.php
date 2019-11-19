@@ -35,6 +35,17 @@
         $('#myCheckbox').click(function () {
           $('#myButton').prop("disabled", !$("#myCheckbox").prop("checked"));
         });
+        // $('input[type="checkbox"]').click(function(){
+        //     if($(this).prop("checked") == true){
+        //       $("#myButton").prop("disabled"  );
+        //       // $("#1").addClass("active");
+        //       // $("#2").addClass("active");
+        //       // $("#3").addClass("active");
+        //       // $("#4").addClass("active");
+        //       // $("#btnSubmit").removeClass("disabled");
+        //       // $('#cu').prop('disabled', false);
+        //      }
+        // });
       });
       //   $('#myCheckbox').click(function (){
       //       let rabo = $('#myCheckbox').val();
@@ -42,22 +53,13 @@
       //     $(`#${rabo}`).addClass("active");
       //   });
       // });
-      //
-      //
-      //
-      //
-      //
-      //
-      //   $('input[type="checkbox"]').click(function(){
-      //       if($(this).prop("checked") == true){
-      //         $("#1").addClass("active");
-      //         $("#2").addClass("active");
-      //         $("#3").addClass("active");
-      //         $("#4").addClass("active");
-      //
-      //         // $("#btnSubmit").removeClass("disabled");
-      //         $('#cu').prop('disabled', false);
-      //        }
+
+
+
+
+
+
+
       //       else if($(this).prop("checked") == false){
       //           $("#1").removeClass("active");
       //           $("#2").removeClass("active");
@@ -67,11 +69,11 @@
       //           // $("#btnSubmit").addClass("disabled");
       //           $('#cu').prop('disabled', true);
       //       }
-      //   });
+      //
       //     });
-
-      let gya = "shausha"
-      console.log(`seu cu, ${gya} asjgdsjhsvgdfsjdfhksahfgksajhdgkjhsadjhg`);
+      //
+      // let gya = "shausha"
+      // console.log(`seu cu, ${gya} asjgdsjhsvgdfsjdfhksahfgksajhdgkjhsadjhg`);
     </script>
   </head>
   <body>
@@ -80,14 +82,14 @@
         <form class="" action="../includes/cadastros/cadastroRecomendacoes.php" method="post">
           <div class="list-group" id="list-tab" role="tablist">
             <ul class="list-group">
-              <li class="list-group-item"><center>Selecione um genero</center></li>
+              <li class="list-group-item"><center>Selecione no <b>mínimo um</b> gênero</center></li>
             <?php
               $con = mysqli_connect("localhost", "root", "", "database_sinner");
               $query_genero = mysqli_query($con,"SELECT * FROM genero");
               $array_g = mysqli_fetch_all($query_genero, MYSQLI_ASSOC);
               $arrayGenero = $array_g;
               foreach ($arrayGenero as $key => $value) {
-                echo '<li class="campinho list-group-item" id="'.$value['id_genero'].'">';
+                echo '<li class="campinho list-group-item" id="a">';
                 echo '<input type="checkbox" id="myCheckbox" name="'.$value['id_genero'].'" value="'.$value['descricao'].'">'.$value["descricao"].'</label>';
                 echo '</li>';
               }
