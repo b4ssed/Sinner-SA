@@ -14,7 +14,11 @@ $array = mysqli_fetch_all($acao, MYSQLI_ASSOC);//Criando um array, formatando o 
 
 if (!empty($array)) { // VERIFICA se tem algo dentro do array (se tiver dentro do array significa que ele achou o usuario dentro do banco)
     $_SESSION["usuario"]  = $array;//Inserindo os dados do usuário em uma sessão
-    header("location:../index.php");
+    if (isset($_GET["newUser"])) {
+      header("location:../pages/recomendacoes.php");
+    }else {
+      header("location:../index.php");
+    }
  } else {
     header("location:../pages/login.php?erro=100");
  }

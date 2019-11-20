@@ -8,7 +8,7 @@
     $ext = strtolower(substr($_FILES['music']['name'],-4));
     if($ext==".mp3"||$ext==".wma"||$ext==".aac"||$ext==".ogg"){
         $new_name = $_FILES['music']['name'];
-        $caminho="../css/music/".$new_name;
+        $caminho="../../css/music/".$new_name;
     // echo $caminho;
     // print_r($_FILES['music']);
         move_uploaded_file($_FILES['music']['tmp_name'], $caminho);
