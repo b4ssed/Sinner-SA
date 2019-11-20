@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Visualizar Gênero</title>
+        <link rel="stylesheet" href="../../css/styleCadastro.css">
         <?php include("../../template/styles.php"); ?>
         <style>
             .containerCadastro{
@@ -28,15 +29,24 @@
      ?>
      <div class="wrapper">
      <?php include("../../template/navbar.php"); ?>
-       <div id="content" class="containerPrincipal">
+       <div id="content" class="container">
         <div class="containerCadastro">
-         <table class="table" style="background:#1e272e; color:white">
+         <table class="table table-dark">
            <thead>
              <tr>
                <th scope="col">Album</th>
+               <th scope="col"></th>
+               <th scope="col"></th>
+               <th scope="col"></th>
              </tr>
            </thead>
            <tbody>
+             <tr>
+               <th>Imagem</th>
+               <td>Título</td>
+               <td>Time</td>
+               <td>Opções</td>
+             </tr>
              <?php
              $con = mysqli_connect("localhost", "root", "", "database_sinner");
              $query_album = mysqli_query($con, "SELECT * from album");
