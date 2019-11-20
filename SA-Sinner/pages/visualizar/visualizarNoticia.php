@@ -13,8 +13,16 @@
             .containerPrincipal{
             background: #b2bec3;
             }
+            img {
+            width:100px;
+            }
 
         </style>
+        <div class="wrapper">
+     <?php include("../../template/navbar.php"); ?>
+       <div id="content" class="containerPrincipal">
+        <div class="containerCadastro">
+         <table class="table" style="background:#1e272e; color:white">
     </head>
     <thead>
              <tr>
@@ -46,16 +54,10 @@ echo "<div class='card-deck'>";
             echo"<tr>";
             echo "<td><img src=".$value['img']."></td>";
             echo "<td>".$value['descricao']."</td>";
-            echo "<a href='jornal.php?id=".($value['id_noticia'])."'> <div class='card' style='width: 18rem;'>
-            
-            <div class='card-body' >
-            
-            <h3>".$value['descricao']."</h3>";
-            echo '<a href="../includes/ExcluirBanda.php?idb='.($value['id_noticia']).'"><button>Excluir</button></a>';
-            echo '<a href="../editar/noticias/editarnoticia.php?idb='.($value['id_noticia']).'"><button>adicionar noticia</button></a>';  
-        echo" </div>
-            </div>
-            </a>";
+            echo"<td>".$dados2[0]['descricao']."</td>";
+            echo ' <td><a href="../../includes/excluir/excluirnoticia.php?idb='.($value['id_noticia']).'"><button class="btn btn-danger">Excluir</button></a>';
+            echo '<a href="../editar/noticias/editarnoticia.php?idb='.($value['id_noticia']).'"><button class="btn btn-dark" >adicionar noticia</button></a></td>';  
+        
         }
 ?>
 </div>
