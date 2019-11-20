@@ -10,6 +10,6 @@
             </li>
         </ul>
         <center>
-          <a href="../../../Sinner-SA/SA-Sinner/actions/encerrarSessao.php"><button class='btn btn-danger'>Log-off</button></a>
+          <a href="../../../../Sinner-SA/SA-Sinner/actions/encerrarSessao.php"><button class='btn btn-danger'>Log-off</button></a>
         </center>
     </nav>
