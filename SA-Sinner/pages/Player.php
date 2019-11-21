@@ -6,7 +6,7 @@
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,URL"></script>
     <script src="https://unpkg.com/plyr@3"></script>
     <link rel="stylesheet" href="https://unpkg.com/plyr@3/dist/plyr.css"/>
-    
+
     <style>
       ul{list-style: none;padding: 0px}
       a{text-decoration: none;color: #444;font-family: arial}
@@ -27,7 +27,7 @@
 
 
 
-    </style> 
+    </style>
 </head>
 <body>
 
@@ -37,14 +37,14 @@
 	$query = mysqli_query($con, "SELECT * FROM musica");
 	$arr = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
-  
+
 ?>
 <!-- Lista de musica -->
 
-<ul id="playlist"> 
+<ul id="playlist">
 <?php
     foreach ($arr as $key => $value) {
-      echo "<li><a href='".$value["musica"]."'>".$value["dsmusica"]."</a></li>";
+      echo "<li><a href='".$value["musica"]."'>".$value["descricao"]."</a></li>";
     }
  ?>
 
@@ -60,7 +60,7 @@
 
     });
 
-    
+
     function inicio(){
       var corrente = 0;
       var audio = $("#audio");
@@ -112,7 +112,7 @@
 		<source src="">
 	</audio>
 
-    
+
   </div>
 </footer>
 
@@ -138,6 +138,6 @@
   <source src="../css/music/Kalimba.mp3" type="audio/mp3" />
 
 </audio> -->
-    
+
 </body>
 </html>

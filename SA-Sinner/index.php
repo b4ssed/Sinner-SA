@@ -18,15 +18,16 @@
         <div class="wrapper">
             <?php
               if (isset($_SESSION['usuario'])) {
-                include("template/navbar.php");
+                include("template/sidebar.php");
               }
             ?>
             <div id="content">
                 <?php
                   if (isset($_SESSION['usuario'])) {
-                    include("includes/btnNavbar.php");
+                    include("template/navbar.php");
+                    include("pages/home.php");
                   }else{
-                    include 'pages/newUser.php';
+                    include('pages/newUser.php');
                   }
                 ?>
             </div>

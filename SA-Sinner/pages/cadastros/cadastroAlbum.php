@@ -5,12 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Cadastro Album</title>
         <?php include("../../template/styles.php"); ?>
-        <link rel="stylesheet" href="../../css/styleCadastro.css"> 
+        <link rel="stylesheet" href="../../css/styleCadastro.css">
     </head>
     <body>
 
         <div class="wrapper">
-            <?php include("../../template/navbar.php"); ?>
+            <?php include("../../template/sidebar.php"); ?>
             <div id="content" class="container">
             <div class="containerCadastro">
                 <form action="../../includes/cadastros/cadastrarAlbum.php" enctype="multipart/form-data" method="post">
@@ -58,7 +58,7 @@
                         <button class="form-control btn btn-dark" type='button' onclick="window.location.href='index.php'">Cancelar</button>
                     </div>
                 </form>
-            </div>   
+            </div>
             </div>
         </div>
         <?php include("../../template/js.php"); ?>

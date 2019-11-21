@@ -27,7 +27,7 @@
 
      ?>
      <div class="wrapper">
-     <?php include("../../template/navbar.php"); ?>
+     <?php include("../../template/sidebar.php"); ?>
        <div id="content" class="containerPrincipal">
         <div class="containerCadastro">
          <table class="table" style="background:#1e272e; color:white">
