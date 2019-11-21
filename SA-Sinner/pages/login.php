@@ -75,14 +75,15 @@
             </div>
             <div class="row">
               <div class="col-sm">
+                <center>
                 <a href="cadastros/cadastroUsuario.php"><small class="form-text text-muted">Cadastre-se</small></a>
+              </center>
               </div>
               <div class="col-sm">
-                <a href="#"><small class="form-text text-muted">Esqueci minha senha</small></a>
-              </div>
-            </div>
-              <div class="col-sm">
-                <button type="submit" class="btn btn-dark" >Entrar</button>
+                <br>
+                <center>
+                <button type="submit" class="btn btn-light" >Entrar</button>
+              </center>
               </div>
           </form>
         </div>

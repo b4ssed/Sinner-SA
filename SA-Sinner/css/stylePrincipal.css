@@ -1,0 +1,28 @@
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+a{
+  margin-top: 4px;
+}
+.mx-auto{
+  width: 50%;
+  height: 38%;
+  border-radius: 10px;
+  background: #272640bb;
+  color: #fff;
+}
+small{
+  color: #fff;
+}
+body{
+  background-image: url("images/fones.jpg");
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+}
