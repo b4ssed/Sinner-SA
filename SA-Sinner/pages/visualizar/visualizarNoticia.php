@@ -56,7 +56,8 @@ echo "<div class='card-deck'>";
             echo "<td>".$value['descricao']."</td>";
             echo"<td>".$dados2[0]['descricao']."</td>";
             echo ' <td><a href="../../includes/excluir/excluirnoticia.php?idb='.($value['id_noticia']).'"><button class="btn btn-danger">Excluir</button></a>';
-            echo '<a href="../editar/noticias/editarnoticia.php?idb='.($value['id_noticia']).'"><button class="btn btn-dark" >adicionar noticia</button></a></td>';  
+            echo '<a href="../editar/noticias/editarnoticia.php?idb='.($value['id_noticia']).'"><button class="btn btn-dark" >adicionar noticia</button></a>';
+            echo '<a href="jornal.php?id='.($value['id_noticia']).'"><button class="btn btn-dark" >ver noticia</button></a></td>';  
         
         }
 ?>
