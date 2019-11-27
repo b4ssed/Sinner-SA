@@ -15,6 +15,7 @@
           height: 100px;
           background-color: purple;
           background-position: center;
+          }
         </style>
     <title></title>
   </head>
