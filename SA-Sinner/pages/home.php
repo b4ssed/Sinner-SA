@@ -20,16 +20,14 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-
 </style>
 <div class="conteudo">
-  <?php  ?>
   <div class="card">
     <div class="card-header">
       Destaque
     </div>
     <div class="card-body">
-      <a href="#">
+      <a href="visualizarNoticiaUsuario.php?id=<?php echo ($arrayNoticia[0]['id_noticia'])?>">
         <h5 class="card-title"><?php echo ($arrayNoticia[0]["descricao"]); ?></h5>
         <p class="card-text" style=""><?php echo ($arrayNoticia[0]["conteudo"]); ?></p>
       </a>
@@ -41,8 +39,8 @@
     <?php
       foreach ($arrayNoticia as $key => $value) {
         echo '<div class="col-4">';
-        echo '<a href="#!">';
-        echo '<div class="card  card-accent-primary wider">';
+        echo '<a href="visualizarNoticiaUsuario.php?id='.$value['id_noticia'].'">';
+        echo '<div class="card card-accent-primary wider">';
         //<!-- Card image -->
         echo '<div class="view view-cascade overlay">';
         echo '<div class="mask rgba-white-slight"></div>';
@@ -57,6 +55,9 @@
         echo '</div>';
         echo '</a>';
         echo "</div>";
+        if ($key == 7){
+          break;
+        }
       }
     ?>
   </div>
@@ -66,12 +67,14 @@
     <?php
       foreach ($arrayBanda as $key => $value) {
         echo '<div class="col">';
-          echo '<div class="card" style="width: 13rem;">';
-            echo '<img class="card-img-top" src="'.$value[''].'" alt="Imagem de capa do card">';
-            echo '<div class="card-body">';
-              echo '<p class="card-text">Cage the Elephant - Melophobia</p>';
-            echo '</div>';
-          echo '</div>';
+        echo '<a href="visualizarBandaUsuario.php?id='.$value['id_banda'].'">';
+        echo '<div class="card" style="width: 13rem;">';
+        echo '<img class="card-img-top" src="'.$value['img'].'" alt="Imagem de capa do card">';
+        echo '<div class="card-body">';
+        echo '<p class="card-text">'.$value['descricao'].'</p>';
+        echo '</div>';
+        echo '</div>';
+        echo '</a>';
         echo '</div>';
         if ($key == 7){
           break;
@@ -81,55 +84,21 @@
   </div>
     <br>
     <h1>Álbuns</h1>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item"><b>Destaque</b></li>
-    </ul>
-    <div class="row">
-      <div class="col-4">
-        <div class="card card-cascade wider">
-          <!-- Card image -->
-          <div class="view view-cascade overlay">
-            <img  class="card-img-top" src="css/images/image07melophobia.jpg" alt="Card image cap">
-            <a href="#!">
-              <div class="mask rgba-white-slight"></div>
-            </a>
-          </div>
-          <!-- Card content -->
-          <div class="card-body card-body-cascade text-center pb-0">
-            <!-- Title -->
-            <h4 class="card-title"><strong>Alison Belmont</strong></h4>
-            <!-- Subtitle -->
-            <h5 class="blue-text pb-2"><strong>Graffiti Artist</strong></h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-8">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item disabled">Melophobia</li>
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-        </div>
-      </div>
-    </div>
     <br>
     <div class="row">
       <?php
         foreach ($arrayAlbum as $key => $value) {
           echo '<div class="col">';
-            echo '<div class="card" style="width: 13rem;">';
-              echo '<img class="card-img-top" src="css/images/image05swampthing.jpg" alt="Imagem de capa do card">';
-              echo '<div class="card-body">';
-                echo '<p class="card-text">Cage the Elephant - Melophobia</p>';
-              echo '</div>';
-            echo '</div>';
+          echo '<a href="visualizarNoticiaUsuario.php?id='.$value['id_album'].'">';
+          echo '<div class="card" style="width: 13rem;">';
+          echo '<img class="card-img-top" src="'.$value['img'].'" alt="Imagem de capa do card">';
+          echo '<div class="card-body">';
+          echo '<p class="card-text">'.$value['descricao'].'';
           echo '</div>';
-          if ($key == 3){
+          echo '</div>';
+          echo "</a>";
+          echo '</div>';
+          if ($key == 7){
             break;
           }
         }
