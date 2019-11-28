@@ -53,18 +53,22 @@
         inicio();
         const player = new Plyr('audio', {});
         window.player = player;
+        
       });
-
+      
+      var indexmusic;
       function inicio(){
         var corrente = 0;
         var audio = $("#audio");
         var playlist = $("#playlist");
+        var totalmusics= playlist.find("li").length;
         var tracks = playlist.find("li a");
         var len = tracks.length -1;
-        audio[0].play();
-        playlist.find("a").click(function(e){
+        
+        playlist.find("a").click(function(e){debugger;
             e.preventDefault();
             link = $(this);
+            indexmusic = link.attr("id");
             corrente = link.parent().index();
             run(link, audio[0]);
         });
@@ -78,6 +82,27 @@
               }
               run($(link), audio[0]);
           })
+
+          $('#btnNext').on('click', function () {debugger;
+           
+            if(indexmusic < (totalmusics-1)){
+              indexmusic++;
+              var link = playlist.find("#"+indexmusic)
+              corrente = link.parent().index();
+              run(link, audio[0]);
+            }
+          })
+
+          $('#btnPrev').on('click', function () {debugger;
+            if(indexmusic > 0){
+              indexmusic--;
+              var link = playlist.find("#"+indexmusic)
+              corrente = link.parent().index();
+              run(link, audio[0]);
+            }
+          })
+
+
       }
 
         function run(link, player){
@@ -88,19 +113,7 @@
           player.play();
         }
 
-        btnNext = $('#btnNext').on('click', function () {
-                if ((index + 1) < trackCount) {
-                    index++;
-                    loadTrack(index);
-                    if (playing) {
-                        audio.play();
-                    }
-                } else {
-                    audio.pause();
-                    index = 0;
-                    loadTrack(index);
-                }
-              })
+        
 
 
       </script> 
@@ -123,12 +136,11 @@
           <?php include("../includes/btnNavbar.php"); ?> 
             <ul id="playlist"> 
               <?php
-                  $idmusicaatual;
-                  $idmusicaatual+=1;
-                  $idmusicaatual-=1;
+                  $idmusica = 0;
                   foreach ($arr as $key => $value) {
                     
-                    echo "<a href='".$value["musica"]."'><li>".$value["descricao"]."</li></a>";
+                    echo "<a id='". $idmusica."' href='".$value["musica"]."'><li>".$value["descricao"]."</li></a>";
+                    $idmusica++;
                   }
               ?>
               </ul>
