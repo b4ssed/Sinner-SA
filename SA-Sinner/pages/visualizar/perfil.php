@@ -2,7 +2,7 @@
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <title>Perfil</title>
-        <?php include("../../template/styles.php");session_start();  ?>
+        <?php include("../../template/styles.php");  ?>
         <?php include("../../template/navbar.php"); ?>
          
      </head>
@@ -45,7 +45,12 @@
                 document.getElementById("buttom1").style.display = 'none';
             }
         }
-     </script>     
+     </script>    
+     <style>
+     img    {
+    border-radius: 50%;
+     }
+    </style> 
                
                 <div class="containerCadastro">
                 <div class="wrapper">

@@ -11,13 +11,13 @@
     
             $con = mysqli_connect("localhost", "root", "", "database_sinner");
             if($pic!=""){
-                echo"asdasd";
+                
                 $ext = strtolower(substr($_FILES['pic1']['name'],-4));
                 if($ext=="jpeg"||$ext==".png"||$ext==".gif"||$ext=="jfif"||$ext==".img"||$ext==".jpg"){
-                    $destino= '../../css/images/image';
+                    $destino= '../../../../Sinner-SA/SA-Sinner/css/images/image';
                     $new_name = $_FILES['pic1']['name'];
                     $caminho="../../css/images/image".$new_name;
-                    move_uploaded_file($_FILES['imgband']['tmp_name'], $destino.$new_name);
+                    move_uploaded_file($_FILES['pic1']['tmp_name'], $destino.$new_name);
                     $query = mysqli_query($con,"UPDATE usuario SET img='$caminho' WHERE id_usuario = $id");
                     }else{
     
@@ -39,7 +39,7 @@
                 $query1 = mysqli_query($con,"UPDATE usuario SET senha='$password' WHERE id_usuario = $id");
             }
             mysqli_close($con);
-          // header("Location: ../../pages/visualizar/perfil.php");
+            header("Location: ../../pages/visualizar/perfil.php");
         
 
 ?>
