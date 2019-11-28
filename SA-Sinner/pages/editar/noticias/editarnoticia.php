@@ -14,7 +14,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 		<script src="external/jquery.hotkeys.js"></script>
     <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link href="index.css" rel="stylesheet">
     <script src="bootstrap-wysiwyg.js"></script>
     
@@ -182,10 +182,18 @@
 	$('#editor').wysiwyg({ fileUploadError: showErrorAlert} );
     window.prettyPrint && prettyPrint();
   });
+
+  $(document).ready(function(){
+    $("button").click(function(){
+        $("#buttonteste").removeClass("btn btn-primary btn-lg btn-block")
+        $("#buttonteste").addClass("btn btn-secondary btn-lg btn-block")
+    })
+  });
+
 </script>
-
-<button id="buttonteste" data-target="#submitt" >enviar</button>
-
+<div class="container">
+<button id="buttonteste" class="btn btn-primary btn-lg btn-block"  >enviar</button>
+</div>
 
 </body>
 </html>

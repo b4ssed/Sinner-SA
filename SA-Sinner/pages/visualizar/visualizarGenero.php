@@ -3,6 +3,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="../../css/styleCadastro.css">
         <title>Visualizar Gênero</title>
         <?php include("../../template/styles.php"); ?>
         <style>
@@ -26,11 +27,16 @@
      <?php include("../../template/sidebar.php"); ?>
        <div id="content" class="containerPrincipal">
         <div class="containerCadastro">
-         <table class="table" style="background:#1e272e; color:white">
+         <table class="table table-dark" style="background:#1e272e; color:white">
            <thead>
              <tr>
                <th scope="col">Gênero</th>
+               <th scope="col"></th>
              </tr>
+             <tr class="">
+                     <td>Nome do Gênero</td>
+                     <td>Opções</td>
+                 </tr>
            </thead>
            <tbody>
              <?php

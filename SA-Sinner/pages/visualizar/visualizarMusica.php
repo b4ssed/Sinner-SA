@@ -3,6 +3,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="../../css/styleCadastro.css">
         <title>Visualizar Gênero</title>
         <?php include("../../template/styles.php"); ?>
         <style>
@@ -26,17 +27,18 @@
      <?php include("../../template/sidebar.php"); ?>
        <div id="content" class="containerPrincipal">
         <div class="containerCadastro">
-         <table class="table" style="background:#1e272e; color:white">
+         <table class="table table-dark" style="background:#1e272e; color:white">
            <thead>
              <tr>
                <th scope="col">Música</th>
+               <th scope="col"></th>
+               <th scope="col"></th>
              </tr>
            </thead>
             <tr class="">
-                    <th>Nome</th>
-                    <th>Duração</th>
-                    <th>Album</th>
-                    <th></th>
+                    <td>Nome</td>
+                    <td>Duração</td>
+                    <td>Album</td>
                 </tr>
             </thead>
             <tbody>
