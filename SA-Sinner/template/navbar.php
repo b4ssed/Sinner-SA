@@ -12,7 +12,7 @@
     <!-- Sidebar  -->
     <nav id="sidebar">
         <div class="sidebar-header">
-            <h3>Sinner</h3>
+            <img src="../../../../Sinner-SA/SA-Sinner/css/images/logo.png" alt="">
         </div>
         <ul class="list-unstyled components">
         
