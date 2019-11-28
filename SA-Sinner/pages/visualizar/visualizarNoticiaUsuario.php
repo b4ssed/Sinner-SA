@@ -5,45 +5,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <!-- <?php
+          $noticia = $_GET['id'];
+          $query = mysqli_query($con,"SELECT * FROM noticia WHERE id_noticia=$noticia");
+        ?> -->
+        <?php
+        $con = mysqli_connect("localhost", "root", "", "database_sinner");
+        $query = mysqli_query($con,"SELECT * FROM noticia");
+        $dados = mysqli_fetch_all($query, MYSQLI_ASSOC);
+         ?>
         <title>noticias</title>
         <?php include("../../template/styles.php"); ?>
         <?php include("../../template/navbar.php"); ?>
         <style media="screen">
-        #bannerimage {
+        .responsive {
           width: 100%;
-          background-image: url(../../../../Sinner-SA/SA-Sinner/css/images/image08melophobia.jpg);
-          height: 100px;
-          background-color: purple;
-          background-position: center;
+          max-height: 400PX;
+          }
+          .lead{
+             width: 75%;
           }
         </style>
     <title></title>
   </head>
   <body>
-    <div id="content" style="padding:0px;" class="containerPrincipal">
-      <img id="bannerimage"></img>
-      </div>
+    <div id="content" style="padding:0px;" >
+      <?php
+        echo "<img src='".$dados[0]['img']."' class='responsive'>";
+       ?>
       <div style="padding:40px;">
         <div class='panel panel-default'>
 
            <?php
-           $con = mysqli_connect("localhost", "root", "", "database_sinner");
-           $query = mysqli_query($con,"SELECT * FROM noticia");
-           $dados = mysqli_fetch_all($query, MYSQLI_ASSOC);
-
-                   foreach ($dados as $key => $value) {
-                       echo "<img src='".$value['img']."' class='rounded' alt='' width='1000' height='700' hover='-1'>";
                        echo"<div class='panel-heading'>";
-                       echo "<h3 class='display-3'>".$value['descricao']."</h3>";
+                       echo "<h3 class='display-3'>".$dados[0]['descricao']."</h3>";
                        echo "</div>";
-                       echo  "<div class='lead'>".$value['conteudo']."</div>";
-                     }
+                       echo  "<center><div class='lead'>".$dados[0]['conteudo']."</div></center>";
             ?>
         </div>
-
-      </div>
-
-
     </div>
   </body>
 </html>
