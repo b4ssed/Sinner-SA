@@ -3,14 +3,14 @@
     $descricao = $_POST['descricao'];
     $duracao = $_POST['duracao'];
     $banda = $_POST['banda'];
-    $destino= '../../css/images/image';
+    $destino= '../../../../Sinner-SA/SA-Sinner/css/images/image';
     $ext = strtolower(substr($_FILES['imgband']['name'],-4));
         //verifica caratere especial
         //if (preg_match("/^([a-zA-Z0-9]+)$/", $descricao)){
 
             if($ext=="jpeg"||$ext==".png"||$ext==".gif"||$ext=="jfif"||$ext==".img"||$ext==".jpg"){
                 $new_name = $_FILES['imgband']['name'];
-                $caminho="../../css/images/image".$new_name;
+                $caminho="../../../../Sinner-SA/SA-Sinner/css/images/image".$new_name;
                 echo $caminho;
                 move_uploaded_file($_FILES['imgband']['tmp_name'], $destino.$new_name);
 
