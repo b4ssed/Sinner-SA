@@ -18,7 +18,7 @@
 
       <!-- Começo CSS -->
       <style>
-
+        
         ul{list-style: none;padding: 0px}
        
         a{text-decoration: none;color: #444;font-family: arial}
@@ -36,13 +36,16 @@
         #rodape {
             position: absolute;
             bottom: 0;
-            width: 100%;
+            width: 91%;
+            left: 100px;
           }
 
          #tracks {
-            font-size:60px;
-            position:relative;
-            text-align:center;
+            font-size:30px;
+            bottom: 0px;
+            position: absolute;
+            
+          
             }
       </style>
       <!-- Fim CSS -->
@@ -123,6 +126,7 @@
   <body>
   <!-- Começo interação no BD -->
     <?php
+      
       $con = mysqli_connect("localhost","root","","database_sinner");
       $query = mysqli_query($con, "SELECT * FROM musica");
       $arr = mysqli_fetch_all($query, MYSQLI_ASSOC);
@@ -130,7 +134,7 @@
     <!-- FIM interação no BD -->
 
     <div class="wrapper">
-      <?php include("../template/navbar.php"); ?> 
+      <?php include("../template/sidebar.php"); ?> 
       <div id="content" style="padding: 0px">
         <div style="padding: 40px">
           <?php include("../includes/btnNavbar.php"); ?> 
@@ -146,18 +150,16 @@
               </ul>
         </div>
     <!-- Começo Player-->
-        <div id="tracks">
-           <button id="btnPrev" class="plyr__controls__item plyr__control plyr__tab-focus" >&vltri;</button><button id="btnNext" class="plyr__controls__item plyr__control plyr__tab-focus" >&vrtri;</button>
-        </div> 
-
         <div id="rodape" >   
           <audio class="tu" id="audio" crossorigin playsinline >
             <source src="">
-          </audio>
-        </div>
+          </audio>  
+       </div>
+       <div id="tracks">
+          <button id="btnPrev" class="plyr__controls__item plyr__control plyr__tab-focus" >&vltri;</button><button id="btnNext" class="plyr__controls__item plyr__control plyr__tab-focus" >&vrtri;</button>
+      </div>
     <!-- FIM Player-->
       </div>
-
     </div>
     <?php include("../template/js.php"); ?>
   </body>
