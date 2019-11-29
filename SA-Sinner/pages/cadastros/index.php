@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="wrapper">
-            <?php include("../../template/navbar.php"); ?>
+            <?php include("../../template/sidebar.php"); ?>
             <div id="content">
               <?php include("../../includes/btnNavbar.php"); ?>
                 <br>

@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="../../css/styleCadastro.css">
     </head>
     <body>
-    <?php include("../../template/navbar.php"); ?>
+    <?php include("../../template/sidebar.php"); ?>
     <?php
         if (isset($_GET["erro"])){
             $erro = $_GET["erro"];

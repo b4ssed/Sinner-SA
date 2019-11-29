@@ -11,7 +11,7 @@
 </head>
   <body>
     <div class="wrapper">
-        <?php include("../../template/Navbar.php"); ?>
+        <?php include("../../template/sidebar.php"); ?>
         <!-- / -->
         <div id="content" class="container">
         <div class="containerCadastro">

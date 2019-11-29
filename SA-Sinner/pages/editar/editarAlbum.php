@@ -23,7 +23,7 @@ if (isset($_GET['id'])) {
         <div class="wrapper">
             <?php include("../../includes/btnNavbar.php"); ?>
             <div id="content" class="container">
-              <?php include("../../template/navbar.php"); ?>
+              <?php include("../../template/sidebar.php"); ?>
               <div class="containerCadastro">
                   <form action="../../includes/editar/editarAlbum.php" enctype="multipart/form-data" method="post">
                     <!-- area de campos do form -->

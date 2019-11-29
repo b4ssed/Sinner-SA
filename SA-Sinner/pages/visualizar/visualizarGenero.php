@@ -24,8 +24,8 @@
       session_start();
      ?>
      <div class="wrapper">
-     <?php include("../../template/navbar.php"); ?>
-       <div id="content" class="container">
+     <?php include("../../template/sidebar.php"); ?>
+       <div id="content" class="containerPrincipal">
         <div class="containerCadastro">
          <table class="table table-dark" style="background:#1e272e; color:white">
            <thead>

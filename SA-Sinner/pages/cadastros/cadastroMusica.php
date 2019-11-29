@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <?php include("../../template/navbar.php"); ?>
+      <?php include("../../template/sidebar.php"); ?>
     <div id="content" class="container">
     <div class="containerCadastro">
       <form action="../../includes/cadastros/cadastrarMusica.php" enctype="multipart/form-data" method="post">

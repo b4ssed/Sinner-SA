@@ -32,7 +32,7 @@ if (isset($_GET['id'])) {
     </head>
     <body>
         <div class="wrapper">
-            <?php include("../../template/navbar.php"); ?>
+            <?php include("../../template/sidebar.php"); ?>
             <div id="content" class="containerPrincipal">
             <div class="containerCadastro">
                 <form action="../../includes/editar/editarGenero.php" method="post">
