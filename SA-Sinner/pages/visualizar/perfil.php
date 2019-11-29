@@ -71,10 +71,10 @@
                             <?php 
                             if($array[0]['img']=="")
                             {
-                            echo" <img src='../../css/images/perfil.png'  style='width:180px ; length:150 px;' >";
+                            echo" <img src='../../css/images/perfil.png'  style='width:180px ;height: 280px;' >";
                             }else
                             {
-                            echo" <img src='".$array[0]['img']."' alt=''>"; 
+                            echo" <img src='".$array[0]['img']."'   style='width:280px ;height: 280px; alt=''>"; 
                             } 
                         ?>   
                          <button style="margin-left: 80%;" onclick="Mudarestado('minhaDiv')" > Editar Perfil </button>

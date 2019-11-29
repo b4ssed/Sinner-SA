@@ -9,7 +9,7 @@ body {
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Luminari', fantasy;
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
@@ -62,7 +62,7 @@ a:focus {
     left: 0;
     height: 100vh;
     z-index: 999;
-    background:#261419;
+    background:#2c004b;
     color: #fff;
     transition: all 0.3s;
 }
@@ -73,7 +73,7 @@ a:focus {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background:#402431 ;
+    background: #2c004b;
 }
 
 #sidebar ul.components {

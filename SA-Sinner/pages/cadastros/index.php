@@ -9,7 +9,7 @@
         <?php include("../../template/styles.php"); ?>
 
     </head>
-    <body>
+    <body  >
         <div class="wrapper">
             <?php include("../../template/navbar.php"); ?>
             <div id="content">

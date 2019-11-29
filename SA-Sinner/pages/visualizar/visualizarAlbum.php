@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Visualizar Gênero</title>
-        <link rel="stylesheet" href="../../css/styleCadastro.css">
+       
         <?php include("../../template/styles.php"); ?>
         <style>
             .containerCadastro{
@@ -14,7 +14,7 @@
             background: #fff;
             }
             .containerPrincipal{
-            background: #b2bec3;
+            background: #ffff;
             }
             img {
             width:100px;
@@ -24,7 +24,7 @@
     </head>
     <body>
     <?php
-      session_start();
+     
 
      ?>
      <div class="wrapper">
@@ -75,6 +75,6 @@
 
 
     </div>
-      <?php include("../template/js.php"); ?>
+      <?php include("../../template/js.php"); ?>
     </body>
 </html>

@@ -12,7 +12,7 @@
     <!-- Sidebar  -->
     <nav id="sidebar">
         <div class="sidebar-header">
-            <img src="../../../../Sinner-SA/SA-Sinner/css/images/logo.png" alt="">
+            <img style="margin-left :23%;" src="../../../../Sinner-SA/SA-Sinner/css/images/logo.png" alt="">
         </div>
         <ul class="list-unstyled components">
         
@@ -26,7 +26,7 @@
         <ul class="list-unstyled CTAs">
         <li class="">
               <center>
-                  <a href="../../../../Sinner-SA/SA-Sinner/pages/visualizar/perfil.php" class="" ><?php         if($array[0]['img']==""){ echo "<img src='../../../../Sinner-SA/SA-Sinner/css/images/perfil.png' style='width:45px ;length:60px;border-radius: 50%;'";}else{echo" <img src='".$array[0]['img']."'  style='width:45px ;length:60px;border-radius: 50%;'>";} ?></a>
+                  <a href="../../../../Sinner-SA/SA-Sinner/pages/visualizar/perfil.php" class="" ><?php         if($array[0]['img']==""){ echo "<img src='../../../../Sinner-SA/SA-Sinner/css/images/perfil.png' style='width:45px ;height: 45px;border-radius: 50%;'";}else{echo" <img src='".$array[0]['img']."'  style='width:45px ;height: 45px;border-radius: 50%;'>";} ?></a>
              </center>
              </li>
                 <li>
@@ -39,5 +39,7 @@
     </nav>
     
 <style>
-
+body{
+background: #5b2e90;
+}
 </style>
