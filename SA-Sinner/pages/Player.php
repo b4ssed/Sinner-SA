@@ -147,7 +147,7 @@
         </div>
     <!-- Começo Player-->
         <div id="tracks">
-           <button id="btnPrev">&vltri;</button><button id="btnNext">&vrtri;</button>
+           <button id="btnPrev" class="plyr__controls__item plyr__control plyr__tab-focus" >&vltri;</button><button id="btnNext" class="plyr__controls__item plyr__control plyr__tab-focus" >&vrtri;</button>
         </div> 
 
         <div id="rodape" >   
