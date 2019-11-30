@@ -21,31 +21,7 @@
     white-space: nowrap;
   }
 </style>
-<script type="text/javascript">
-  function showUser(str) {
-    if (str == "") {
-        document.getElementById("txtHint").innerHTML = "";
-        return;
-    } else {
-        if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } else {
-            // code for IE6, IE5
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("txtHint").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET","../includes/pesquisa.php?q="+str,true);
-        xmlhttp.send();
-    }
-  }
-</script>
-<div class="conteudo">
-  <div id="txtHint"><b>Person info will be listed here...</b></div>
+<div id="conteudo">
   <div class="card">
     <div class="card-header">
       Destaque
@@ -58,13 +34,14 @@
     </div>
   </div>
   <br>
+
   <h1>Notícias</h1>
   <div class="row">
     <?php
       foreach ($arrayNoticia as $key => $value) {
         echo '<div class="col-4">';
-        echo '<a href="visualizarNoticiaUsuario.php?id='.$value['id_noticia'].'">';
-        echo '<div class="card card-accent-primary wider">';
+        echo '<a href="visualizar/visualizarNoticiaUsuario.php?id='.$value['id_noticia'].'">';
+        echo '<div id="noticia" class="card card-accent-primary wider">';
         //<!-- Card image -->
         echo '<div class="view view-cascade overlay">';
         echo '<div class="mask rgba-white-slight"></div>';
@@ -75,6 +52,7 @@
         echo '<h4 class="card-title"><strong>'.$value['descricao'].'</strong></h4>';
         //<!-- Subtitle -->
         echo '<p class="card-text">'.$value['conteudo'].'</p>';
+        echo '';
         echo '</div>';
         echo '</div>';
         echo '</a>';
@@ -91,7 +69,7 @@
     <?php
       foreach ($arrayBanda as $key => $value) {
         echo '<div class="col">';
-        echo '<a href="visualizarBandaUsuario.php?id='.$value['id_banda'].'">';
+        echo '<a href="pages/visualizar/visualizarBandaUsuario.php?id='.$value['id_banda'].'">';
         echo '<div class="card" style="width: 13rem;">';
         echo '<img class="card-img-top" src="'.$value['img'].'" alt="Imagem de capa do card">';
         echo '<div class="card-body">';
@@ -113,7 +91,7 @@
       <?php
         foreach ($arrayAlbum as $key => $value) {
           echo '<div class="col">';
-          echo '<a href="visualizarNoticiaUsuario.php?id='.$value['id_album'].'">';
+          echo '<a href="visualizar/visualizarAlbumUsuario.php?id='.$value['id_album'].'">';
           echo '<div class="card" style="width: 13rem;">';
           echo '<img class="card-img-top" src="'.$value['img'].'" alt="Imagem de capa do card">';
           echo '<div class="card-body">';
