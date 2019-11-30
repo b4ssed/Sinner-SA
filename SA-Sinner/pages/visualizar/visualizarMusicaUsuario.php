@@ -51,22 +51,34 @@
         <br>
         <div style="padding:40px;">
           <h1><?php echo $array_banda["descricao"] ?></h1>
-          <h2>Álbuns</h2>
+          <h2><?php echo $array_album["descricao"]; ?></h2>
           <div class='row'>
-            <?php
-              foreach ($b as $key => $value) {
-                echo '<div class="col">';
-                echo '<a href="visualizarMusicaUsuario.php?id='.$value['id_album'].'">';
-                echo '<div class="card" style="width: 13rem;">';
-                echo '<img class="card-img-top" src="'.$value['img'].'" alt="Imagem de capa do card">';
-                echo '<div class="card-body">';
-                echo '<p class="card-text">'.$value['descricao'].'';
-                echo '</div>';
-                echo '</div>';
-                echo '</div>';
-              }
-            ?>
+            <table class="table lead">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Título</th>
+                  <th scope="col">Artista</th>
+                  <th scope="col">Álbum</th>
+                  <th scope="col">Duração</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                  foreach ($a as $key => $value) {
+                    echo "<tr>";
+                    echo "<th scope='row'>".$value["id_musica"]."</th>";
+                    echo "<td>".$value['descricao']."</td>";
+                    echo "<td>".$array_banda['descricao']."</td>";
+                    echo "<td>".$array_album["descricao"]."</td>";
+                    echo "<td>".$value["duracao"]."</td>";
+                    echo "</tr>";
+                  }
+                ?>
+              </tbody>
+            </table>
           </div>
+        </div>
       </div>
     </div>
   </body>
