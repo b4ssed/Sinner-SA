@@ -3,6 +3,7 @@
 <html>
   <head>
     <?php include("../../template/styles.php"); ?>
+    <?php session_start(); ?>
     <link rel="stylesheet" href="../../css/styleCadastro.css">
     <title>Cadastro musica</title>
   </head>

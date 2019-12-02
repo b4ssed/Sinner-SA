@@ -5,7 +5,7 @@
     <style>
             .containerLogin{
               width: 50%;
-              height: 38%;
+              height: 30%;
               border-radius: 10px;
               background: #fff;
             }
@@ -39,53 +39,39 @@
     ?>
       <div class="containerPrincipal">
         <div class="containerLogin">
-          <div class="row">
-            <div class="col">
               <center>
                 <h2>SINNER</h2>
                 <small class="form-text text-muted">Você precisa realizar o log-in para acessar o site</small>
               </center>
+              <?php
+                if (isset($_GET['newUser'])) {
+                  echo '<form action="../actions/validarLogin.php?newUser=1" method="post">';
+                }else {
+                  echo '<form action="../actions/validarLogin.php" method="post">';
+                }
+              ?>
+                  <form action="../actions/validarLogin.php" method="post">
+                        <div class="form-group">
+                          <center>
+                            <input type="text" class="form-control" required id="login" name="login" placeholder="Login">
+                          </center>
+                        </div>
+                        <div class="form-group">
+                          <center>
+                            <input type="password" class="form-control" required id="senha" name="senha" placeholder="Senha">
+                          </center>
+                        </div>
+                        <div class="form-group">
+                          <center>
+                          <a href="cadastros/cadastroUsuario.php"><small class="form-text text-muted">Cadastre-se</small></a>
+                          <button type="submit" class="btn btn-dark " >Entrar</button>
+                          </center>
+                        </div>
+
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
-          <?php
-            if (isset($_GET['newUser'])) {
-              echo '<form action="../actions/validarLogin.php?newUser=1" method="post">';
-            }else {
-              echo '<form action="../actions/validarLogin.php" method="post">';
-            }
-          ?>
-          <form action="../actions/validarLogin.php" method="post">
-            <div class="row">
-              <div class="col-sm">
-                <div class="form-group">
-                  <center>
-                    <input type="text" class="form-control" required id="login" name="login" placeholder="Login">
-                  </center>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm">
-                <div class="form-group">
-                  <center>
-                    <input type="password" class="form-control" required id="senha" name="senha" placeholder="Senha">
-                  </center>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm">
-                <a href="cadastros/cadastroUsuario.php"><small class="form-text text-muted">Cadastre-se</small></a>
-              </div>
-              <div class="col-sm">
-                <a href="#"><small class="form-text text-muted">Esqueci minha senha</small></a>
-              </div>
-            </div>
-              <div class="col-sm">
-                <button type="submit" class="btn btn-dark" >Entrar</button>
-              </div>
-          </form>
-        </div>
-      </div>
   </body>
 </html>
