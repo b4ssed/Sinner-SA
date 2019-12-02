@@ -27,7 +27,7 @@
       Destaque
     </div>
     <div class="card-body">
-      <a href="visualizar/NoticiaUsuario.php?id=<?php echo ($arrayNoticia[0]['id_noticia'])?>">
+      <a href="pages/visualizar/visualizarNoticiaUsuario.php?id=<?php echo ($arrayNoticia[0]['id_noticia'])?>">
         <h5 class="card-title"><?php echo ($arrayNoticia[0]["descricao"]); ?></h5>
         <p class="card-text" style=""><?php echo ($arrayNoticia[0]["conteudo"]); ?></p>
       </a>
