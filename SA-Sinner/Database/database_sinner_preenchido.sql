@@ -172,10 +172,10 @@ INSERT INTO album VALUES(DEFAULT, "00:04:23", "Swamp Thing", "../../../../Sinner
 INSERT INTO album VALUES(DEFAULT, "00:39:11", "The Number of the Beast", "../../../../Sinner-SA/SA-Sinner/css/images/image06numberofthebeast.jpg" , 2);
 INSERT INTO album VALUES(DEFAULT, "00:37:23", "Melophobia", "../../../../Sinner-SA/SA-Sinner/css/images/image07melophobia.jpg" , 3);
 INSERT INTO album VALUES(DEFAULT, "00:81:09", "The Wall", "../../../../Sinner-SA/SA-Sinner/css/images/image08thewall.jpg" , 4);
-INSERT INTO musica VALUES(DEFAULT, "Swamp Thing", "00:04:23", "../../css/music/swampthing.mp3", 1);
-INSERT INTO musica VALUES(DEFAULT, "The Number of the Beast", "00:04:52", "../../css/music/thenumberofthebeast.mp3", 2);
-INSERT INTO musica VALUES(DEFAULT, "Telescope", "00:03:56", "../../css/music/telescope.mp3", 3);
-INSERT INTO musica VALUES(DEFAULT, "Hey You", "00:04:40", "../../css/music/heyyou.mp3", 4);
+INSERT INTO musica VALUES(DEFAULT, "Swamp Thing", "00:04:23", "../../../../Sinner-SA/SA-Sinner/css/music/swampthing.mp3", 1);
+INSERT INTO musica VALUES(DEFAULT, "The Number of the Beast", "00:04:52", "../../../../Sinner-SA/SA-Sinner/css/music/thenumberofthebeast.mp3", 2);
+INSERT INTO musica VALUES(DEFAULT, "Telescope", "00:03:56", "../../../../Sinner-SA/SA-Sinner/css/music/telescope.mp3", 3);
+INSERT INTO musica VALUES(DEFAULT, "Hey You", "00:04:40", "../../../../Sinner-SA/SA-Sinner/css/music/heyyou.mp3", 4);
 INSERT INTO noticia VALUES(DEFAULT, "Vocalista sofre acidente", "Ocorreu um acidente automobilistico", "../../../../Sinner-SA/SA-Sinner/css/images/image08thewall.jpg", 3);
 INSERT INTO noticia VALUES(DEFAULT, "Vocalista muda de banda", "Ocorreu uma mudança de bana", "../../../../Sinner-SA/SA-Sinner/css/images/image04pinkfloyd.jpg", 4);
 INSERT INTO noticia VALUES(DEFAULT, "Rock in Rio", "Iron Maiden toca no Rock in Rio", "../../../../Sinner-SA/SA-Sinner/css/images/image02ironmaiden.jpg", 2);

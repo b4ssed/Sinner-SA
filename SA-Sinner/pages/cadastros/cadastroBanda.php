@@ -6,11 +6,12 @@
     </head>
     <body>
         <div class="wrapper">
-            <?php include("../../template/navbar.php"); ?>
+          <?php session_start(); ?>
+            <?php include("../../template/sidebar.php"); ?>
             <div class="container" id ='content'>
                 <div class="containerCadastro">
                     <form action="../../includes/cadastros/cadastroBanda.php" enctype="multipart/form-data"  method="post" >
-                    <center>        
+                    <center>
                     <H2>Cadastro de Banda</H2>
                     </center>
                         <div class="form-group">

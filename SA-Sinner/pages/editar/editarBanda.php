@@ -1,7 +1,8 @@
 <!DOCTYPE html>
     <?php
+    session_start();
       $con = mysqli_connect("localhost", "root", "", "database_sinner");
-      $id= $_GET['id'];
+      $id = $_GET['id'];
       $query = mysqli_query($con, "SELECT * FROM banda where id_banda = $id");
       $dados = mysqli_fetch_all($query, MYSQLI_ASSOC);
       $arrayorc = $dados;
@@ -19,18 +20,14 @@
         </head>
         <body>
             <div class="wrapper">
-                <?php include("../../template/Navbar.php"); ?>
+                <?php include("../../template/sidebar.php"); ?>
                 <!-- / -->
                 <div id="content" class="container">
                 <div class="containerCadastro">
-                    <form action="../../includes/editar/editarBanda.php" enctype="multipart/form-data" method="post">
+                  <?php echo '  <form action="../../includes/editar/editarBanda.php?id='.$id.'" enctype="multipart/form-data" method="post">'; ?>
+
                       <!-- area de campos do form -->
                       <hr />
-                      <?php
-                      if (isset($_GET['id'])) {
-                        echo "<input type='hidden' name='id' value='".$id."'>";
-                      }
-                      ?>
                         <div class="form-group">
                         <h1>Editar Banda</h1>
                           <label for="descricao">Descrição</label>

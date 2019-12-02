@@ -30,7 +30,7 @@
       $array_num = mysqli_fetch_assoc($query_genero);
       $arraynum = json_encode($array_num);
     ?>
-    <script>
+    <!-- <script>
       $(document).ready(function () {
         $('#myCheckbox').click(function () {
           $('#myButton').prop("disabled", !$("#myCheckbox").prop("checked"));
@@ -74,7 +74,7 @@
       //
       // let gya = "shausha"
       // console.log(`seu cu, ${gya} asjgdsjhsvgdfsjdfhksahfgksajhdgkjhsadjhg`);
-    </script>
+    </script> -->
   </head>
   <body>
     <div class="container">

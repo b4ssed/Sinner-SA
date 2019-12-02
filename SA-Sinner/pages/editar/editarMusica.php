@@ -7,11 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../../css/styleCadastro.css">
     <title>Editar Música</title>
-    <?php include("../../template/styles.php"); ?>
+    <?php session_start();
+    include("../../template/styles.php"); ?>
 </head>
   <body>
     <div class="wrapper">
-        <?php include("../../template/Navbar.php"); ?>
+        <?php include("../../template/sidebar.php"); ?>
         <!-- / -->
         <div id="content" class="container">
         <div class="containerCadastro">
