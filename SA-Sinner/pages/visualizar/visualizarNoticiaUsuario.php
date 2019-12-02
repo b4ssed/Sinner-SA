@@ -5,18 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
-        <!-- <?php
+        <?php
+          $con = mysqli_connect("localhost", "root", "", "database_sinner");
           $noticia = $_GET['id'];
           $query = mysqli_query($con,"SELECT * FROM noticia WHERE id_noticia=$noticia");
-        ?> -->
+          $dados = mysqli_fetch_all($query, MYSQLI_ASSOC);
+        ?>
         <?php
-        $con = mysqli_connect("localhost", "root", "", "database_sinner");
-        $query = mysqli_query($con,"SELECT * FROM noticia");
-        $dados = mysqli_fetch_all($query, MYSQLI_ASSOC);
+        session_start();
+        // $con = mysqli_connect("localhost", "root", "", "database_sinner");
+        // $query = mysqli_query($con,"SELECT * FROM noticia");
+        
          ?>
         <title>noticias</title>
         <?php include("../../template/styles.php"); ?>
-        <?php include("../../template/navbar.php"); ?>
+        <?php include("../../template/sidebar.php"); ?>
         <style media="screen">
         .responsive {
           width: 100%;
