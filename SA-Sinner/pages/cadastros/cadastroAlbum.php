@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Cadastro Album</title>
+        <?php session_start(); ?>
         <?php include("../../template/styles.php"); ?>
         <link rel="stylesheet" href="../../css/styleCadastro.css">
     </head>
@@ -31,6 +32,7 @@
                         <label for="descricao">Banda</label>
                             <select name="banda">
                                 <?php
+
                                     $con = mysqli_connect("localhost", "root", "", "database_sinner");
 
                                     //Selecionar Genero

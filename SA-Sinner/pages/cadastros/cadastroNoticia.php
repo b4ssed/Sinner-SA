@@ -4,13 +4,14 @@
         <?php include("../../template/styles.php"); ?>
         <link rel="stylesheet" href="../../css/styleCadastro.css">
     </head>
-   
+
     <div class="wrapper">
-        <?php include("../../template/navbar.php"); ?>
+        <?php include("../../template/sidebar.php"); ?>
+        <?php session_start(); ?>
             <div id="content" class="container">
                 <div class="containerCadastro">
                     <hr/>
-    <form action="../../includes/cadastros/cadastroNoticia.php" enctype="multipart/form-data"  method="post" >
+                  <form action="../../includes/cadastros/cadastroNoticia.php" enctype="multipart/form-data"  method="post" >
                   <center>
                   <H2>Cadastro de Noticia</H2>
                   </center>
@@ -27,14 +28,14 @@
 
                     $query_genero = mysqli_query($con,"SELECT * FROM genero");
                     $arrayGenero = mysqli_fetch_all($query_genero);
-                    $generos = $arrayGenero;  
-                    foreach($generos as $key => $value){                
-                        echo '<option value="'.$value[0].'">'.$value[1].'</option>';       
+                    $generos = $arrayGenero;
+                    foreach($generos as $key => $value){
+                        echo '<option value="'.$value[0].'">'.$value[1].'</option>';
                     }
-                    
+
                     mysqli_close($con)
                      ?>
-                     
+
                 </select>
                 </div>
                 <div class="form-group">
