@@ -1,12 +1,6 @@
 <?php
-if (isset($_GET['id'])) {
-  $id = $_GET['id'];
+session_start();
 
-  $conexao = mysqli_connect('localhost','root','','database_sinner');
-  $query = mysqli_query($conexao, "SELECT * FROM genero WHERE id=$id");
-  $arrayorc = mysqli_fetch_all($query, MYSQLI_ASSOC);
-  mysqli_close ($conexao);
-}
  ?>
 <html>
     <head>
@@ -32,17 +26,17 @@ if (isset($_GET['id'])) {
     </head>
     <body>
         <div class="wrapper">
-            <?php include("../../template/navbar.php"); ?>
+            <?php include("../../template/sidebar.php"); ?>
             <div id="content" class="containerPrincipal">
             <div class="containerCadastro">
-                <form action="../../includes/editar/editarGenero.php" method="post">
+              <?php
+                $id = $_GET['id'];
+                echo '<form action="../../includes/editar/editarGenero.php?id='.$id.'" method="post">';
+              ?>
+
                   <!-- area de campos do form -->
                   <hr />
-                  <?php
-                  if (isset($_GET['id'])) {
-                    echo "<input type='hidden' name='id' value='".$id."'>";
-                  }
-                  ?>
+
                     <div class="form-group">
                       <H2>Gênero</H2>
                       <?php

@@ -1,11 +1,5 @@
 <?php
-if (isset($_GET['id'])) {
-  $id = $_GET['id'];
-  $conexao = mysqli_connect('localhost','root','','database_sinner');
-  $query = mysqli_query($conexao, "SELECT * FROM album WHERE id_album=$id");
-  $arrayorc = mysqli_fetch_all($query, MYSQLI_ASSOC);
-  mysqli_close ($conexao);
-}
+session_start();
  ?>
 <html>
     <head>
@@ -23,15 +17,12 @@ if (isset($_GET['id'])) {
         <div class="wrapper">
             <?php include("../../includes/btnNavbar.php"); ?>
             <div id="content" class="container">
-              <?php include("../../template/navbar.php"); ?>
+              <?php include("../../template/sidebar.php"); ?>
               <div class="containerCadastro">
-                  <form action="../../includes/editar/editarAlbum.php" enctype="multipart/form-data" method="post">
-                    <!-- area de campos do form -->
-                    <?php
-                    if (isset($_GET['id'])) {
-                      echo "<input type='hidden' name='id' value='".$id."'>";
-                    }
-                    ?>
+                <?php
+                  $id = $_GET['id'];
+                  echo '<form action="../../includes/editar/editarAlbum.php?id='.$id.'" enctype="multipart/form-data" method="post">' ?>
+
                       <div class="form-group">
                       <h1>Editar Album</h1>
                         <label for="descricao">Descrição</label>
@@ -75,7 +66,7 @@ if (isset($_GET['id'])) {
 
                       <div class="form-group">
                       <label>Imagem da banda</label>
-                      <input type="file" name="imgband" >
+                      <input type="file" name="imgbanda" >
                       </div>
                       <div class="form-group">
                           <button type="submit" class="form-control btn btn-dark">Enviar</button>

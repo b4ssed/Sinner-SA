@@ -3,12 +3,13 @@
 <html>
   <head>
     <?php include("../../template/styles.php"); ?>
+    <?php session_start(); ?>
     <link rel="stylesheet" href="../../css/styleCadastro.css">
     <title>Cadastro musica</title>
   </head>
   <body>
     <div class="wrapper">
-      <?php include("../../template/navbar.php"); ?>
+      <?php include("../../template/sidebar.php"); ?>
     <div id="content" class="container">
     <div class="containerCadastro">
       <form action="../../includes/cadastros/cadastrarMusica.php" enctype="multipart/form-data" method="post">

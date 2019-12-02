@@ -24,13 +24,14 @@
       session_start();
      ?>
      <div class="wrapper">
-     <?php include("../../template/navbar.php"); ?>
-       <div id="content" class="container">
+     <?php include("../../template/sidebar.php"); ?>
+       <div id="content" class="containerPrincipal">
         <div class="containerCadastro">
          <table class="table table-dark" style="background:#1e272e; color:white">
            <thead>
              <tr>
                <th scope="col">Gênero</th>
+               <th scope="col"></th>
                <th scope="col"></th>
              </tr>
              <tr class="">
@@ -48,11 +49,8 @@
                 foreach ($array as $key => $value) {
                   echo "<tr>";
                   echo "<td>".$value['descricao']."</td>";
-
-                  echo '<form class="" action="../../includes/excluir/excluirGenero.php? method="post">';
-                  echo '<td><button type="submit" class="btn btn-danger" name="excluirGenero" value='.$value["id_genero"].'>Excluir Item';
-                  echo '</form>';
-                  echo '<a href="../../pages/editar/editarGenero.php?id='.$value["id_genero"].'">	<button class="btn btn-dark">Editar</button></a></td>';
+                  echo '<td><a href="../../includes/excluir/excluirGenero.php?id='.$value["id_genero"].'">	<button class="btn btn-danger">Excluir</button></a></td>';
+                  echo '<td><a href="../../pages/editar/editarGenero.php?id='.$value["id_genero"].'">	<button class="btn btn-dark">Editar</button></a></td>';
                   echo "</tr>";
                 }
               }

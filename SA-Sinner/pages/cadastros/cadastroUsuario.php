@@ -3,8 +3,8 @@
         <?php include("../../template/styles.php"); ?>
         <link rel="stylesheet" href="../../css/styleCadastro.css">
     </head>
-    <body>
-    <?php include("../../template/navbar.php"); ?>
+    <body style="background-color:grey;">
+
     <?php
         if (isset($_GET["erro"])){
             $erro = $_GET["erro"];
@@ -19,7 +19,7 @@
             }
         }
     ?>
-    <div id="content" class="container">
+    <div class="container">
             <div class="containerCadastro">
                   <center>
                       <h3>Cadastre-se</h3>
