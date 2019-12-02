@@ -112,5 +112,3 @@
         <?php include("../../template/js.php"); ?>
     </body>
 </html>
-
-    </head>

@@ -21,26 +21,27 @@
     white-space: nowrap;
   }
 </style>
-<div class="conteudo">
+<div id="conteudo">
   <div class="card">
     <div class="card-header">
       Destaque
     </div>
     <div class="card-body">
-      <a href="visualizarNoticiaUsuario.php?id=<?php echo ($arrayNoticia[0]['id_noticia'])?>">
+      <a href="visualizar/NoticiaUsuario.php?id=<?php echo ($arrayNoticia[0]['id_noticia'])?>">
         <h5 class="card-title"><?php echo ($arrayNoticia[0]["descricao"]); ?></h5>
         <p class="card-text" style=""><?php echo ($arrayNoticia[0]["conteudo"]); ?></p>
       </a>
     </div>
   </div>
   <br>
+
   <h1>Notícias</h1>
   <div class="row">
     <?php
       foreach ($arrayNoticia as $key => $value) {
         echo '<div class="col-4">';
-        echo '<a href="visualizarNoticiaUsuario.php?id='.$value['id_noticia'].'">';
-        echo '<div class="card card-accent-primary wider">';
+        echo '<a href="visualizar/visualizarNoticiaUsuario.php?id='.$value['id_noticia'].'">';
+        echo '<div id="noticia" class="card card-accent-primary wider">';
         //<!-- Card image -->
         echo '<div class="view view-cascade overlay">';
         echo '<div class="mask rgba-white-slight"></div>';
@@ -51,6 +52,7 @@
         echo '<h4 class="card-title"><strong>'.$value['descricao'].'</strong></h4>';
         //<!-- Subtitle -->
         echo '<p class="card-text">'.$value['conteudo'].'</p>';
+        echo '';
         echo '</div>';
         echo '</div>';
         echo '</a>';
@@ -67,7 +69,7 @@
     <?php
       foreach ($arrayBanda as $key => $value) {
         echo '<div class="col">';
-        echo '<a href="visualizarBandaUsuario.php?id='.$value['id_banda'].'">';
+        echo '<a href="pages/visualizar/visualizarBandaUsuario.php?id='.$value['id_banda'].'">';
         echo '<div class="card" style="width: 13rem;">';
         echo '<img class="card-img-top" src="'.$value['img'].'" alt="Imagem de capa do card">';
         echo '<div class="card-body">';
@@ -89,7 +91,7 @@
       <?php
         foreach ($arrayAlbum as $key => $value) {
           echo '<div class="col">';
-          echo '<a href="visualizarNoticiaUsuario.php?id='.$value['id_album'].'">';
+          echo '<a href="visualizar/visualizarAlbumUsuario.php?id='.$value['id_album'].'">';
           echo '<div class="card" style="width: 13rem;">';
           echo '<img class="card-img-top" src="'.$value['img'].'" alt="Imagem de capa do card">';
           echo '<div class="card-body">';

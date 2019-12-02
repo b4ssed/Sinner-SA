@@ -6,6 +6,7 @@
     </head>
     <body>
         <div class="wrapper">
+          <?php session_start(); ?>
             <?php include("../../template/sidebar.php"); ?>
             <div class="container" id ='content'>
                 <div class="containerCadastro">

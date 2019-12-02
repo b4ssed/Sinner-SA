@@ -1,9 +1,9 @@
 <?php
  $con = mysqli_connect("localhost", "root", "", "database_sinner");
- $id= $_POST['id'];
+ $id= $_GET['id'];
  $name=$_POST['descricao'];
 
- echo $name;
+
 
         //RESGATA OS DADOS
     $query = mysqli_query($con, "SELECT * FROM banda where id_banda = $id");
@@ -11,7 +11,7 @@
     $ext11 = ($dados[0]['img']);
 
 //ADICIONA A NOVA IMAGEM E EXCLUI A ANTIGA
- $destino= '../../../../Sinner-SA/SA-Sinner/css/images/image';
+  $destino= '../../../../Sinner-SA/SA-Sinner/css/images/image';
     $ext = strtolower(substr($_FILES['imgband']['name'],-4));
     if($ext=="jpeg"||$ext==".png"||$ext==".gif"||$ext=="jfif"||$ext==".img"||$ext==".jpg"){
     $new_name = $_FILES['imgband']['name'].$id.$ext;
