@@ -29,7 +29,7 @@
             mysqli_close($con);
             header("Location: ../../pages/cadastros/cadastroUsuario.php?erro=201");
         }else{
-            $query_insert = mysqli_query($con,"INSERT INTO usuario VALUES(DEFAULT, '$nome', '$email', '$senha', NULL, 1)");
+            $query_insert = mysqli_query($con,"INSERT INTO usuario VALUES(DEFAULT, '$nome', '$email', '$senha', NULL, 2)");
             if ($query_insert){
                 mysqli_close($con);
                 header("Location: ../../pages/login.php?newUser=1");

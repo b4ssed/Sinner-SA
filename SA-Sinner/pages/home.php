@@ -27,7 +27,7 @@
       Destaque
     </div>
     <div class="card-body">
-      <a href="visualizar/NoticiaUsuario.php?id=<?php echo ($arrayNoticia[0]['id_noticia'])?>">
+      <a href="pages/visualizar/visualizarNoticiaUsuario.php?id=<?php echo ($arrayNoticia[0]['id_noticia'])?>">
         <h5 class="card-title"><?php echo ($arrayNoticia[0]["descricao"]); ?></h5>
         <p class="card-text" style=""><?php echo ($arrayNoticia[0]["conteudo"]); ?></p>
       </a>
@@ -91,7 +91,7 @@
       <?php
         foreach ($arrayAlbum as $key => $value) {
           echo '<div class="col">';
-          echo '<a href="visualizar/visualizarAlbumUsuario.php?id='.$value['id_album'].'">';
+          echo '<a href="pages/visualizar/visualizarMusicaUsuario.php?id='.$value['id_album'].'">';
           echo '<div class="card" style="width: 13rem;">';
           echo '<img class="card-img-top" src="'.$value['img'].'" alt="Imagem de capa do card">';
           echo '<div class="card-body">';

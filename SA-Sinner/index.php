@@ -36,5 +36,5 @@
             include("template/js.php");
           }
         ?>
-    </body>
+    </body>    
 </html>

@@ -23,13 +23,13 @@
              ?>
           </li>
           <li class="">
-              <a href="../../../../Sinner-SA/SA-Sinner/pages/visualizar/indexNoticia">Notícias</a>
+              <a href="../../../../Sinner-SA/SA-Sinner/pages/visualizar/indexNoticia.php">Notícias</a>
           </li>
           <li class="">
-              <a href="../../../../Sinner-SA/SA-Sinner/pages/visualizar/indexBanda">Banda</a>
+              <a href="../../../../Sinner-SA/SA-Sinner/pages/visualizar/indexBanda.php">Banda</a>
           </li>
           <li class="">
-            <a href="../../../../Sinner-SA/SA-Sinner/pages/visualizar/indexAlbuns">Albuns</a>
+            <a href="../../../../Sinner-SA/SA-Sinner/pages/visualizar/indexAlbuns.php">Albuns</a>
           </li>
         </ul>
         <ul class="list-unstyled CTAs">

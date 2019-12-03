@@ -12,8 +12,7 @@
         <div class="wrapper">
             <?php include("../../template/sidebar.php"); ?>
             <div id="content">
-              <?php include("../../includes/btnNavbar.php"); ?>
-                <br>
+              <?php include("../../template/navbar.php"); ?>
                 <div class="row">
                   <div class="col-sm-6">
                     <div class="card">
