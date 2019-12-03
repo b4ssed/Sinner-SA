@@ -1,33 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <?php include("../template/styles.php"); ?>
-    <style>
-            .containerLogin{
-              width: 50%;
-              height: 30%;
-              border-radius: 10px;
-              background: #fff;
-            }
-            body{
-              background: grey;
-            }
-            .containerLogin a{
-              text-decoration: underline;
-            }
-            .containerLogin input{
-              width: 50%;
-            }
-            .containerPrincipal{
-              width: 100vw;
-              height: 100vh;
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
-              align-items: center;
-            }
-        </style>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/stylePrincipal.css">
+  <style media="screen">
+    .mx-auto{
+      height: auto;
+    }
+    .col{
+      style= padding: 0px 20px;
+    }
+  </style>
+</head>
   <body>
     <?php // Tratativa de erro #100
     if(isset($_GET["erro"])){
@@ -37,11 +25,13 @@
       }
     }
     ?>
-      <div class="containerPrincipal">
-        <div class="containerLogin">
+    <div class="container">
+      <div class="mx-auto">
+        <div class="row" >
+          <div class="col">
               <center>
-                <h2>SINNER</h2>
-                <small class="form-text text-muted">Você precisa realizar o log-in para acessar o site</small>
+                <h3>SINNER</h3>
+                <small class="form-text">Você precisa realizar o log-in para acessar o site</small>
               </center>
               <?php
                 if (isset($_GET['newUser'])) {
@@ -50,22 +40,30 @@
                   echo '<form action="../actions/validarLogin.php" method="post">';
                 }
               ?>
+              <br>
+            </div>
+            </div>
                   <form action="../actions/validarLogin.php" method="post">
-                        <div class="form-group">
-                          <center>
-                            <input type="text" class="form-control" required id="login" name="login" placeholder="Login">
-                          </center>
+                    <div class="row">
+                      <div class="col">
+                          <input type="text" class="form-control" required id="login" name="login" placeholder="Login">
                         </div>
-                        <div class="form-group">
+                      </div>
+                        <br>
+                        <div class="row">
+                          <div class="col">
                           <center>
                             <input type="password" class="form-control" required id="senha" name="senha" placeholder="Senha">
                           </center>
+                          </div>
                         </div>
-                        <div class="form-group">
+                        <div class="row">
+                          <div class="col">
                           <center>
-                          <a href="cadastros/cadastroUsuario.php"><small class="form-text text-muted">Cadastre-se</small></a>
-                          <button type="submit" class="btn btn-dark " >Entrar</button>
+                          <a href="cadastros/cadastroUsuario.php"><small class="form-text">Cadastre-se</small></a>
+                          <button type="submit" class="btn btn-light " >Entrar</button>
                           </center>
+                          </div>
                         </div>
 
                   </form>

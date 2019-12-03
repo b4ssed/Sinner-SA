@@ -11,15 +11,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="nav navbar-nav ml-auto">
               <li class="nav-item">
-                  <a href="../../../../Sinner-SA/SA-Sinner/pages/visualizar/indexNoticia" class="nav-link">Notícias</a>
+                  <a href="../../../../Sinner-SA/SA-Sinner/pages/visualizar/indexNoticia.php" class="nav-link">Notícias</a>
               </li>
               <li class="nav-item">
-                  <a href="../../../../Sinner-SA/SA-Sinner/pages/visualizar/indexBanda" class="nav-link">Banda</a>
+                  <a href="../../../../Sinner-SA/SA-Sinner/pages/visualizar/indexBanda.php" class="nav-link">Banda</a>
               </li>
               <li class="nav-item">
-                <a href="../../../../Sinner-SA/SA-Sinner/pages/visualizar/indexAlbuns" class="nav-link">Albuns</a>
+                <a href="../../../../Sinner-SA/SA-Sinner/pages/visualizar/indexAlbuns.php" class="nav-link">Albuns</a>
               </li>
           </ul>
         </div>
     </div>
     </nav>
+

@@ -1,4 +1,5 @@
 <html>
+ 
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,11 @@
         <?php include("../../template/styles.php"); ?>
 
     </head>
-    <body>
+    <body  >
         <div class="wrapper">
             <?php include("../../template/sidebar.php"); ?>
             <div id="content">
-              <?php include("../../includes/btnNavbar.php"); ?>
-                <br>
+              <?php include("../../template/navbar.php"); ?>
                 <div class="row">
                   <div class="col-sm-6">
                     <div class="card">
