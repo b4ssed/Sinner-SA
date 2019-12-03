@@ -63,8 +63,11 @@
           }
 
 
-          .flavio button:hover{
+          #btnPrev:hover, #btnNext:hover{
             background: #00b3ff;
+            color: white;
+            
+
           }
       </style>
       <!-- Fim CSS -->
@@ -175,8 +178,8 @@
           </audio>  
        </div>
        <div id="tracks">
-          <button class="flavio" id="btnPrev">&vltri;</button>
-          <button id="btnNext" class="flavio">&vrtri;</button>
+          <button id="btnPrev">&vltri;</button>
+          <button id="btnNext">&vrtri;</button>
       </div>
     <!-- FIM Player-->
       </div>
