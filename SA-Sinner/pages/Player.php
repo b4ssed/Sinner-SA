@@ -14,20 +14,21 @@
       <link rel="stylesheet" href="https://unpkg.com/plyr@3/dist/plyr.css"/>
       <!-- Nav Bar -->
       <?php include("../template/styles.php"); ?>
+      <?php session_start(); ?>
       <!-- Fim Bar -->
 
       <!-- Começo CSS -->
       <style>
         
-        ul{list-style: none;padding: 0px}
+        .player ul{list-style: none;padding: 0px}
        
-        a{text-decoration: none;color: #444;font-family: arial}
+        .player a{text-decoration: none;color: #444;font-family: arial}
        
-        li:hover{background: #eee;border-bottom: solid 1px #692273;}
+        .player li:hover{background: #eee;border-bottom: solid 1px #00b3ff;}
        
-        li{width: 20%; padding: 5px; border-bottom: solid 1px #ccc;}
+        .player li{width: 20%; padding: 5px; border-bottom: solid 1px #ccc;}
         
-        .active a{color:#692273; padding-left: 1px; font-style: italic;}
+        
 
         .plyr--audio .plyr__controls{
           background:black;
@@ -36,17 +37,33 @@
         #rodape {
             position: absolute;
             bottom: 0;
-            width: 91%;
-            left: 100px;
+            width: 93%;
+            left: 7%;
           }
 
          #tracks {
-            font-size:30px;
+            font-size:33.5px;
             bottom: 0px;
             position: absolute;
+            width: 7%;
+            border:0px;
             
-          
+    
+
             }
+
+          #btnPrev, #btnNext{
+            width: 50%;
+            float: left;
+            border:0px;
+
+          }
+
+
+          .flavio button:hover{
+            background: #eee;
+            border-bottom: solid 1px #00b3ff;
+          }
       </style>
       <!-- Fim CSS -->
 
@@ -68,7 +85,7 @@
         var tracks = playlist.find("li a");
         var len = tracks.length -1;
         
-        playlist.find("a").click(function(e){debugger;
+        playlist.find("a").click(function(e){
             e.preventDefault();
             link = $(this);
             indexmusic = link.attr("id");
@@ -86,7 +103,7 @@
               run($(link), audio[0]);
           })
 
-          $('#btnNext').on('click', function () {debugger;
+          $('#btnNext').on('click', function () {
            
             if(indexmusic < (totalmusics-1)){
               indexmusic++;
@@ -96,7 +113,7 @@
             }
           })
 
-          $('#btnPrev').on('click', function () {debugger;
+          $('#btnPrev').on('click', function () {
             if(indexmusic > 0){
               indexmusic--;
               var link = playlist.find("#"+indexmusic)
@@ -138,12 +155,12 @@
       <div id="content" style="padding: 0px">
         <div style="padding: 40px">
           <?php include("../includes/btnNavbar.php"); ?> 
-            <ul id="playlist"> 
+            <ul id="playlist" class="player"> 
               <?php
                   $idmusica = 0;
                   foreach ($arr as $key => $value) {
                     
-                    echo "<a id='". $idmusica."' href='".$value["musica"]."'><li>".$value["descricao"]."</li></a>";
+                    echo "<a  class='player' id='". $idmusica."' href='".$value["musica"]."'><li class='player'>".$value["descricao"]."</li></a>";
                     $idmusica++;
                   }
               ?>
@@ -156,7 +173,8 @@
           </audio>  
        </div>
        <div id="tracks">
-          <button id="btnPrev" class="plyr__controls__item plyr__control plyr__tab-focus" >&vltri;</button><button id="btnNext" class="plyr__controls__item plyr__control plyr__tab-focus" >&vrtri;</button>
+          <button class="flavio" id="btnPrev">&vltri;</button>
+          <button id="btnNext" class="flavio">&vrtri;</button>
       </div>
     <!-- FIM Player-->
       </div>
