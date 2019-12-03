@@ -20,6 +20,12 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+  hr{
+    border:1px solid #05011b;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.76);
+  }
+
+  
 </style>
 <div id="conteudo">
   <div class="card">
@@ -34,13 +40,13 @@
     </div>
   </div>
   <br>
-
+<hr>
   <h1>Notícias</h1>
   <div class="row">
     <?php
       foreach ($arrayNoticia as $key => $value) {
         echo '<div class="col-4">';
-        echo '<a href="visualizar/visualizarNoticiaUsuario.php?id='.$value['id_noticia'].'">';
+        echo '<a href="pages/visualizar/visualizarNoticiaUsuario.php?id='.$value['id_noticia'].'">';
         echo '<div id="noticia" class="card card-accent-primary wider">';
         //<!-- Card image -->
         echo '<div class="view view-cascade overlay">';
@@ -63,6 +69,8 @@
       }
     ?>
   </div>
+ 
+  <hr>
   <br>
   <h1>Bandas</h1>
   <div class="row">
@@ -84,6 +92,7 @@
       }
     ?>
   </div>
+  <hr>
     <br>
     <h1>Álbuns</h1>
     <br>

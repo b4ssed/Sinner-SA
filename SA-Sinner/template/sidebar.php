@@ -17,7 +17,7 @@
           </li>
           <li class="">
             <?php
-              if ($_SESSION["usuario"][0]["tipo_usuario_id_tipo_usuario"]) {
+              if ($_SESSION["usuario"][0]["tipo_usuario_id_tipo_usuario"]==1) {
                 echo '<a href="../../../../Sinner-SA/SA-Sinner/pages/cadastros/index.php">Painel admin.</a>';
               }
              ?>
@@ -31,6 +31,7 @@
           <li class="">
             <a href="../../../../Sinner-SA/SA-Sinner/pages/visualizar/indexAlbuns.php">Albuns</a>
           </li>
+          
         </ul>
         <ul class="list-unstyled CTAs">
         <li class="">
