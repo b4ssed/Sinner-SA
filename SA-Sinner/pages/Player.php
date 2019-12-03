@@ -31,7 +31,7 @@
         
 
         .plyr--audio .plyr__controls{
-          background:black;
+          background:#000;
         }
         
         #rodape {
@@ -46,9 +46,10 @@
             bottom: 0px;
             position: absolute;
             width: 7%;
-            border:0px;
             
-    
+            
+            
+
 
             }
 
@@ -56,13 +57,14 @@
             width: 50%;
             float: left;
             border:0px;
+            background:#000;
+            color: #343a40;
 
           }
 
 
           .flavio button:hover{
-            background: #eee;
-            border-bottom: solid 1px #00b3ff;
+            background: #00b3ff;
           }
       </style>
       <!-- Fim CSS -->
