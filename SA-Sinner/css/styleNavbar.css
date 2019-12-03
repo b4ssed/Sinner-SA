@@ -160,6 +160,18 @@ a.article:hover {
     right: 0;
 }
 
+/* #content2 {
+    padding: 00px;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+  
+} */
+
 #content.active {
     width: 100%;
 }

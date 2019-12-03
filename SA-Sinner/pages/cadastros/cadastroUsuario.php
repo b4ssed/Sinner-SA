@@ -1,10 +1,17 @@
 <html>
-    <head>
-        <?php include("../../template/styles.php"); ?>
-        <link rel="stylesheet" href="../../css/styleCadastro.css">
-    </head>
-    <body style="background-color:grey;">
-
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/stylePrincipal.css">
+  <style media="screen">
+    .mx-auto{
+      height: auto;
+    }
+  </style>
+</head>
     <?php
         if (isset($_GET["erro"])){
             $erro = $_GET["erro"];
@@ -20,28 +27,44 @@
         }
     ?>
     <div class="container">
-            <div class="containerCadastro">
-                  <center>
-                      <h3>Cadastre-se</h3>
-                  </center>
-                  <form action="../../includes/cadastros/cadastrarUsuario.php" method="post">
-                      <div class="form-group">
-                          <label for="usuario">Usuário</label>
-                          <input type="text" class="form-control" name="usuario" max="45" required>
-                      </div>
-                      <div class="form-group">
-                          <label for="email">E-mail</label>
-                          <input type="email" class="form-control" name="email" max="50" required>
-                      </div>
-                      <div class="form-group">
-                          <label for="senha">Senha</label>
-                          <input type="password" class="form-control"  name="senha" max="8" required>
-                      </div>
-                      <center>
-                        <button type="submit" class="btn btn-dark">Cadastrar</button>
-                      </center>
-                  </form>
+      <div class="mx-auto">
+        <div class="row">
+          <div class="col">
+              <center>
+                  <h3>Cadastre-se</h3>
+              </center>
             </div>
+          </div>
+            <form action="../../includes/cadastros/cadastrarUsuario.php" method="post">
+              <div class="row">
+                <div class="col form-group">
+                  <label for="usuario">Usuário</label>
+                  <input type="text" class="form-control" name="usuario" max="45" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col form-group">
+                  <label for="email">E-mail</label>
+                  <input type="email" class="form-control" name="email" max="50" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col form-group">
+                  <label for="senha">Senha</label>
+                  <input type="password" class="form-control"  name="senha" max="8" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                <center>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-light">Cadastrar</button>
+                  </div>
+              </center>
+            </div>
+          </div>
+          </form>
         </div>
+      </div>
     </body>
 </html>
