@@ -65,6 +65,9 @@
 
           #btnPrev:hover, #btnNext:hover{
             background: #00b3ff;
+            color: white;
+            
+
           }
       </style>
       <!-- Fim CSS -->
