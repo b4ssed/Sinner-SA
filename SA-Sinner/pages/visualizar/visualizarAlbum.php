@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Visualizar Gênero</title>
-       
+
         <?php include("../../template/styles.php"); ?>
         <style>
             .containerCadastro{
@@ -23,10 +23,6 @@
         </style>
     </head>
     <body>
-    <?php
-     
-
-     ?>
      <div class="wrapper">
      <?php include("../../template/sidebar.php"); ?>
        <div id="content" class="containerPrincipal">
@@ -72,8 +68,6 @@
         </div>
       </div>
     <br>
-
-
     </div>
       <?php include("../../template/js.php"); ?>
     </body>

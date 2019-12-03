@@ -36,6 +36,7 @@
             </div>
           </div>
             <form action="../../includes/cadastros/cadastrarUsuario.php" method="post">
+              <input type="hidden" name="tipoUsuario" value="2">
               <div class="row">
                 <div class="col form-group">
                   <label for="usuario">Usuário</label>
