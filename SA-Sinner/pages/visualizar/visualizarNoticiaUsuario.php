@@ -15,7 +15,7 @@
         session_start();
         // $con = mysqli_connect("localhost", "root", "", "database_sinner");
         // $query = mysqli_query($con,"SELECT * FROM noticia");
-        
+
          ?>
         <title>noticias</title>
         <?php include("../../template/styles.php"); ?>
@@ -47,5 +47,6 @@
             ?>
         </div>
     </div>
+    <?php include("../../template/js.php"); ?>
   </body>
 </html>

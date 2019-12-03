@@ -38,16 +38,17 @@
         margin-left: 5%;
       }
     </style>
+      <?php include("../../template/styles.php"); ?>
   </head>
   <body>
     <div class="wrapper">
+      <?php include("../../template/sidebar.php"); ?>
       <div id="content" style="padding:0px;" >
         <div class="responsive">
           <?php
             echo "<img class='imgbanda'src='".$array_banda['img']."'>";
            ?>
         </div>
-
         <br>
         <div style="padding:40px;">
           <h1><?php echo $array_banda["descricao"] ?></h1>
@@ -67,7 +68,9 @@
               }
             ?>
           </div>
+        </div>
       </div>
     </div>
+    <?php include("../../template/js.php"); ?>
   </body>
 </html>

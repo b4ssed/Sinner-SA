@@ -1,5 +1,5 @@
 <html>
- 
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,10 @@
                       <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs">
                           <li class="nav-item">
-                            <a class="nav-link active" href="cadastroUsuario.php">Cadastro</a>
+                            <a class="nav-link active" href="cadastroUsuarioAdministrador.php">Cadastro</a>
+                            <li class="nav-item">
+                              <a class="nav-link active" href="../visualizar/visualizarUsuario.php">Visualizar</a>
+                            </li>
                           </li>
                         </ul>
                       </div>
