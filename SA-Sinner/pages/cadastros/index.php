@@ -28,7 +28,7 @@
                         </ul>
                       </div>
                       <div class="card-body">
-                        <h5 class="card-title">Usuário</h5>
+                        <h5 class="card-title">Administradores</h5>
                         <p class="card-text">Para cadastrar outros administradores.</p>
                       </div>
                     </div>

@@ -16,10 +16,11 @@
             <div class="containerCadastro">
                 <form action="../../includes/cadastros/cadastrarGenero.php" method="post">
                   <!-- area de campos do form -->
-                  <hr />
+                  <hr>
                     <div class="form-group">
                         <h2>Cadastro Gênero</h2>
-                      <input type="text" class="form-control" name="descricao" placeholder="Pagodinho">
+                        <label for="descricao">Nome do Genero</label>
+                      <input type="text" class="form-control" name="descricao" placeholder="Título do Genero">
                     </div>
                     <div class="form-group">
                         <button type="submit" class="form-control btn btn-dark">Enviar</button>

@@ -28,29 +28,20 @@
 
         .player li{width: 20%; padding: 5px; border-bottom: solid 1px #ccc;}
 
-
-
         .plyr--audio .plyr__controls{
           background:#000;
         }
-
         #rodape {
             position: absolute;
             bottom: 0;
             width: 93%;
             left: 7%;
           }
-
          #tracks {
             font-size:33.5px;
             bottom: 0px;
             position: absolute;
             width: 7%;
-
-
-
-
-
             }
 
           #btnPrev, #btnNext{
@@ -59,10 +50,7 @@
             border:0px;
             background:#000;
             color: #343a40;
-
           }
-
-
           #btnPrev:hover, #btnNext:hover{
             background: #00b3ff;
             color: white;
@@ -193,12 +181,12 @@
         <div style="padding: 40px">
           <h1><?php echo $array_banda["descricao"] ?></h1>
           <h2><?php echo $array_album["descricao"]; ?></h2>
-            <ul id="playlist" class="player">
+            <ul id="playlist" class=" list-group player">
               <?php
                   $idmusica = 0;
                   foreach ($arr as $key => $value) {
 
-                    echo "<a  class='player' id='". $idmusica."' href='".$value["musica"]."'><li class='player'>".$value["descricao"]."</li></a>";
+                    echo "<a  class='player' id='". $idmusica."' href='".$value["musica"]."'><li class=' list-group-item player'>".$value["descricao"]."</li></a>";
                     $idmusica++;
                   }
               ?>

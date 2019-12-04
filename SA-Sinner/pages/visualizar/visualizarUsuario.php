@@ -67,7 +67,7 @@
 
               foreach ($arrayUsuario as $key => $value) {
                 echo "<tr>";
-                echo "<td><img src=".$value['id_usuario']."></td>";
+                echo "<td>".$value['id_usuario']."</td>";
                 echo "<td>".$value['nome']."</td>";
                 echo "<td>".$value['email']."</td>";
                 echo "<td>".$value['tipo_usuario_id_tipo_usuario']."</td>";
@@ -79,6 +79,7 @@
            ?>
          </tbody>
        </table>
+       <button class="form-control btn btn-dark" type='button' onclick="window.location.href='../cadastros/index.php'">Voltar</button>
       </div>
     </div>
   <br>

@@ -33,13 +33,14 @@
                <th scope="col">Música</th>
                <th scope="col"></th>
                <th scope="col"></th>
+               <th scope="col"></th>
              </tr>
            </thead>
             <tr class="">
-                    <td>Nome</td>
-                    <td>Duração</td>
-                    <td>Album</td>
-                </tr>
+              <td>Nome</td>
+              <td>Duração</td>
+              <td>Album</td>
+            </tr>
             </thead>
             <tbody>
                 <tr>
@@ -72,6 +73,7 @@
 
             </tbody>
         </table>
+        <button class="form-control btn btn-dark" type='button' onclick="window.location.href='../cadastros/index.php'">Voltar</button>
         <?php include("../../template/js.php"); ?>
 </body>
 </html>
