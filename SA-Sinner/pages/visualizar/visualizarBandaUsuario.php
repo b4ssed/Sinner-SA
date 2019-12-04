@@ -5,6 +5,7 @@
     <title></title>
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <?php
+      session_start();
       $id = $_GET['id'];
       //Conexão com o BD
       $con = mysqli_connect("localhost", "root", "", "database_sinner");
@@ -57,7 +58,7 @@
             <?php
               foreach ($b as $key => $value) {
                 echo '<div class="col">';
-                echo '<a href="visualizarMusicaUsuario.php?id='.$value['id_album'].'">';
+                echo '<a href="../Player.php?id='.$value['id_album'].'">';
                 echo '<div class="card" style="width: 13rem;">';
                 echo '<img class="card-img-top" src="'.$value['img'].'" alt="Imagem de capa do card">';
                 echo '<div class="card-body">';

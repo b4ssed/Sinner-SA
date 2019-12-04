@@ -39,7 +39,7 @@
           <?php
             foreach ($arrayNoticia as $key => $value) {
               echo '<div class="col-4">';
-              echo '<a href="visualizar/visualizarNoticiaUsuario.php?id='.$value['id_noticia'].'">';
+              echo '<a href="visualizarNoticiaUsuario.php?id='.$value['id_noticia'].'">';
               echo '<div id="noticia" class="card card-accent-primary wider">';
               //<!-- Card image -->
               echo '<div class="view view-cascade overlay">';
