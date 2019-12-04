@@ -5,6 +5,7 @@
     <title></title>
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <?php
+      session_start();
       $id = $_GET['id'];
       //Conexão com o BD
       $con = mysqli_connect("localhost", "root", "", "database_sinner");
@@ -38,16 +39,17 @@
         margin-left: 5%;
       }
     </style>
+      <?php include("../../template/styles.php"); ?>
   </head>
   <body>
     <div class="wrapper">
+      <?php include("../../template/sidebar.php"); ?>
       <div id="content" style="padding:0px;" >
         <div class="responsive">
           <?php
             echo "<img class='imgbanda'src='".$array_banda['img']."'>";
            ?>
         </div>
-
         <br>
         <div style="padding:40px;">
           <h1><?php echo $array_banda["descricao"] ?></h1>
@@ -56,7 +58,7 @@
             <?php
               foreach ($b as $key => $value) {
                 echo '<div class="col">';
-                echo '<a href="visualizarMusicaUsuario.php?id='.$value['id_album'].'">';
+                echo '<a href="../Player.php?id='.$value['id_album'].'">';
                 echo '<div class="card" style="width: 13rem;">';
                 echo '<img class="card-img-top" src="'.$value['img'].'" alt="Imagem de capa do card">';
                 echo '<div class="card-body">';
@@ -67,7 +69,9 @@
               }
             ?>
           </div>
+        </div>
       </div>
     </div>
+    <?php include("../../template/js.php"); ?>
   </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
     $nome = $_POST['TNoticia'];
-   
+
     $GENERO=$_POST['genero'];
 
 
@@ -17,11 +17,11 @@
     $con = mysqli_connect("localhost", "root", "", "database_sinner");
         $query = mysqli_query($con,"INSERT INTO noticia VALUES(DEFAULT, '$nome', '00','$caminho',$GENERO)");
         mysqli_close($con);
-        echo "<script> alert('digite a noticia :)'); window.location.href = '../../pages/visualizar/visualizarNoticia.php'; </script>" ;
+        header('Location: ../../pages/cadastros/cadastroNoticia.php');
 
     }else{
 
-        echo "<script> alert('esse tipo de imagem não é suportada'); window.location.href = '../pages/CNoticia.php'; </script>" ;
+        header('Location: ../../pages/cadastros/cadastroNoticia.php');
     }
 
 

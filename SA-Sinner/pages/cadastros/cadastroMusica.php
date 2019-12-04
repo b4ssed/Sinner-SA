@@ -23,7 +23,7 @@
     </div>
     <div class="form-group">
       <label for="descricao">Duração</label>
-      <input type="float" name="duracao" class="form-control" placeholder="Duração" required>
+      <input type="float" name="duracao" class="form-control" placeholder="MM:SS" required>
     </div>
     <div class="form-group">
     <label for="descricao">Arquivo da música</label>

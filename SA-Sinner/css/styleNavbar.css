@@ -63,7 +63,7 @@ a:focus {
     height: 100vh;
     z-index: 999;
     border: #fff;
-    background:#05011b;
+    background:#2d3436;
     color: #fff;
     transition: all 0.3s;
 }
@@ -159,18 +159,6 @@ a.article:hover {
     top: 0;
     right: 0;
 }
-
-/* #content2 {
-    padding: 00px;
-    width: calc(100% - 250px);
-    min-height: 100vh;
-    transition: all 0.3s;
-    position: absolute;
-    top: 0;
-    right: 0;
-    
-  
-} */
 
 #content.active {
     width: 100%;

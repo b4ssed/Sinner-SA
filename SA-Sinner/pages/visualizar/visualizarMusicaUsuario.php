@@ -15,7 +15,6 @@
       //Album
       $query_album = mysqli_query($con,"SELECT * FROM album WHERE id_album = $array_banda[id_banda]");
       $array_album = mysqli_fetch_assoc($query_album);
-      $b[] = $array_album;
       //Musica
       $query_musica = mysqli_query($con,"SELECT * FROM musica WHERE id_musica = $array_album[id_album]");
       $array_musica = mysqli_fetch_assoc($query_musica);
@@ -38,9 +37,11 @@
         margin-left: 5%;
       }
     </style>
+    <?php include("../../template/styles.php"); ?>
   </head>
   <body>
     <div class="wrapper">
+      <?php include("../../template/sidebar.php"); ?>
       <div id="content" style="padding:0px;" >
         <div class="responsive">
           <?php
@@ -81,5 +82,6 @@
         </div>
       </div>
     </div>
+    <?php include("../../template/js.php"); ?>
   </body>
 </html>

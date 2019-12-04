@@ -19,38 +19,29 @@
 
       <!-- Começo CSS -->
       <style>
-        
+
         .player ul{list-style: none;padding: 0px}
-       
+
         .player a{text-decoration: none;color: #444;font-family: arial}
-       
+
         .player li:hover{background: #eee;border-bottom: solid 1px #00b3ff;}
-       
+
         .player li{width: 20%; padding: 5px; border-bottom: solid 1px #ccc;}
-        
-        
 
         .plyr--audio .plyr__controls{
           background:#000;
         }
-        
         #rodape {
             position: absolute;
             bottom: 0;
             width: 93%;
             left: 7%;
           }
-
          #tracks {
             font-size:33.5px;
             bottom: 0px;
             position: absolute;
             width: 7%;
-            
-            
-            
-
-
             }
 
           #btnPrev, #btnNext{
@@ -59,12 +50,12 @@
             border:0px;
             background:#000;
             color: #343a40;
-
           }
-
-
-          .flavio button:hover{
+          #btnPrev:hover, #btnNext:hover{
             background: #00b3ff;
+            color: white;
+
+
           }
       </style>
       <!-- Fim CSS -->
@@ -75,9 +66,9 @@
         inicio();
         const player = new Plyr('audio', {});
         window.player = player;
-        
+
       });
-      
+
       var indexmusic;
       function inicio(){
         var corrente = 0;
@@ -86,7 +77,7 @@
         var totalmusics= playlist.find("li").length;
         var tracks = playlist.find("li a");
         var len = tracks.length -1;
-        
+
         playlist.find("a").click(function(e){
             e.preventDefault();
             link = $(this);
@@ -106,7 +97,7 @@
           })
 
           $('#btnNext').on('click', function () {
-           
+
             if(indexmusic < (totalmusics-1)){
               indexmusic++;
               var link = playlist.find("#"+indexmusic)
@@ -135,48 +126,81 @@
           player.play();
         }
 
-        
 
 
-      </script> 
+
+      </script>
       <!-- FIM JavaScript -->
+      <style media="screen">
+      .responsive {
+        width: 100%;
+        height: 200PX;
+        background: black;
+        }
+        .lead{
+           width: 75%;
+        }
+        .imgbanda{
+          margin-top: 40px;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          margin-left: 5%;
+        }
+      </style>
   </head>
 
   <body>
   <!-- Começo interação no BD -->
-    <?php
-      
-      $con = mysqli_connect("localhost","root","","database_sinner");
-      $query = mysqli_query($con, "SELECT * FROM musica");
-      $arr = mysqli_fetch_all($query, MYSQLI_ASSOC);
-    ?>
+  <?php
+    $id = $_GET['id'];
+    //Conexão com o BD
+    $con = mysqli_connect("localhost", "root", "", "database_sinner");
+    //Select e armazenamento em arrays
+    //Banda
+    $query_banda = mysqli_query($con,"SELECT * FROM banda WHERE id_banda=$id");
+    $array_banda = mysqli_fetch_assoc($query_banda);
+    //Album
+    $query_album = mysqli_query($con,"SELECT * FROM album WHERE id_album = $array_banda[id_banda]");
+    $array_album = mysqli_fetch_assoc($query_album);
+    //Musica
+    $query_musica = mysqli_query($con,"SELECT * FROM musica WHERE id_musica = $array_album[id_album]");
+    $array_musica = mysqli_fetch_assoc($query_musica);
+    $arr[] = $array_musica;
+  ?>
     <!-- FIM interação no BD -->
 
     <div class="wrapper">
-      <?php include("../template/sidebar.php"); ?> 
+      <?php include("../template/sidebar.php"); ?>
       <div id="content" style="padding: 0px">
+        <div class="responsive">
+          <?php
+            echo "<img class='imgbanda'src='".$array_banda['img']."'>";
+           ?>
+        </div>
         <div style="padding: 40px">
-          <?php include("../includes/btnNavbar.php"); ?> 
-            <ul id="playlist" class="player"> 
+          <h1><?php echo $array_banda["descricao"] ?></h1>
+          <h2><?php echo $array_album["descricao"]; ?></h2>
+            <ul id="playlist" class=" list-group player">
               <?php
                   $idmusica = 0;
                   foreach ($arr as $key => $value) {
-                    
-                    echo "<a  class='player' id='". $idmusica."' href='".$value["musica"]."'><li class='player'>".$value["descricao"]."</li></a>";
+
+                    echo "<a  class='player' id='". $idmusica."' href='".$value["musica"]."'><li class=' list-group-item player'>".$value["descricao"]."</li></a>";
                     $idmusica++;
                   }
               ?>
               </ul>
         </div>
     <!-- Começo Player-->
-        <div id="rodape" >   
+        <div id="rodape" >
           <audio class="tu" id="audio" crossorigin playsinline >
             <source src="">
-          </audio>  
+          </audio>
        </div>
        <div id="tracks">
-          <button class="flavio" id="btnPrev">&vltri;</button>
-          <button id="btnNext" class="flavio">&vrtri;</button>
+          <button id="btnPrev">&vltri;</button>
+          <button id="btnNext">&vrtri;</button>
       </div>
     <!-- FIM Player-->
       </div>
