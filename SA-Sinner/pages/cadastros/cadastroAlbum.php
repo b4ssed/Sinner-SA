@@ -20,13 +20,13 @@
                   <center>
                   <H2>Cadastro de Album</H2>
                   </center>
+                  <div class="form-group">
+                    <label for="descricao">Nome do Álbum</label>
+                    <input type="text" class="form-control" name="descricao" placeholder="Nome do Álbum">
+                  </div>
                     <div class="form-group">
                       <label for="descricao">Duração</label>
-                      <input type="text" class="form-control" name="duracao" placeholder="Duração">
-                    </div>
-                    <div class="form-group">
-                      <label for="descricao">Descrição</label>
-                      <input type="text" class="form-control" name="descricao" placeholder="Descrição">
+                      <input type="text" class="form-control" name="duracao" placeholder="MM:SS">
                     </div>
                     <div class="form-group">
                         <label for="descricao">Banda</label>

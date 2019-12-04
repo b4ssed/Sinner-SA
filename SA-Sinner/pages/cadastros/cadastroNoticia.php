@@ -41,8 +41,9 @@
                 <label>Imagem da Noticia.</label>
                 <input type="file" name="imgband" >
                 </div>
-                <button  id='submitt' type="submit" class="form-control btn btn-dark">enviar</button>
+                <button  id='submitt' type="submit" class="form-control btn btn-dark">Enviar</button>
             </form>
+            <button class="form-control btn btn-dark" type='button' onclick="window.location.href='index.php'">Cancelar</button>
           </div>
         </div>
       </div>
