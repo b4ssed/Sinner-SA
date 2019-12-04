@@ -39,20 +39,20 @@
               <input type="hidden" name="tipoUsuario" value="2">
               <div class="row">
                 <div class="col form-group">
-                  <label for="usuario">Usuário</label>
-                  <input type="text" class="form-control" name="usuario" max="45" required>
+                  
+                  <input type="text" style="width: 80%;margin-left: 10%;" placeholder="Usuário" class="form-control" name="usuario" max="45" required>
                 </div>
               </div>
               <div class="row">
                 <div class="col form-group">
-                  <label for="email">E-mail</label>
-                  <input type="email" class="form-control" name="email" max="50" required>
+                  
+                  <input type="email" style="width: 80%;margin-left: 10%;"  placeholder="E-mail" class="form-control" name="email" max="50" required>
                 </div>
               </div>
               <div class="row">
                 <div class="col form-group">
-                  <label for="senha">Senha</label>
-                  <input type="password" class="form-control"  name="senha" max="8" required>
+                  
+                  <input type="password" style="width: 80%;margin-left: 10%;" class="form-control" placeholder="Senha"  name="senha" max="8" required>
                 </div>
               </div>
               <div class="row">

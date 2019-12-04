@@ -160,7 +160,9 @@ INSERT INTO usuario VALUES(DEFAULT, "Matheus", "matheus@gmail.com", "123", NULL,
 INSERT INTO usuario VALUES(DEFAULT, "Bruna", "bruna@gmail.com", "1234", NULL, 1);
 INSERT INTO usuario VALUES(DEFAULT, "Jonathan", "jonathan@gmail.com", "12345", NULL, 1);
 INSERT INTO usuario VALUES(DEFAULT, "Lucas", "lucas@gmail.com", "123", NULL, 1);
+INSERT INTO usuario VALUES(DEFAULT, "usuario", "usuario@gmail.com", "123", NULL, 2);
 INSERT INTO genero VALUES(DEFAULT, "Eletrônica");
+INSERT INTO genero VALUES(DEFAULT, "Pop");
 INSERT INTO genero VALUES(DEFAULT, "Heavy Metal");
 INSERT INTO genero VALUES(DEFAULT, "Indie");
 INSERT INTO genero VALUES(DEFAULT, "Rock");
@@ -168,14 +170,41 @@ INSERT INTO banda VALUES(DEFAULT, "Pegboard Nerds", "../../../../Sinner-SA/SA-Si
 INSERT INTO banda VALUES(DEFAULT, "Iron Maiden", "../../../../Sinner-SA/SA-Sinner/css/images/image02ironmaiden.jpg", 2);
 INSERT INTO banda VALUES(DEFAULT, "Cage the Elephant", "../../../../Sinner-SA/SA-Sinner/css/images/image03cagetheelephant.png", 3);
 INSERT INTO banda VALUES(DEFAULT, "Pink Floyd", "../../../../Sinner-SA/SA-Sinner/css/images/image04pinkfloyd.jpg", 4);
-INSERT INTO album VALUES(DEFAULT, "00:04:23", "Swamp Thing", "../../../../Sinner-SA/SA-Sinner/css/images/image05swampthing.jpg" , 1);
-INSERT INTO album VALUES(DEFAULT, "00:39:11", "The Number of the Beast", "../../../../Sinner-SA/SA-Sinner/css/images/image06numberofthebeast.jpg" , 2);
-INSERT INTO album VALUES(DEFAULT, "00:37:23", "Melophobia", "../../../../Sinner-SA/SA-Sinner/css/images/image07melophobia.jpg" , 3);
-INSERT INTO album VALUES(DEFAULT, "00:81:09", "The Wall", "../../../../Sinner-SA/SA-Sinner/css/images/image08thewall.jpg" , 4);
+INSERT INTO banda VALUES(DEFAULT, "Red Hot Chili Peppers", "../../../../Sinner-SA/SA-Sinner/css/images/logo_rhcp.png", 5);
+INSERT INTO banda VALUES(DEFAULT, "Jack Stauber", "../../../../Sinner-SA/SA-Sinner/css/images/jack_stauber_logo.jpg", 6);
+INSERT INTO banda VALUES(DEFAULT, "System of a Down", "../../../../Sinner-SA/SA-Sinner/css/images/soad_logo.jpg", 7);
+INSERT INTO banda VALUES(DEFAULT, "Chopin", "../../../../Sinner-SA/SA-Sinner/css/images/chopin_logo.jpg", 8);	
+	
+INSERT INTO album VALUES(DEFAULT, "04:23", "Swamp Thing", "../../../../Sinner-SA/SA-Sinner/css/images/image05swampthing.jpg" , 1);
+INSERT INTO album VALUES(DEFAULT, "39:11", "The Number of the Beast", "../../../../Sinner-SA/SA-Sinner/css/images/image06numberofthebeast.jpg" , 2);
+INSERT INTO album VALUES(DEFAULT, "37:23", "Melophobia", "../../../../Sinner-SA/SA-Sinner/css/images/image07melophobia.jpg" , 3);
+INSERT INTO album VALUES(DEFAULT, "81:09", "The Wall", "../../../../Sinner-SA/SA-Sinner/css/images/image08thewall.jpg" , 4);
+INSERT INTO album VALUES(DEFAULT, "100:19", "Preludes", "../../../../Sinner-SA/SA-Sinner/css/images/preludes.jpg" , 5);
+INSERT INTO album VALUES(DEFAULT, "62:11", "Pop food", "../../../../Sinner-SA/SA-Sinner/css/images/popfood.jpg" , 6);
+INSERT INTO album VALUES(DEFAULT, "78:03", "Gateway", "../../../../Sinner-SA/SA-Sinner/css/images/gateway.jpg" , 7);
+INSERT INTO album VALUES(DEFAULT, "81:09", "Toxicity", "../../../../Sinner-SA/SA-Sinner/css/images/toxicity.jpg" , 8);
+
+
 INSERT INTO musica VALUES(DEFAULT, "Swamp Thing", "00:04:23", "../../../../Sinner-SA/SA-Sinner/css/music/swampthing.mp3", 1);
 INSERT INTO musica VALUES(DEFAULT, "The Number of the Beast", "00:04:52", "../../../../Sinner-SA/SA-Sinner/css/music/thenumberofthebeast.mp3", 2);
 INSERT INTO musica VALUES(DEFAULT, "Telescope", "00:03:56", "../../../../Sinner-SA/SA-Sinner/css/music/telescope.mp3", 3);
 INSERT INTO musica VALUES(DEFAULT, "Hey You", "00:04:40", "../../../../Sinner-SA/SA-Sinner/css/music/heyyou.mp3", 4);
+
+INSERT INTO musica VALUES(DEFAULT, "Hey You", "00:04:40", "../../../../Sinner-SA/SA-Sinner/css/music/heyyou.mp3", 4);
+INSERT INTO musica VALUES(DEFAULT, "Hey You", "00:04:40", "../../../../Sinner-SA/SA-Sinner/css/music/heyyou.mp3", 4);
+INSERT INTO musica VALUES(DEFAULT, "Hey You", "00:04:40", "../../../../Sinner-SA/SA-Sinner/css/music/heyyou.mp3", 4);
+INSERT INTO musica VALUES(DEFAULT, "Hey You", "00:04:40", "../../../../Sinner-SA/SA-Sinner/css/music/heyyou.mp3", 4);
+INSERT INTO musica VALUES(DEFAULT, "Hey You", "00:04:40", "../../../../Sinner-SA/SA-Sinner/css/music/heyyou.mp3", 4);
+INSERT INTO musica VALUES(DEFAULT, "Hey You", "00:04:40", "../../../../Sinner-SA/SA-Sinner/css/music/heyyou.mp3", 4);
+INSERT INTO musica VALUES(DEFAULT, "Hey You", "00:04:40", "../../../../Sinner-SA/SA-Sinner/css/music/heyyou.mp3", 4);
+INSERT INTO musica VALUES(DEFAULT, "Hey You", "00:04:40", "../../../../Sinner-SA/SA-Sinner/css/music/heyyou.mp3", 4);
+INSERT INTO musica VALUES(DEFAULT, "Hey You", "00:04:40", "../../../../Sinner-SA/SA-Sinner/css/music/heyyou.mp3", 4);
+INSERT INTO musica VALUES(DEFAULT, "Hey You", "00:04:40", "../../../../Sinner-SA/SA-Sinner/css/music/heyyou.mp3", 4);
+INSERT INTO musica VALUES(DEFAULT, "Hey You", "00:04:40", "../../../../Sinner-SA/SA-Sinner/css/music/heyyou.mp3", 4);
+INSERT INTO musica VALUES(DEFAULT, "Hey You", "00:04:40", "../../../../Sinner-SA/SA-Sinner/css/music/heyyou.mp3", 4);
+INSERT INTO musica VALUES(DEFAULT, "Hey You", "00:04:40", "../../../../Sinner-SA/SA-Sinner/css/music/heyyou.mp3", 4);
+
+
 INSERT INTO noticia VALUES(DEFAULT, "Vocalista sofre acidente", "Ocorreu um acidente automobilistico", "../../../../Sinner-SA/SA-Sinner/css/images/image08thewall.jpg", 3);
 INSERT INTO noticia VALUES(DEFAULT, "Vocalista muda de banda", "Ocorreu uma mudança de bana", "../../../../Sinner-SA/SA-Sinner/css/images/image04pinkfloyd.jpg", 4);
 INSERT INTO noticia VALUES(DEFAULT, "Rock in Rio", "Iron Maiden toca no Rock in Rio", "../../../../Sinner-SA/SA-Sinner/css/images/image02ironmaiden.jpg", 2);

@@ -13,6 +13,7 @@
     }
     .col{
       style= padding: 0px 20px;
+      
     }
   </style>
 </head>
@@ -46,15 +47,15 @@
                   <form action="../actions/validarLogin.php" method="post">
                     <div class="row">
                       <div class="col">
-                          <input type="text" class="form-control" required id="login" name="login" placeholder="Login">
+                          <input type="text" style="width: 80%;margin-left: 10%;"class="form-control " required id="login" name="login" placeholder="Login">
                         </div>
                       </div>
                         <br>
                         <div class="row">
                           <div class="col">
-                          <center>
-                            <input type="password" class="form-control" required id="senha" name="senha" placeholder="Senha">
-                          </center>
+                          
+                            <input type="password" style="width: 80%;margin-left: 10%;" class="form-control" required id="senha" name="senha" placeholder="Senha">
+                          
                           </div>
                         </div>
                         <div class="row">
@@ -62,6 +63,7 @@
                           <center>
                           <a href="cadastros/cadastroUsuario.php"><small class="form-text">Cadastre-se</small></a>
                           <button type="submit" class="btn btn-light " >Entrar</button>
+                          <hr>  
                           </center>
                           </div>
                         </div>
