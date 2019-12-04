@@ -74,11 +74,11 @@
                             <?php
                             if($array[0]['img']=="")
                             {
-                            echo" <img src='../../css/images/perfil.png'  style='width:180px ;height: 280px;' >";
+                            echo" <img src='../../css/images/perfil.png'  style='width:200px ;height: 200px;' >";
                             }else
                             {
 
-                            echo" <img src='".$array[0]['img']."'   style='width:280px ;height: 280px; alt=''>"; 
+                            echo" <img src='".$array[0]['img']."'   style='width:200px ;height: 200px; alt=''>"; 
                             } 
                         ?>   
 
