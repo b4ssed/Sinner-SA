@@ -16,7 +16,7 @@
                     </center>
                         <div class="form-group">
                             <label for="name">Nome da banda</label>
-                            <input type="text" class="form-control" name="name" required >
+                            <input type="text" class="form-control" name="name" placeholder="Nome da banda" required >
                         </div>
                         <div class="form-group">
                             <label for="name">Gênero</label>
