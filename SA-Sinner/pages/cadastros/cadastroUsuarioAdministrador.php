@@ -28,6 +28,9 @@
             <?php include("../../template/sidebar.php"); ?>
             <div id="content" class="container">
             <div class="containerCadastro">
+              <center>
+                <h2>Cadastro Administrador</h2>
+              </center>
                 <form action="../../includes/cadastros/cadastrarUsuario.php?admPanel=1" method="post">
                   <div class="row">
                     <div class="col form-group">
@@ -48,6 +51,7 @@
                     </div>
                   </div>
                     <div class="form-group">
+                      <label for="tipoUsuario">Tipo do Usuário</label>
                       <select name="tipoUsuario">
                         <?php
                           $con = mysqli_connect("localhost", "root", "", "database_sinner");

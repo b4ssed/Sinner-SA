@@ -39,7 +39,7 @@
           <?php
             foreach ($arrayBanda as $key => $value) {
               echo '<div class="col">';
-              echo '<a href="pages/visualizar/visualizarBandaUsuario.php?id='.$value['id_banda'].'">';
+              echo '<a href="visualizarBandaUsuario.php?id='.$value['id_banda'].'">';
               echo '<div class="card" style="width: 13rem;">';
               echo '<img class="card-img-top" src="'.$value['img'].'" alt="Imagem de capa do card">';
               echo '<div class="card-body">';

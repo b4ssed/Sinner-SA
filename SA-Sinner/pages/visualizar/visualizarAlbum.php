@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Visualizar Gênero</title>
-
+        <?php session_start(); ?>
         <?php include("../../template/styles.php"); ?>
         <style>
             .containerCadastro{
@@ -65,6 +65,7 @@
              ?>
            </tbody>
          </table>
+         <button class="form-control btn btn-dark" type='button' onclick="window.location.href='../cadastros/index.php'">Voltar</button>
         </div>
       </div>
     <br>

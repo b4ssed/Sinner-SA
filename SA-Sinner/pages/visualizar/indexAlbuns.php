@@ -39,7 +39,7 @@
           <?php
             foreach ($arrayAlbum as $key => $value) {
               echo '<div class="col">';
-              echo '<a href="visualizarAlbumUsuario.php?id='.$value['id_album'].'">';
+              echo '<a href="../Player.php?id='.$value['id_album'].'">';
               echo '<div class="card" style="width: 13rem;">';
               echo '<img class="card-img-top" src="'.$value['img'].'" alt="Imagem de capa do card">';
               echo '<div class="card-body">';

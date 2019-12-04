@@ -19,12 +19,13 @@
             }
 
         </style>
+        </head>
         <div class="wrapper">
      <?php include("../../template/sidebar.php"); ?>
        <div id="content" class="containerPrincipal">
         <div class="containerCadastro">
          <table class="table" style="background:#1e272e; color:white">
-    </head>
+
     <thead>
              <tr>
                <th scope="col">Notícia</th>
@@ -63,6 +64,8 @@ echo "<div class='card-deck'>";
         }
 ?>
 </div>
-
+</div>
+</div>
+</div>
 
 </html>
