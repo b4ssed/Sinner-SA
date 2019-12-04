@@ -15,10 +15,9 @@
         $con = mysqli_connect("localhost", "root", "", "database_sinner");
         $query_insert = mysqli_query($con,"INSERT INTO musica VALUES(DEFAULT, '$nmusica', '$duracao', '$destino', $album)");
         mysqli_close($con);
-        echo "<script> alert('Musica cadastrada com sucesso !'); window.location.href ='../../pages/cadastros/cadastroMusica.php'; </script>" ;
+        header('Location: ../../pages/cadastros/cadastroMusica.php');
     }else{
-
-        echo "<script> alert('Esse tipo arquivo não é suportado'); window.location.href ='../../pages/cadastros/cadastroMusica.php'; </script>" ;
+        header('Location: ../../pages/cadastros/cadastroMusica.php');
     }
 
 ?>

@@ -12,12 +12,11 @@
     move_uploaded_file($_FILES['imgband']['tmp_name'], $destino.$new_name);
     }else{
 
-        echo "<script> alert('esse tipo de imagem não é suportada'); window.location.href = '../../pages/cadastros/cadastroBanda.php'; </script>" ;
+      header('Location: ../../pages/cadastros/cadastroBanda.php');
     }
         $con = mysqli_connect("localhost", "root", "", "database_sinner");
         $query = mysqli_query($con,"INSERT INTO banda VALUES(DEFAULT, '$nome', '$caminho', '$genero')");
         mysqli_close($con);
-        echo "<script> alert('banda cadastrada :)'); window.location.href = '../../pages/cadastros/cadastroBanda.php'; </script>" ;
-        header("Location: ../../pages/visualizar/visualizarBanda.php");
+        header('Location: ../../pages/cadastros/cadastroBanda.php');
 
 ?>

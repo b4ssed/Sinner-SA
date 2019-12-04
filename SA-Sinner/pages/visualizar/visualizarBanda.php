@@ -67,6 +67,7 @@
       ?>
     </tbody>
   </table>
+  <button class="form-control btn btn-dark" type='button' onclick="window.location.href='../cadastros/index.php'">Voltar</button>
  </div>
 </div>
 <br>

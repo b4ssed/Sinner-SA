@@ -21,7 +21,7 @@
             $con = mysqli_connect("localhost", "root", "", "database_sinner");
             $query = mysqli_query($con,"INSERT INTO album VALUES(DEFAULT, '$duracao', '$descricao', '$caminho', '$banda')");
             mysqli_close($con);
-            header("Location: ../../pages/visualizar/visualizarAlbum.php");
+            header("Location: ../../pages/cadastros/cadastroAlbum.php");
        // }
 
 ?>
