@@ -56,7 +56,6 @@
           <h2>Álbuns</h2>
           <div class='row'>
             <?php
-            print_r($b[0]['id_album']);
               foreach ($b as $key => $value) {
                 echo '<div class="col">';
                 echo '<a href="../Player.php?id='.$value['id_album'].'">';
