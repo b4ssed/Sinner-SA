@@ -168,7 +168,7 @@ INSERT INTO genero VALUES(DEFAULT, "Indie");
 INSERT INTO genero VALUES(DEFAULT, "Rock");
 INSERT INTO banda VALUES(DEFAULT, "Pegboard Nerds", "../../../../Sinner-SA/SA-Sinner/css/images/image01pegboardnerds.jpg", 1);
 INSERT INTO banda VALUES(DEFAULT, "Iron Maiden", "../../../../Sinner-SA/SA-Sinner/css/images/image02ironmaiden.jpg", 2);
-INSERT INTO banda VALUES(DEFAULT, "Cage the Elephant", "../../../../Sinner-SA/SA-Sinner/css/images/image03cagetheelephant.png", 3);
+INSERT INTO banda VALUES(DEFAULT, "Cage the Elephant", "../../../../Sinner-SA/SA-Sinner/css/images/image03cagetheelephant.jpg", 3);
 INSERT INTO banda VALUES(DEFAULT, "Pink Floyd", "../../../../Sinner-SA/SA-Sinner/css/images/image04pinkfloyd.jpg", 4);
 INSERT INTO banda VALUES(DEFAULT, "Red Hot Chili Peppers", "../../../../Sinner-SA/SA-Sinner/css/images/logo_rhcp.png", 5);
 INSERT INTO banda VALUES(DEFAULT, "Jack Stauber", "../../../../Sinner-SA/SA-Sinner/css/images/jack_stauber_logo.jpg", 6);
@@ -203,8 +203,7 @@ INSERT INTO musica VALUES(DEFAULT, "Deer Dance", "02:55", "../../../../Sinner-SA
 INSERT INTO musica VALUES(DEFAULT, "Jer Pilot", "02:06", "../../../../Sinner-SA/SA-Sinner/css/music/soad4.mp3", 7);
 INSERT INTO musica VALUES(DEFAULT, "X", "01:58", "../../../../Sinner-SA/SA-Sinner/css/music/soad5.mp3", 7);
 INSERT INTO musica VALUES(DEFAULT, "Chop Suey!", "03:30", "../../../../Sinner-SA/SA-Sinner/css/music/soad6.mp3", 7);
-INSERT INTO musica VALUES(DEFAULT, "Bounce", "01:54", "../../../../Sinner-SA/SA-Sinner/css/music/soad7.mp3", 7);
-INSERT INTO musica VALUES(DEFAULT, "Forest", "04:00", "../../../../Sinner-SA/SA-Sinner/css/music/soad8.mp3", 7);
+
 
 
 INSERT INTO musica VALUES(DEFAULT, "Monarchy of Roses", "04:12", "../../../../Sinner-SA/SA-Sinner/css/music/rhcp1.mp3", 8);
@@ -213,9 +212,7 @@ INSERT INTO musica VALUES(DEFAULT, "Brendan's Death Song", "05:39", "../../../..
 INSERT INTO musica VALUES(DEFAULT, "Ethiopia", "03:51", "../../../../Sinner-SA/SA-Sinner/css/music/rhcp4.mp3", 8);
 INSERT INTO musica VALUES(DEFAULT, "Annie Wants a Baby", "03:40", "../../../../Sinner-SA/SA-Sinner/css/music/rhcp5.mp3", 8);
 INSERT INTO musica VALUES(DEFAULT, "Look Around", "03:28", "../../../../Sinner-SA/SA-Sinner/css/music/rhcp6.mp3", 8);
-INSERT INTO musica VALUES(DEFAULT, "The Adventures Of Rain", "04:43", "../../../../Sinner-SA/SA-Sinner/css/music/rhcp7.mp3", 8);
-INSERT INTO musica VALUES(DEFAULT, "Did I Let You Know?", "04:22", "../../../../Sinner-SA/SA-Sinner/css/music/rhcp8.mp3", 8);
-INSERT INTO musica VALUES(DEFAULT, "Goodbye Hooray", "03:53", "../../../../Sinner-SA/SA-Sinner/css/music/rhcp9.mp3", 8);
+
 
 
 
