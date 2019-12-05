@@ -35,7 +35,6 @@
     <div class="card-body">
       <a href="pages/visualizar/visualizarNoticiaUsuario.php?id=<?php echo ($arrayNoticia[0]['id_noticia'])?>">
         <h5 class="card-title"><?php echo ($arrayNoticia[0]["descricao"]); ?></h5>
-        <p class="card-text" style=""><?php echo ($arrayNoticia[0]["conteudo"]); ?></p>
       </a>
     </div>
   </div>
@@ -56,8 +55,6 @@
         echo '<div class="card-body card-body-cascade text-center pb-0">';
         //<!-- Title -->
         echo '<h4 class="card-title"><strong>'.$value['descricao'].'</strong></h4>';
-        //<!-- Subtitle -->
-        echo '<p class="card-text">'.$value['conteudo'].'</p>';
         echo '';
         echo '</div>';
         echo '</div>';
@@ -86,6 +83,7 @@
         echo '</div>';
         echo '</a>';
         echo '</div>';
+        echo '<br>';
         if ($key == 7){
           break;
         }
@@ -100,7 +98,7 @@
       <?php
         foreach ($arrayAlbum as $key => $value) {
           echo '<div class="col">';
-          echo '<a href="pages/visualizar/visualizarMusicaUsuario.php?id='.$value['id_album'].'">';
+          echo '<a href="pages/Player.php?id='.$value['id_album'].'">';
           echo '<div class="card" style="width: 13rem;">';
           echo '<img class="card-img-top" src="'.$value['img'].'" alt="Imagem de capa do card">';
           echo '<div class="card-body">';

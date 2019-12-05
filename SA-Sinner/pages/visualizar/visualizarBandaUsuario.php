@@ -14,11 +14,11 @@
       $query_banda = mysqli_query($con,"SELECT * FROM banda WHERE id_banda=$id");
       $array_banda = mysqli_fetch_assoc($query_banda);
       //Album
-      $query_album = mysqli_query($con,"SELECT * FROM album WHERE id_album = $array_banda[id_banda]");
+      $query_album = mysqli_query($con,"SELECT * FROM album WHERE banda_id_banda = $array_banda[id_banda]");
       $array_album = mysqli_fetch_assoc($query_album);
       $b[] = $array_album;
       //Musica
-      $query_musica = mysqli_query($con,"SELECT * FROM musica WHERE id_musica = $array_album[id_album]");
+      $query_musica = mysqli_query($con,"SELECT * FROM musica WHERE album_id_album = $array_album[id_album]");
       $array_musica = mysqli_fetch_assoc($query_musica);
       $a[] = $array_musica;
     ?>
@@ -56,6 +56,7 @@
           <h2>Álbuns</h2>
           <div class='row'>
             <?php
+            print_r($b[0]['id_album']);
               foreach ($b as $key => $value) {
                 echo '<div class="col">';
                 echo '<a href="../Player.php?id='.$value['id_album'].'">';

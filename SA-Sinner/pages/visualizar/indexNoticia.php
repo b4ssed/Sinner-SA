@@ -50,7 +50,6 @@
               //<!-- Title -->
               echo '<h4 class="card-title"><strong>'.$value['descricao'].'</strong></h4>';
               //<!-- Subtitle -->
-              echo '<p class="card-text">'.$value['conteudo'].'</p>';
               echo '';
               echo '</div>';
               echo '</div>';
