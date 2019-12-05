@@ -118,7 +118,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `database_sinner`.`noticia` (
   `id_noticia` INT NOT NULL AUTO_INCREMENT,
-  `descricao` VARCHAR(50) NOT NULL,
+  `descricao` VARCHAR(100) NOT NULL,
   `conteudo` LONGTEXT NOT NULL,
   `img` VARCHAR(100) NULL,
   `genero_id_genero` INT NOT NULL,
@@ -173,8 +173,8 @@ INSERT INTO banda VALUES(DEFAULT, "Pink Floyd", "../../../../Sinner-SA/SA-Sinner
 INSERT INTO banda VALUES(DEFAULT, "Red Hot Chili Peppers", "../../../../Sinner-SA/SA-Sinner/css/images/logo_rhcp.png", 5);
 INSERT INTO banda VALUES(DEFAULT, "Jack Stauber", "../../../../Sinner-SA/SA-Sinner/css/images/jack_stauber_logo.jpg", 6);
 INSERT INTO banda VALUES(DEFAULT, "System of a Down", "../../../../Sinner-SA/SA-Sinner/css/images/soad_logo.jpg", 7);
-INSERT INTO banda VALUES(DEFAULT, "Chopin", "../../../../Sinner-SA/SA-Sinner/css/images/chopin_logo.jpg", 8);	
-	
+INSERT INTO banda VALUES(DEFAULT, "Chopin", "../../../../Sinner-SA/SA-Sinner/css/images/chopin_logo.jpg", 8);
+
 INSERT INTO album VALUES(DEFAULT, "04:23", "Swamp Thing", "../../../../Sinner-SA/SA-Sinner/css/images/image05swampthing.jpg" , 1);
 INSERT INTO album VALUES(DEFAULT, "39:11", "The Number of the Beast", "../../../../Sinner-SA/SA-Sinner/css/images/image06numberofthebeast.jpg" , 2);
 INSERT INTO album VALUES(DEFAULT, "37:23", "Melophobia", "../../../../Sinner-SA/SA-Sinner/css/images/image07melophobia.jpg" , 3);
@@ -188,12 +188,14 @@ INSERT INTO musica VALUES(DEFAULT, "Swamp Thing", "04:23", "../../../../Sinner-S
 INSERT INTO musica VALUES(DEFAULT, "The Number of the Beast", "04:52", "../../../../Sinner-SA/SA-Sinner/css/music/thenumberofthebeast.mp3", 2);
 INSERT INTO musica VALUES(DEFAULT, "Telescope", "03:56", "../../../../Sinner-SA/SA-Sinner/css/music/telescope.mp3", 3);
 INSERT INTO musica VALUES(DEFAULT, "Hey You", "04:40", "../../../../Sinner-SA/SA-Sinner/css/music/heyyou.mp3", 4);
-INSERT INTO musica VALUES(DEFAULT, "claire de lune", "05:01", "../../../../Sinner-SA/SA-Sinner/css/music/cp1.mp3", 5);
-INSERT INTO musica VALUES(DEFAULT, "Etude", "02:21", "../../../../Sinner-SA/SA-Sinner/css/music/cp2.mp3", 5);
-INSERT INTO musica VALUES(DEFAULT, "nocturne piano & violino", "03:21", "../../../../Sinner-SA/SA-Sinner/css/music/cp3.mp3", 5);
-INSERT INTO musica VALUES(DEFAULT, "nocture", "04:29", "../../../../Sinner-SA/SA-Sinner/css/music/cp4.mp3", 5);
-INSERT INTO musica VALUES(DEFAULT, "Romantic ", "05:13", "../../../../Sinner-SA/SA-Sinner/css/music/cp5.mp3", 5);
-INSERT INTO musica VALUES(DEFAULT, "Spring Waltz", "05:11", "../../../../Sinner-SA/SA-Sinner/css/music/cp6.mp3", 5);
+
+INSERT INTO musica VALUES(DEFAULT, "Monarchy of Roses", "04:12", "../../../../Sinner-SA/SA-Sinner/css/music/rhcp1.mp3", 5);
+INSERT INTO musica VALUES(DEFAULT, "Factory Of Faith", "04:21", "../../../../Sinner-SA/SA-Sinner/css/music/rhcp2.mp3", 5);
+INSERT INTO musica VALUES(DEFAULT, "Brendan's Death Song", "05:39", "../../../../Sinner-SA/SA-Sinner/css/music/rhcp3.mp3", 5);
+INSERT INTO musica VALUES(DEFAULT, "Ethiopia", "03:51", "../../../../Sinner-SA/SA-Sinner/css/music/rhcp4.mp3", 5);
+INSERT INTO musica VALUES(DEFAULT, "Annie Wants a Baby", "03:40", "../../../../Sinner-SA/SA-Sinner/css/music/rhcp5.mp3", 5);
+INSERT INTO musica VALUES(DEFAULT, "Look Around", "03:28", "../../../../Sinner-SA/SA-Sinner/css/music/rhcp6.mp3", 5);
+
 INSERT INTO musica VALUES(DEFAULT, "Buttercup", "03:28", "../../../../Sinner-SA/SA-Sinner/css/music/pf1.mp3", 6);
 INSERT INTO musica VALUES(DEFAULT, "oh klahoma", "03:08", "../../../../Sinner-SA/SA-Sinner/css/music/pf2.mp3", 6);
 
@@ -205,13 +207,13 @@ INSERT INTO musica VALUES(DEFAULT, "X", "01:58", "../../../../Sinner-SA/SA-Sinne
 INSERT INTO musica VALUES(DEFAULT, "Chop Suey!", "03:30", "../../../../Sinner-SA/SA-Sinner/css/music/soad6.mp3", 7);
 
 
+INSERT INTO musica VALUES(DEFAULT, "claire de lune", "05:01", "../../../../Sinner-SA/SA-Sinner/css/music/cp1.mp3", 8);
+INSERT INTO musica VALUES(DEFAULT, "Etude", "02:21", "../../../../Sinner-SA/SA-Sinner/css/music/cp2.mp3", 8);
+INSERT INTO musica VALUES(DEFAULT, "nocturne piano & violino", "03:21", "../../../../Sinner-SA/SA-Sinner/css/music/cp3.mp3", 8);
+INSERT INTO musica VALUES(DEFAULT, "nocture", "04:29", "../../../../Sinner-SA/SA-Sinner/css/music/cp4.mp3", 8);
+INSERT INTO musica VALUES(DEFAULT, "Romantic ", "05:13", "../../../../Sinner-SA/SA-Sinner/css/music/cp5.mp3", 8);
+INSERT INTO musica VALUES(DEFAULT, "Spring Waltz", "05:11", "../../../../Sinner-SA/SA-Sinner/css/music/cp6.mp3", 8);
 
-INSERT INTO musica VALUES(DEFAULT, "Monarchy of Roses", "04:12", "../../../../Sinner-SA/SA-Sinner/css/music/rhcp1.mp3", 8);
-INSERT INTO musica VALUES(DEFAULT, "Factory Of Faith", "04:21", "../../../../Sinner-SA/SA-Sinner/css/music/rhcp2.mp3", 8);
-INSERT INTO musica VALUES(DEFAULT, "Brendan's Death Song", "05:39", "../../../../Sinner-SA/SA-Sinner/css/music/rhcp3.mp3", 8);
-INSERT INTO musica VALUES(DEFAULT, "Ethiopia", "03:51", "../../../../Sinner-SA/SA-Sinner/css/music/rhcp4.mp3", 8);
-INSERT INTO musica VALUES(DEFAULT, "Annie Wants a Baby", "03:40", "../../../../Sinner-SA/SA-Sinner/css/music/rhcp5.mp3", 8);
-INSERT INTO musica VALUES(DEFAULT, "Look Around", "03:28", "../../../../Sinner-SA/SA-Sinner/css/music/rhcp6.mp3", 8);
 
 
 

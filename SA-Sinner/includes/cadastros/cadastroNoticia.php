@@ -15,7 +15,7 @@
 
     move_uploaded_file($_FILES['imgband']['tmp_name'], $destino.$new_name);
     $con = mysqli_connect("localhost", "root", "", "database_sinner");
-        $query = mysqli_query($con,"INSERT INTO noticia VALUES(DEFAULT, '$nome', '00','$caminho',$GENERO)");
+        $query = mysqli_query($con,"INSERT INTO noticia VALUES(DEFAULT, '$nome', '','$caminho',$GENERO)");
         mysqli_close($con);
         header('Location: ../../pages/cadastros/cadastroNoticia.php');
 
